@@ -41,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				D5267569251B405100D6768F /* Starboard */,
+				D5267578251B405400D6768F /* Info.plist */,
 				D5267568251B405100D6768F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +57,54 @@
 		D5267569251B405100D6768F /* Starboard */ = {
 			isa = PBXGroup;
 			children = (
-				D526756A251B405100D6768F /* AppDelegate.swift */,
-				D526756C251B405100D6768F /* SceneDelegate.swift */,
-				D526756E251B405100D6768F /* ViewController.swift */,
-				D5267570251B405100D6768F /* Main.storyboard */,
-				D5267573251B405400D6768F /* Assets.xcassets */,
-				D5267575251B405400D6768F /* LaunchScreen.storyboard */,
-				D5267578251B405400D6768F /* Info.plist */,
+				D5267581251B417600D6768F /* Models */,
+				D5267582251B418000D6768F /* Views */,
+				D526757F251B417000D6768F /* Controllers */,
+				D5267583251B418D00D6768F /* Delegates */,
+				D5267585251B419900D6768F /* Supporting Files */,
 			);
 			path = Starboard;
+			sourceTree = "<group>";
+		};
+		D526757F251B417000D6768F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D526756E251B405100D6768F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5267581251B417600D6768F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5267582251B418000D6768F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5267570251B405100D6768F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5267583251B418D00D6768F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D526756A251B405100D6768F /* AppDelegate.swift */,
+				D526756C251B405100D6768F /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		D5267585251B419900D6768F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5267573251B405400D6768F /* Assets.xcassets */,
+				D5267575251B405400D6768F /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -271,6 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -293,10 +335,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = me.dbarsam.Starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,10 +355,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = me.dbarsam.Starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
