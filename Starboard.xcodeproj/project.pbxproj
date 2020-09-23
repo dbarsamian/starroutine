@@ -41,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				D5267569251B405100D6768F /* Starboard */,
-				D5267578251B405400D6768F /* Info.plist */,
 				D5267568251B405100D6768F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +56,7 @@
 		D5267569251B405100D6768F /* Starboard */ = {
 			isa = PBXGroup;
 			children = (
+				D5267578251B405400D6768F /* Info.plist */,
 				D5267581251B417600D6768F /* Models */,
 				D5267582251B418000D6768F /* Views */,
 				D526757F251B417000D6768F /* Controllers */,
