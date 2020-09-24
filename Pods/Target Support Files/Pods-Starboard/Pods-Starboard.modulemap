@@ -1,0 +1,6 @@
+framework module Pods_Starboard {
+  umbrella header "Pods-Starboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

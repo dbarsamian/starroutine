@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var realm: Realm?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Iniitalize Realm singleton
+        do {
+            let configuration = Realm.Configuration(schemaVersion: 1)
+            realm = try Realm(configuration: configuration)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         return true
     }
 
