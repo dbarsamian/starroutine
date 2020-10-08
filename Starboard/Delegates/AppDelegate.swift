@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Iniitalize Realm singleton
         do {
-            let configuration = Realm.Configuration(schemaVersion: 1)
+            let configuration = Realm.Configuration(schemaVersion: 2)
             realm = try Realm(configuration: configuration)
         } catch {
             print(error.localizedDescription)

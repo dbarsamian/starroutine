@@ -7,9 +7,16 @@
 
 import Foundation
 
-class Constants {
-    public static let GoalCellIdentifier = "GoalCell"
-    public static let SettingCellIdentifier = "SettingCell"
-    public static let StarboardSegueIdentifier = "OpenStarboardSegue"
-    public static let AddGoalSegueIdentifier = "GoToAddScene"
+struct Constants {    
+    
+    struct CellIdentifier {
+        public static let SettingCellIdentifier = "SettingCell"
+        public static let StarboardCellIdentifier = "StarboardCell"
+        public static let GoalCellIdentifier = "GoalCell"
+    }
+    
+    struct SegueIdentifier {
+        public static let StarboardSegueIdentifier = "OpenStarboardSegue"
+        public static let AddGoalSegueIdentifier = "GoToAddScene"
+    }
 }

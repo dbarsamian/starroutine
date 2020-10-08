@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="StarboardCell" customModule="Starboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6H-5m-fRl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 365" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-xy-2BL">
+                                <rect key="frame" x="8" y="8" width="224" height="64"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-0K-HAj">
+                                <rect key="frame" x="240" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4uP-Ko-8tK"/>
+                                    <constraint firstAttribute="width" constant="80" id="HzB-AR-kHi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="tintColor" name="StarColor"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vL6-4E-Wiy">
+                                <rect key="frame" x="240" y="-0.5" width="80" height="80"/>
+                                <color key="tintColor" name="StarColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Aas-FK-HDi"/>
+                                    <constraint firstAttribute="width" constant="80" id="VKj-G3-eEE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dHd-xy-2BL" firstAttribute="top" secondItem="U6H-5m-fRl" secondAttribute="top" constant="8" id="2rY-vB-Zkr"/>
+                            <constraint firstAttribute="bottom" secondItem="Lxr-0K-HAj" secondAttribute="bottom" id="CvN-Mw-tAA"/>
+                            <constraint firstItem="Lxr-0K-HAj" firstAttribute="leading" secondItem="dHd-xy-2BL" secondAttribute="trailing" constant="8" id="Kb2-o6-Q7L"/>
+                            <constraint firstItem="dHd-xy-2BL" firstAttribute="leading" secondItem="U6H-5m-fRl" secondAttribute="leading" constant="8" id="NtH-gR-MkR"/>
+                            <constraint firstAttribute="bottom" secondItem="dHd-xy-2BL" secondAttribute="bottom" constant="8" id="TeJ-az-85A"/>
+                            <constraint firstItem="Lxr-0K-HAj" firstAttribute="top" secondItem="U6H-5m-fRl" secondAttribute="top" id="WiK-5e-2OK"/>
+                            <constraint firstAttribute="trailing" secondItem="vL6-4E-Wiy" secondAttribute="trailing" id="amV-QN-D2U"/>
+                            <constraint firstItem="vL6-4E-Wiy" firstAttribute="top" secondItem="U6H-5m-fRl" secondAttribute="top" id="c6b-gl-VUk"/>
+                            <constraint firstAttribute="trailing" secondItem="Lxr-0K-HAj" secondAttribute="trailing" id="fbQ-sR-4mE"/>
+                            <constraint firstAttribute="bottom" secondItem="vL6-4E-Wiy" secondAttribute="bottom" id="wyz-zg-vzG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="U6H-5m-fRl" secondAttribute="bottom" id="cf7-S4-AOB"/>
+                    <constraint firstItem="U6H-5m-fRl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="l1g-nc-Tue"/>
+                    <constraint firstItem="U6H-5m-fRl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lry-LQ-ZXb"/>
+                    <constraint firstAttribute="trailing" secondItem="U6H-5m-fRl" secondAttribute="trailing" id="wJV-6t-ejV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="parentView" destination="U6H-5m-fRl" id="bW9-bb-Iu1"/>
+                <outlet property="starImage" destination="vL6-4E-Wiy" id="dM1-v1-xJH"/>
+                <outlet property="titleLabel" destination="dHd-xy-2BL" id="Zcz-wp-LMQ"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="StarColor">
+            <color red="0.96470588235294119" green="0.72549019607843135" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DatePickerCell
 
 // MARK: - AddGoalDelegate Protocol
 
@@ -13,22 +14,66 @@ protocol AddGoalDelegate {
     func addGoal(goal: Goal)
 }
 
+// MARK: - Class
+
 class AddGoalViewController: UITableViewController {
     
+    // Section 1
     @IBOutlet weak var TitleField: UITextField!
+    @IBOutlet weak var TitleFieldCell: UITableViewCell!
     @IBOutlet weak var DescriptionField: UITextField!
+    @IBOutlet weak var DescriptionFieldCell: UITableViewCell!
+    
+    // Section 2
+    @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var DateLabelCell: UITableViewCell!
+    @IBOutlet weak var DatePicker: UIDatePicker!
+    @IBOutlet weak var DatePickerCell: UITableViewCell!
+    var datePickerCellIsHidden = true
     
     var delegate: AddGoalDelegate?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Set up table view
+        tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        // Set up date picker
+        DatePicker.preferredDatePickerStyle = .inline
+        DatePicker.minimumDate = Date()
+        DatePickerCell.isHidden = true
+        updateDateLabel(with: DatePicker.date)
+        
+        // Set up navigation items
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
         self.navigationItem.title = "Add Goal"
-        
-        
-        TitleField.becomeFirstResponder()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // MARK: - TableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath) == DateLabelCell {
+            tableView.beginUpdates()
+            DatePickerCell.isHidden = !DatePickerCell.isHidden
+            tableView.layoutIfNeeded()
+            tableView.endUpdates()
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - Date Picker
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        updateDateLabel(with: sender.date)
+    }
+    
+    func updateDateLabel(with date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        DateLabel.text = dateFormatter.string(from: date)
     }
     
     // MARK: - Button Handlers
@@ -48,6 +93,7 @@ class AddGoalViewController: UITableViewController {
             present(alert, animated: true, completion: nil)
             return
         }
+        
         
         let goal = Goal()
         goal.title = titleText

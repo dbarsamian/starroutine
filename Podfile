@@ -7,5 +7,6 @@ target 'Starboard' do
 
   # Pods for Starboard
   pod 'RealmSwift'
+  pod 'DatePickerCell'
 
 end

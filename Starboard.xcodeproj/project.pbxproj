@@ -21,6 +21,8 @@
 		D53CEF4D251C5F770091C9A9 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF4C251C5F770091C9A9 /* UITableViewExtension.swift */; };
 		D53CEF52251C65850091C9A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF51251C65850091C9A9 /* Constants.swift */; };
 		D53CEF59251C67EC0091C9A9 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF58251C67EC0091C9A9 /* AddGoalViewController.swift */; };
+		D570C20F251F3D2900792871 /* StarboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570C20D251F3D2900792871 /* StarboardCell.swift */; };
+		D570C210251F3D2900792871 /* StarboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D570C20E251F3D2900792871 /* StarboardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D53CEF4C251C5F770091C9A9 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		D53CEF51251C65850091C9A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D53CEF58251C67EC0091C9A9 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
+		D570C20D251F3D2900792871 /* StarboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardCell.swift; sourceTree = "<group>"; };
+		D570C20E251F3D2900792871 /* StarboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarboardCell.xib; sourceTree = "<group>"; };
 		DB036676F327F2ECA3BA929C /* Pods_Starboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC28BD15BD137259E5C16DF /* Pods-Starboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starboard.release.xcconfig"; path = "Target Support Files/Pods-Starboard/Pods-Starboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				D5267570251B405100D6768F /* Main.storyboard */,
+				D570C20D251F3D2900792871 /* StarboardCell.swift */,
+				D570C20E251F3D2900792871 /* StarboardCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D570C210251F3D2900792871 /* StarboardCell.xib in Resources */,
 				D5267577251B405400D6768F /* LaunchScreen.storyboard in Resources */,
 				D5267574251B405400D6768F /* Assets.xcassets in Resources */,
 				D5267572251B405100D6768F /* Main.storyboard in Resources */,
@@ -282,6 +289,7 @@
 				D53CEF3A251C52940091C9A9 /* StarboardViewController.swift in Sources */,
 				D53CEF43251C52FE0091C9A9 /* SettingsViewController.swift in Sources */,
 				D53CEF59251C67EC0091C9A9 /* AddGoalViewController.swift in Sources */,
+				D570C20F251F3D2900792871 /* StarboardCell.swift in Sources */,
 				D53CEF46251C552C0091C9A9 /* Goal.swift in Sources */,
 				D53CEF52251C65850091C9A9 /* Constants.swift in Sources */,
 			);

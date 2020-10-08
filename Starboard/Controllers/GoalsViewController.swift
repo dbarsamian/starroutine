@@ -5,12 +5,12 @@
 //  Created by David Barsamian on 9/23/20.
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 // MARK: - UIViewController
+
 class GoalsViewController: UITableViewController {
-    
     var realm: Realm?
     var goals: Results<Goal>? {
         willSet {
@@ -31,36 +31,54 @@ class GoalsViewController: UITableViewController {
         
         // Retrieve goals
         goals = loadGoals()
-        
-        
     }
     
     // MARK: - Actions
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: Constants.AddGoalSegueIdentifier, sender: self)
+        performSegue(withIdentifier: Constants.SegueIdentifier.AddGoalSegueIdentifier, sender: self)
     }
     
-    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        
-    }
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {}
     
     // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let naviVC = segue.destination as? UINavigationController {
-            if let destVC = naviVC.viewControllers[0] as? AddGoalViewController {
-                destVC.delegate = self
+        switch segue.identifier {
+        case Constants.SegueIdentifier.AddGoalSegueIdentifier:
+            if let naviVC = segue.destination as? UINavigationController {
+                if let destVC = naviVC.viewControllers[0] as? AddGoalViewController {
+                    destVC.delegate = self
+                } else {
+                    print("Could not find add goal view controller")
+                }
             } else {
-                print("Could not find add goal view controller")
+                print("Could not find navigation controller")
             }
-        } else {
-            print("Could not find navigation controller")
+        case Constants.SegueIdentifier.StarboardSegueIdentifier:
+            if let destVC = segue.destination as? StarboardViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    if let safeGoals = goals {
+                        destVC.goal = safeGoals[indexPath.row]
+                    }
+                }
+            }
+        default:
+            print("Default case reached!!!")
         }
     }
     
     // MARK: - Data Manipulation
-    func saveGoals() {
-        
+
+    func saveGoal(_ goal: Goal) {
+        do {
+            try realm?.write {
+                realm?.add(goal)
+            }
+        } catch {
+            print(error)
+        }
+        tableView.reloadData(with: .automatic)
     }
     
     func loadGoals() -> Results<Goal>? {
@@ -68,31 +86,32 @@ class GoalsViewController: UITableViewController {
     }
     
     // MARK: - UITableViewDataSource
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO
-        return 0
+        return goals?.count ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.GoalCellIdentifier)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier.GoalCellIdentifier)!
+        if let safeGoals = goals {
+            cell.textLabel?.text = safeGoals[indexPath.row].title
+            cell.detailTextLabel?.text = safeGoals[indexPath.row].goalDescription
+        }
         return cell
     }
     
     // MARK: - UITableViewDelegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO
-    }
-    
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.SegueIdentifier.StarboardSegueIdentifier, sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension GoalsViewController: AddGoalDelegate {
     func addGoal(goal: Goal) {
-        self.dismiss(animated: true) {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MMM d, yyyy h:mm a"
-            print("\(goal.title): \(goal.description) @ \(formatter.string(from: goal.dateCreated! ))")
+        dismiss(animated: true) {
+            self.saveGoal(goal)
         }
     }
 }
