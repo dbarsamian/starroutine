@@ -25,10 +25,10 @@ struct DayListView: View {
             Text("Day \(self.day.number)")
                 .font(.largeTitle)
             Spacer()
-            Image(systemName: dayComplete ? "star.fill" : "star")
-                .renderingMode(.original)
+            Image(systemName: day.goal!.icon ?? "star")
                 .font(.largeTitle)
-                .scaleEffect(day.completed ? 1 : 0.75)
+                .scaleEffect(day.completed ? 1.5 : 0.75)
+                .foregroundColor(day.completed ? Color(day.goal!.color as! UIColor) : Color.gray)
                 .onTapGesture {
                     if !day.goal!.completed {
                         withAnimation(.interpolatingSpring(stiffness: 50, damping: 5)) {
@@ -37,6 +37,7 @@ struct DayListView: View {
                         }
                     }
                 }
+                .animation(.spring())
         })
         .onReceive(self.day.objectWillChange) {
             try? self.viewContext.save()

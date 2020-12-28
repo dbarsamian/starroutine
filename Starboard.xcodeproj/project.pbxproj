@@ -3,17 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
+		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
+		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
 		D50973C4255F3517008F944C /* StarboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarboardApp.swift */; };
 		D50973C6255F3517008F944C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C5255F3517008F944C /* ContentView.swift */; };
 		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
 		D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973CA255F3519008F944C /* Preview Assets.xcassets */; };
 		D50973CD255F3519008F944C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973CC255F3519008F944C /* Persistence.swift */; };
 		D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D50973CE255F3519008F944C /* Starboard.xcdatamodeld */; };
-		D55F2A7C25675E1900DB9C52 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F2A7B25675E1900DB9C52 /* Date.swift */; };
+		D55F2A7C25675E1900DB9C52 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F2A7B25675E1900DB9C52 /* DateExtension.swift */; };
 		D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4140256B2C190089250B /* EmptyListView.swift */; };
 		D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4143256B2CB20089250B /* GoalLinkView.swift */; };
 		D5EB4147256B2FC30089250B /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4146256B2FC30089250B /* GoalsView.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
+		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		D50973C0255F3517008F944C /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50973C3255F3517008F944C /* StarboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardApp.swift; sourceTree = "<group>"; };
 		D50973C5255F3517008F944C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +39,7 @@
 		D50973CC255F3519008F944C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D50973CF255F3519008F944C /* Starboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Starboard.xcdatamodel; sourceTree = "<group>"; };
 		D50973D1255F3519008F944C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D55F2A7B25675E1900DB9C52 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D55F2A7B25675E1900DB9C52 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		D5EB4140256B2C190089250B /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		D5EB4143256B2CB20089250B /* GoalLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalLinkView.swift; sourceTree = "<group>"; };
 		D5EB4146256B2FC30089250B /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 			children = (
 				D50973C7255F3519008F944C /* Assets.xcassets */,
 				D50973C9255F3519008F944C /* Preview Content */,
+				68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,7 +140,9 @@
 		D55F2A7A25675DEF00DB9C52 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D55F2A7B25675E1900DB9C52 /* Date.swift */,
+				D55F2A7B25675E1900DB9C52 /* DateExtension.swift */,
+				68C5EFC42599B5230094BE12 /* ColorExtension.swift */,
+				68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,7 +218,7 @@
 				};
 			};
 			buildConfigurationList = D50973BB255F3516008F944C /* Build configuration list for PBXProject "Starboard" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -245,9 +254,11 @@
 			files = (
 				D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */,
 				D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */,
-				D55F2A7C25675E1900DB9C52 /* Date.swift in Sources */,
+				D55F2A7C25675E1900DB9C52 /* DateExtension.swift in Sources */,
 				D5EB414D256B30A60089250B /* StarboardView.swift in Sources */,
 				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
+				68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */,
+				68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */,
 				D5EB414A256B30380089250B /* AddGoalView.swift in Sources */,
 				D5EB4150256B30C50089250B /* DayListView.swift in Sources */,
 				D5EB4156256B30FC0089250B /* SettingsView.swift in Sources */,
@@ -255,6 +266,7 @@
 				D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */,
 				D50973CD255F3519008F944C /* Persistence.swift in Sources */,
 				D50973C6255F3517008F944C /* ContentView.swift in Sources */,
+				68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */,
 				D50973C4255F3517008F944C /* StarboardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
