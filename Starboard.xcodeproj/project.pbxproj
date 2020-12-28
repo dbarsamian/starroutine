@@ -3,181 +3,187 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9874C784E581CD2FFFB28751 /* Pods_Starboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB036676F327F2ECA3BA929C /* Pods_Starboard.framework */; };
-		D526756B251B405100D6768F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526756A251B405100D6768F /* AppDelegate.swift */; };
-		D526756D251B405100D6768F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526756C251B405100D6768F /* SceneDelegate.swift */; };
-		D5267572251B405100D6768F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5267570251B405100D6768F /* Main.storyboard */; };
-		D5267574251B405400D6768F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5267573251B405400D6768F /* Assets.xcassets */; };
-		D5267577251B405400D6768F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5267575251B405400D6768F /* LaunchScreen.storyboard */; };
-		D53CEF3A251C52940091C9A9 /* StarboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF39251C52940091C9A9 /* StarboardViewController.swift */; };
-		D53CEF3D251C52BC0091C9A9 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF3C251C52BC0091C9A9 /* GoalsViewController.swift */; };
-		D53CEF40251C52D90091C9A9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF3F251C52D90091C9A9 /* HistoryViewController.swift */; };
-		D53CEF43251C52FE0091C9A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF42251C52FE0091C9A9 /* SettingsViewController.swift */; };
-		D53CEF46251C552C0091C9A9 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF45251C552C0091C9A9 /* Goal.swift */; };
-		D53CEF4D251C5F770091C9A9 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF4C251C5F770091C9A9 /* UITableViewExtension.swift */; };
-		D53CEF52251C65850091C9A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF51251C65850091C9A9 /* Constants.swift */; };
-		D53CEF59251C67EC0091C9A9 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53CEF58251C67EC0091C9A9 /* AddGoalViewController.swift */; };
-		D570C20F251F3D2900792871 /* StarboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570C20D251F3D2900792871 /* StarboardCell.swift */; };
-		D570C210251F3D2900792871 /* StarboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D570C20E251F3D2900792871 /* StarboardCell.xib */; };
+		D50973C4255F3517008F944C /* StarboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarboardApp.swift */; };
+		D50973C6255F3517008F944C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C5255F3517008F944C /* ContentView.swift */; };
+		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
+		D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973CA255F3519008F944C /* Preview Assets.xcassets */; };
+		D50973CD255F3519008F944C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973CC255F3519008F944C /* Persistence.swift */; };
+		D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D50973CE255F3519008F944C /* Starboard.xcdatamodeld */; };
+		D55F2A7C25675E1900DB9C52 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F2A7B25675E1900DB9C52 /* Date.swift */; };
+		D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4140256B2C190089250B /* EmptyListView.swift */; };
+		D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4143256B2CB20089250B /* GoalLinkView.swift */; };
+		D5EB4147256B2FC30089250B /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4146256B2FC30089250B /* GoalsView.swift */; };
+		D5EB414A256B30380089250B /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4149256B30380089250B /* AddGoalView.swift */; };
+		D5EB414D256B30A60089250B /* StarboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB414C256B30A60089250B /* StarboardView.swift */; };
+		D5EB4150256B30C50089250B /* DayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB414F256B30C50089250B /* DayListView.swift */; };
+		D5EB4153256B30E90089250B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4152256B30E90089250B /* HistoryView.swift */; };
+		D5EB4156256B30FC0089250B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4155256B30FC0089250B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D2A870691B1BB429AF8934A /* Pods-Starboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starboard.debug.xcconfig"; path = "Target Support Files/Pods-Starboard/Pods-Starboard.debug.xcconfig"; sourceTree = "<group>"; };
-		D5267567251B405100D6768F /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D526756A251B405100D6768F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D526756C251B405100D6768F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5267571251B405100D6768F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D5267573251B405400D6768F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D5267576251B405400D6768F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D5267578251B405400D6768F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D53CEF39251C52940091C9A9 /* StarboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardViewController.swift; sourceTree = "<group>"; };
-		D53CEF3C251C52BC0091C9A9 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
-		D53CEF3F251C52D90091C9A9 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		D53CEF42251C52FE0091C9A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D53CEF45251C552C0091C9A9 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
-		D53CEF4C251C5F770091C9A9 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
-		D53CEF51251C65850091C9A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D53CEF58251C67EC0091C9A9 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
-		D570C20D251F3D2900792871 /* StarboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardCell.swift; sourceTree = "<group>"; };
-		D570C20E251F3D2900792871 /* StarboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarboardCell.xib; sourceTree = "<group>"; };
-		DB036676F327F2ECA3BA929C /* Pods_Starboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDC28BD15BD137259E5C16DF /* Pods-Starboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starboard.release.xcconfig"; path = "Target Support Files/Pods-Starboard/Pods-Starboard.release.xcconfig"; sourceTree = "<group>"; };
+		D50973C0255F3517008F944C /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50973C3255F3517008F944C /* StarboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardApp.swift; sourceTree = "<group>"; };
+		D50973C5255F3517008F944C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D50973C7255F3519008F944C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D50973CA255F3519008F944C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D50973CC255F3519008F944C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D50973CF255F3519008F944C /* Starboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Starboard.xcdatamodel; sourceTree = "<group>"; };
+		D50973D1255F3519008F944C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55F2A7B25675E1900DB9C52 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D5EB4140256B2C190089250B /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
+		D5EB4143256B2CB20089250B /* GoalLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalLinkView.swift; sourceTree = "<group>"; };
+		D5EB4146256B2FC30089250B /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		D5EB4149256B30380089250B /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		D5EB414C256B30A60089250B /* StarboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardView.swift; sourceTree = "<group>"; };
+		D5EB414F256B30C50089250B /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
+		D5EB4152256B30E90089250B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		D5EB4155256B30FC0089250B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D5267564251B405100D6768F /* Frameworks */ = {
+		D50973BD255F3517008F944C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9874C784E581CD2FFFB28751 /* Pods_Starboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		382238E49CF0E6FD7DB03A02 /* Frameworks */ = {
+		D50973B7255F3516008F944C = {
 			isa = PBXGroup;
 			children = (
-				DB036676F327F2ECA3BA929C /* Pods_Starboard.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		444CDFDA1931226EFC7EA141 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4D2A870691B1BB429AF8934A /* Pods-Starboard.debug.xcconfig */,
-				FDC28BD15BD137259E5C16DF /* Pods-Starboard.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		D526755E251B405100D6768F = {
-			isa = PBXGroup;
-			children = (
-				D5267569251B405100D6768F /* Starboard */,
-				D5267568251B405100D6768F /* Products */,
-				444CDFDA1931226EFC7EA141 /* Pods */,
-				382238E49CF0E6FD7DB03A02 /* Frameworks */,
+				D50973C2255F3517008F944C /* Starboard */,
+				D50973C1255F3517008F944C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D5267568251B405100D6768F /* Products */ = {
+		D50973C1255F3517008F944C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5267567251B405100D6768F /* Starboard.app */,
+				D50973C0255F3517008F944C /* Starboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5267569251B405100D6768F /* Starboard */ = {
+		D50973C2255F3517008F944C /* Starboard */ = {
 			isa = PBXGroup;
 			children = (
-				D5267578251B405400D6768F /* Info.plist */,
-				D5267581251B417600D6768F /* Models */,
-				D5267582251B418000D6768F /* Views */,
-				D526757F251B417000D6768F /* Controllers */,
-				D5267583251B418D00D6768F /* Delegates */,
-				D5267585251B419900D6768F /* Supporting Files */,
-				D53CEF4B251C5F2F0091C9A9 /* Extensions */,
+				D50973D1255F3519008F944C /* Info.plist */,
+				D53957972565E1E7001D7497 /* Models */,
+				D53957932565E1D6001D7497 /* Views */,
+				D53957952565E1E0001D7497 /* Controllers */,
+				D53957982565E1F8001D7497 /* Supporting Files */,
+				D55F2A7A25675DEF00DB9C52 /* Extensions */,
 			);
 			path = Starboard;
 			sourceTree = "<group>";
 		};
-		D526757F251B417000D6768F /* Controllers */ = {
+		D50973C9255F3519008F944C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D53CEF39251C52940091C9A9 /* StarboardViewController.swift */,
-				D53CEF3C251C52BC0091C9A9 /* GoalsViewController.swift */,
-				D53CEF3F251C52D90091C9A9 /* HistoryViewController.swift */,
-				D53CEF42251C52FE0091C9A9 /* SettingsViewController.swift */,
-				D53CEF58251C67EC0091C9A9 /* AddGoalViewController.swift */,
+				D50973CA255F3519008F944C /* Preview Assets.xcassets */,
 			);
-			path = Controllers;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D5267581251B417600D6768F /* Models */ = {
+		D53957932565E1D6001D7497 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D53CEF45251C552C0091C9A9 /* Goal.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D5267582251B418000D6768F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D5267570251B405100D6768F /* Main.storyboard */,
-				D570C20D251F3D2900792871 /* StarboardCell.swift */,
-				D570C20E251F3D2900792871 /* StarboardCell.xib */,
+				D50973C5255F3517008F944C /* ContentView.swift */,
+				D5EB4158256B31380089250B /* GoalViews */,
+				D5EB415A256B31660089250B /* StarboardViews */,
+				D5EB415C256B31700089250B /* HistoryViews */,
+				D5EB415E256B31770089250B /* SettingViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D5267583251B418D00D6768F /* Delegates */ = {
+		D53957952565E1E0001D7497 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D526756A251B405100D6768F /* AppDelegate.swift */,
-				D526756C251B405100D6768F /* SceneDelegate.swift */,
+				D50973C3255F3517008F944C /* StarboardApp.swift */,
+				D50973CC255F3519008F944C /* Persistence.swift */,
 			);
-			path = Delegates;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D5267585251B419900D6768F /* Supporting Files */ = {
+		D53957972565E1E7001D7497 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D5267573251B405400D6768F /* Assets.xcassets */,
-				D5267575251B405400D6768F /* LaunchScreen.storyboard */,
-				D53CEF51251C65850091C9A9 /* Constants.swift */,
+				D50973CE255F3519008F944C /* Starboard.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D53957982565E1F8001D7497 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D50973C7255F3519008F944C /* Assets.xcassets */,
+				D50973C9255F3519008F944C /* Preview Content */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D53CEF4B251C5F2F0091C9A9 /* Extensions */ = {
+		D55F2A7A25675DEF00DB9C52 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D53CEF4C251C5F770091C9A9 /* UITableViewExtension.swift */,
+				D55F2A7B25675E1900DB9C52 /* Date.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D5EB4158256B31380089250B /* GoalViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5EB4140256B2C190089250B /* EmptyListView.swift */,
+				D5EB4143256B2CB20089250B /* GoalLinkView.swift */,
+				D5EB4146256B2FC30089250B /* GoalsView.swift */,
+				D5EB4149256B30380089250B /* AddGoalView.swift */,
+			);
+			path = GoalViews;
+			sourceTree = "<group>";
+		};
+		D5EB415A256B31660089250B /* StarboardViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5EB414C256B30A60089250B /* StarboardView.swift */,
+				D5EB414F256B30C50089250B /* DayListView.swift */,
+			);
+			path = StarboardViews;
+			sourceTree = "<group>";
+		};
+		D5EB415C256B31700089250B /* HistoryViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5EB4152256B30E90089250B /* HistoryView.swift */,
+			);
+			path = HistoryViews;
+			sourceTree = "<group>";
+		};
+		D5EB415E256B31770089250B /* SettingViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5EB4155256B30FC0089250B /* SettingsView.swift */,
+			);
+			path = SettingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5267566251B405100D6768F /* Starboard */ = {
+		D50973BF255F3517008F944C /* Starboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D526757B251B405400D6768F /* Build configuration list for PBXNativeTarget "Starboard" */;
+			buildConfigurationList = D50973D4255F3519008F944C /* Build configuration list for PBXNativeTarget "Starboard" */;
 			buildPhases = (
-				F2B0582E48E72AB2C5375399 /* [CP] Check Pods Manifest.lock */,
-				D5267563251B405100D6768F /* Sources */,
-				D5267564251B405100D6768F /* Frameworks */,
-				D5267565251B405100D6768F /* Resources */,
-				2B9C608DB6D2A3C03C7ECA8A /* [CP] Embed Pods Frameworks */,
+				D50973BC255F3517008F944C /* Sources */,
+				D50973BD255F3517008F944C /* Frameworks */,
+				D50973BE255F3517008F944C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -185,24 +191,24 @@
 			);
 			name = Starboard;
 			productName = Starboard;
-			productReference = D5267567251B405100D6768F /* Starboard.app */;
+			productReference = D50973C0255F3517008F944C /* Starboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D526755F251B405100D6768F /* Project object */ = {
+		D50973B8255F3516008F944C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					D5267566251B405100D6768F = {
-						CreatedOnToolsVersion = 12.0;
+					D50973BF255F3517008F944C = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
-			buildConfigurationList = D5267562251B405100D6768F /* Build configuration list for PBXProject "Starboard" */;
+			buildConfigurationList = D50973BB255F3516008F944C /* Build configuration list for PBXProject "Starboard" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -210,114 +216,53 @@
 				en,
 				Base,
 			);
-			mainGroup = D526755E251B405100D6768F;
-			productRefGroup = D5267568251B405100D6768F /* Products */;
+			mainGroup = D50973B7255F3516008F944C;
+			productRefGroup = D50973C1255F3517008F944C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5267566251B405100D6768F /* Starboard */,
+				D50973BF255F3517008F944C /* Starboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D5267565251B405100D6768F /* Resources */ = {
+		D50973BE255F3517008F944C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D570C210251F3D2900792871 /* StarboardCell.xib in Resources */,
-				D5267577251B405400D6768F /* LaunchScreen.storyboard in Resources */,
-				D5267574251B405400D6768F /* Assets.xcassets in Resources */,
-				D5267572251B405100D6768F /* Main.storyboard in Resources */,
+				D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */,
+				D50973C8255F3519008F944C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2B9C608DB6D2A3C03C7ECA8A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Starboard/Pods-Starboard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Starboard/Pods-Starboard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Starboard/Pods-Starboard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2B0582E48E72AB2C5375399 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Starboard-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		D5267563251B405100D6768F /* Sources */ = {
+		D50973BC255F3517008F944C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D526756B251B405100D6768F /* AppDelegate.swift in Sources */,
-				D53CEF4D251C5F770091C9A9 /* UITableViewExtension.swift in Sources */,
-				D53CEF3D251C52BC0091C9A9 /* GoalsViewController.swift in Sources */,
-				D526756D251B405100D6768F /* SceneDelegate.swift in Sources */,
-				D53CEF40251C52D90091C9A9 /* HistoryViewController.swift in Sources */,
-				D53CEF3A251C52940091C9A9 /* StarboardViewController.swift in Sources */,
-				D53CEF43251C52FE0091C9A9 /* SettingsViewController.swift in Sources */,
-				D53CEF59251C67EC0091C9A9 /* AddGoalViewController.swift in Sources */,
-				D570C20F251F3D2900792871 /* StarboardCell.swift in Sources */,
-				D53CEF46251C552C0091C9A9 /* Goal.swift in Sources */,
-				D53CEF52251C65850091C9A9 /* Constants.swift in Sources */,
+				D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */,
+				D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */,
+				D55F2A7C25675E1900DB9C52 /* Date.swift in Sources */,
+				D5EB414D256B30A60089250B /* StarboardView.swift in Sources */,
+				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
+				D5EB414A256B30380089250B /* AddGoalView.swift in Sources */,
+				D5EB4150256B30C50089250B /* DayListView.swift in Sources */,
+				D5EB4156256B30FC0089250B /* SettingsView.swift in Sources */,
+				D5EB4147256B2FC30089250B /* GoalsView.swift in Sources */,
+				D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */,
+				D50973CD255F3519008F944C /* Persistence.swift in Sources */,
+				D50973C6255F3517008F944C /* ContentView.swift in Sources */,
+				D50973C4255F3517008F944C /* StarboardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		D5267570251B405100D6768F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5267571251B405100D6768F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D5267575251B405400D6768F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5267576251B405400D6768F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		D5267579251B405400D6768F /* Debug */ = {
+		D50973D2255F3519008F944C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,8 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				"INFOPLIST_FILE[sdk=*]" = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +323,7 @@
 			};
 			name = Debug;
 		};
-		D526757A251B405400D6768F /* Release */ = {
+		D50973D3255F3519008F944C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -424,8 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				"INFOPLIST_FILE[sdk=*]" = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -435,70 +378,85 @@
 			};
 			name = Release;
 		};
-		D526757C251B405400D6768F /* Debug */ = {
+		D50973D5255F3519008F944C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D2A870691B1BB429AF8934A /* Pods-Starboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Starboard/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = J97PER9B8T;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Starboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.dbarsam.Starboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D526757D251B405400D6768F /* Release */ = {
+		D50973D6255F3519008F944C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDC28BD15BD137259E5C16DF /* Pods-Starboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Starboard/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = J97PER9B8T;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Starboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.dbarsam.Starboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5267562251B405100D6768F /* Build configuration list for PBXProject "Starboard" */ = {
+		D50973BB255F3516008F944C /* Build configuration list for PBXProject "Starboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5267579251B405400D6768F /* Debug */,
-				D526757A251B405400D6768F /* Release */,
+				D50973D2255F3519008F944C /* Debug */,
+				D50973D3255F3519008F944C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D526757B251B405400D6768F /* Build configuration list for PBXNativeTarget "Starboard" */ = {
+		D50973D4255F3519008F944C /* Build configuration list for PBXNativeTarget "Starboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D526757C251B405400D6768F /* Debug */,
-				D526757D251B405400D6768F /* Release */,
+				D50973D5255F3519008F944C /* Debug */,
+				D50973D6255F3519008F944C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D50973CE255F3519008F944C /* Starboard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D50973CF255F3519008F944C /* Starboard.xcdatamodel */,
+			);
+			currentVersion = D50973CF255F3519008F944C /* Starboard.xcdatamodel */;
+			path = Starboard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = D526755F251B405100D6768F /* Project object */;
+	rootObject = D50973B8255F3516008F944C /* Project object */;
 }
