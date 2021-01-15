@@ -10,6 +10,7 @@
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
+		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
 		D50973C4255F3517008F944C /* StarboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarboardApp.swift */; };
 		D50973C6255F3517008F944C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C5255F3517008F944C /* ContentView.swift */; };
 		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
 		D50973C0255F3517008F944C /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50973C3255F3517008F944C /* StarboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardApp.swift; sourceTree = "<group>"; };
 		D50973C5255F3517008F944C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68CBEA1925B11C5B001E0FFF /* GoalViews */ = {
+			isa = PBXGroup;
+			children = (
+				68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */,
+			);
+			path = GoalViews;
+			sourceTree = "<group>";
+		};
 		D50973B7255F3516008F944C = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		D53957972565E1E7001D7497 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				68CBEA1925B11C5B001E0FFF /* GoalViews */,
 				D50973CE255F3519008F944C /* Starboard.xcdatamodeld */,
 			);
 			path = Models;
@@ -259,6 +270,7 @@
 				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
 				68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */,
 				68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */,
+				68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */,
 				D5EB414A256B30380089250B /* AddGoalView.swift in Sources */,
 				D5EB4150256B30C50089250B /* DayListView.swift in Sources */,
 				D5EB4156256B30FC0089250B /* SettingsView.swift in Sources */,

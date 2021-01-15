@@ -12,12 +12,7 @@ struct AddGoalView: View {
     @Environment(\.presentationMode) var presentationMode // For modal view control
     
     // New goal data
-    @State var name: String = ""
-    @State var desc: String = ""
-    @State var startDate: Date = Calendar.current.startOfDay(for: Date())
-    @State var endDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
-    @State var color = Color.blue
-    @State var icon: String = "star.fill"
+    @ObservedObject var viewModel = AddGoalViewModel()
     
     // State variables
     @State private var showingStartDate = false
@@ -45,12 +40,12 @@ struct AddGoalView: View {
         NavigationView {
             Form {
                 Section(header: Text("Info")) {
-                    TextField("Name", text: $name)
+                    TextField("Name", text: $viewModel.name)
                         .keyboardType(.default)
-                    TextField("Description", text: $desc)
+                    TextField("Description", text: $viewModel.desc)
                         .keyboardType(.default)
-                    ColorPicker("Color", selection: $color)
-                    Picker(selection: $icon, label: Text("Icon"), content: {
+                    ColorPicker("Color", selection: $viewModel.color)
+                    Picker(selection: $viewModel.icon, label: Text("Icon"), content: {
                         ForEach(AddGoalView.icons, id: \.self) { icon in
                             Image(systemName: icon)
                         }
@@ -61,14 +56,14 @@ struct AddGoalView: View {
                     HStack {
                         Label("Start Date", systemImage: "calendar")
                         Spacer()
-                        Text("\(startDate, formatter: AddGoalView.dateFormatter)")
+                        Text("\($viewModel.startDate.wrappedValue, formatter: AddGoalView.dateFormatter)")
                     }
                     .onTapGesture {
                         showingStartDate.toggle()
                         showingEndDate = false
                     }
                     if showingStartDate {
-                        DatePicker(selection: $startDate, in: Date()..., displayedComponents: .date) {}
+                        DatePicker(selection: $viewModel.startDate, in: Date()..., displayedComponents: .date) {}
                             .labelsHidden()
                             .datePickerStyle(GraphicalDatePickerStyle())
                     }
@@ -76,14 +71,14 @@ struct AddGoalView: View {
                     HStack {
                         Label("End Date", systemImage: "calendar")
                         Spacer()
-                        Text("\(endDate, formatter: AddGoalView.dateFormatter)")
+                        Text("\($viewModel.endDate.wrappedValue, formatter: AddGoalView.dateFormatter)")
                     }
                     .onTapGesture {
                         showingStartDate = false
                         showingEndDate.toggle()
                     }
                     if showingEndDate {
-                        DatePicker(selection: $endDate, in: Calendar.current.date(byAdding: .day, value: 1, to: self.startDate)! ... Calendar.current.date(byAdding: .year, value: 1, to: self.startDate)!, displayedComponents: .date) {}
+                        DatePicker(selection: $viewModel.endDate, in: Calendar.current.date(byAdding: .day, value: 1, to: $viewModel.startDate.wrappedValue)! ... Calendar.current.date(byAdding: .year, value: 1, to: $viewModel.startDate.wrappedValue)!, displayedComponents: .date) {}
                             .labelsHidden()
                             .datePickerStyle(GraphicalDatePickerStyle())
                     }
@@ -99,12 +94,12 @@ struct AddGoalView: View {
                 trailing: Button(action: {
                     // Create new goal
                     let newGoal = Goal(context: viewContext)
-                    newGoal.name = name
-                    newGoal.desc = desc
-                    newGoal.startDate = startDate
-                    newGoal.endDate = endDate
-                    newGoal.color = UIColor(color)
-                    newGoal.icon = icon
+                    newGoal.name = $viewModel.name.wrappedValue
+                    newGoal.desc = $viewModel.desc.wrappedValue
+                    newGoal.startDate = $viewModel.startDate.wrappedValue
+                    newGoal.endDate = $viewModel.endDate.wrappedValue
+                    newGoal.color = UIColor($viewModel.color.wrappedValue)
+                    newGoal.icon = $viewModel.icon.wrappedValue
                     newGoal.id = UUID()
                     // Populate new goal's daysCompleted with however many Days
                     var days: [Day] = []
@@ -121,7 +116,7 @@ struct AddGoalView: View {
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Text("Add")
-                }).disabled(name.isEmpty || desc.isEmpty)
+                }).disabled($viewModel.name.wrappedValue.isEmpty || $viewModel.desc.wrappedValue.isEmpty)
             )
         }
     }
