@@ -50,7 +50,7 @@ struct ContentView_Previews: PreviewProvider {
             day.number = Int16(n)
             daysCompleted.append(day)
         }
-        g.daysCompleted = NSSet(array: daysCompleted)
+        g.days = NSSet(array: daysCompleted)
         return g
     }
 

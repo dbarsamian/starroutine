@@ -17,8 +17,8 @@ struct StarboardView: View {
     
     var body: some View {
         List() {
-            ForEach(goal.daysCompleted!.sortedArray(using: [NSSortDescriptor(keyPath: \Day.number, ascending: true)]) as! [Day], id: \Day.number) { day in
-                DayListView(day: day)
+            ForEach(goal.days!.sortedArray(using: [NSSortDescriptor(keyPath: \Day.number, ascending: true)]) as! [Day], id: \Day.number) { day in
+                DayView(day: day)
                     .id(day.date)
             }
             .frame(height: 75)

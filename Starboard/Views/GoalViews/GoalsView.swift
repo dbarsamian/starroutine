@@ -10,14 +10,14 @@ import SwiftUI
 struct GoalsView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) private var presentation
-    
+
     @FetchRequest(entity: Goal.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Goal.startDate, ascending: true), NSSortDescriptor(keyPath: \Goal.name, ascending: true)]) var goals: FetchedResults<Goal>
-    
+
     @State var showingAddGoals = false
     @State var showingAlert = false
-    
+
     @State private var selectedGoal: UUID?
-    
+
     var body: some View {
         NavigationView {
             if goals.isEmpty {
@@ -29,7 +29,7 @@ struct GoalsView: View {
                             destination: StarboardView(goal: goal),
                             tag: goal.id!,
                             selection: $selectedGoal) {
-                            GoalLinkView(goal: goal)
+                                GoalLinkView(goal: goal)
                         }
                     }
                     .onDelete(perform: { indexSet in
@@ -38,11 +38,11 @@ struct GoalsView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarItems(trailing:
-                                        Button(action: {
-                                            self.showingAddGoals.toggle()
-                                        }, label: {
-                                            Image(systemName: "plus.circle").imageScale(.large)
-                                        })
+                    Button(action: {
+                        self.showingAddGoals.toggle()
+                    }, label: {
+                        Image(systemName: "plus.circle").imageScale(.large)
+                    })
                 )
                 .sheet(isPresented: $showingAddGoals, content: {
                     AddGoalView()

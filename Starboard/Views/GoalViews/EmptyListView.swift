@@ -11,18 +11,22 @@ struct EmptyListView: View {
     @State var showingAddGoals = false
     
     var body: some View {
-        Text("There's no goals here!\nTap the plus icon to make a new one.")
-            .padding(.all)
-            .navigationBarItems(trailing:
-                Button(action: {
-                    self.showingAddGoals.toggle()
-                }, label: {
-                    Image(systemName: "plus.circle").imageScale(.large)
+        VStack {
+            Text("\"You are never too old to set another goal or to dream a new dream.\" - C.S. Lewis")
+                .padding(.all)
+                .font(.subheadline)
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        self.showingAddGoals.toggle()
+                    }, label: {
+                        Image(systemName: "plus.circle").imageScale(.large)
+                    })
+                )
+                .sheet(isPresented: $showingAddGoals, content: {
+                    AddGoalView()
                 })
-            )
-            .sheet(isPresented: $showingAddGoals, content: {
-                AddGoalView()
-            })
-            .navigationBarTitle("Goals")
+                .navigationBarTitle("Goals")
+            Spacer()
+        }
     }
 }

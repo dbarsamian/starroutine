@@ -58,14 +58,18 @@ struct AddGoalView: View {
                         Spacer()
                         Text("\($viewModel.startDate.wrappedValue, formatter: AddGoalView.dateFormatter)")
                     }
+                    .contentShape(Rectangle())
                     .onTapGesture {
-                        showingStartDate.toggle()
-                        showingEndDate = false
+                        withAnimation(.easeInOut(duration: 4)) {
+                            showingStartDate.toggle()
+                            showingEndDate = false
+                        }
                     }
                     if showingStartDate {
                         DatePicker(selection: $viewModel.startDate, in: Date()..., displayedComponents: .date) {}
                             .labelsHidden()
                             .datePickerStyle(GraphicalDatePickerStyle())
+                            .padding(.top)
                     }
                     // End Date
                     HStack {
@@ -73,14 +77,18 @@ struct AddGoalView: View {
                         Spacer()
                         Text("\($viewModel.endDate.wrappedValue, formatter: AddGoalView.dateFormatter)")
                     }
+                    .contentShape(Rectangle())
                     .onTapGesture {
-                        showingStartDate = false
-                        showingEndDate.toggle()
+                        withAnimation(.easeInOut(duration: 4)) {
+                            showingStartDate = false
+                            showingEndDate.toggle()
+                        }
                     }
                     if showingEndDate {
                         DatePicker(selection: $viewModel.endDate, in: Calendar.current.date(byAdding: .day, value: 1, to: $viewModel.startDate.wrappedValue)! ... Calendar.current.date(byAdding: .year, value: 1, to: $viewModel.startDate.wrappedValue)!, displayedComponents: .date) {}
                             .labelsHidden()
                             .datePickerStyle(GraphicalDatePickerStyle())
+                            .padding(.top)
                     }
                 }
             }
@@ -106,10 +114,10 @@ struct AddGoalView: View {
                     for n in 1 ... newGoal.endDate!.interval(ofComponent: .day, fromDate: newGoal.startDate!) {
                         let newDay = Day(context: viewContext)
                         newDay.number = Int16(n)
-                        newDay.date = Calendar.current.startOfDay(for: Date())
+                        newDay.date = Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .day, value: n - 1, to: Date())!)
                         days.append(newDay)
                     }
-                    newGoal.daysCompleted = NSSet(array: days)
+                    newGoal.days = NSSet(array: days)
                     
                     // Save new goal
                     try? viewContext.save()
