@@ -3,6 +3,9 @@
 
 *Starboard* is a daily goal tracking app designed to make it rewarding and easy to create new habits and achieve your goals.
 
+[![GitHub license](https://img.shields.io/github/license/dbarsamian/starboard)](https://github.com/dbarsamian/starboard/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/dbarsamian/starboard)](https://github.com/dbarsamian/starboard/issues)
+
 ## ✨New: SwiftUI Rewrite
 *Starboard* has been rewritten from the ground up in SwiftUI using the new App protocol. SwiftUI is the future of developing for Apple's platforms and reduces the amount of work I need to do on things like UI, Cross-Platform Compatability, and Core Data implementation. The move to SwiftUI has also resulted in a smaller project size and smaller binary size.
 
