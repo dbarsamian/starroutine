@@ -12,6 +12,7 @@
         <attribute name="daysCompleted" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="desc" attributeType="String" defaultValueString=""/>
         <attribute name="endDate" attributeType="Date" defaultDateTimeInterval="627528060" usesScalarValueType="NO"/>
+        <attribute name="hardMode" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="icon" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
@@ -20,6 +21,6 @@
     </entity>
     <elements>
         <element name="Day" positionX="246" positionY="19" width="128" height="89"/>
-        <element name="Goal" positionX="-57" positionY="-9" width="128" height="179"/>
+        <element name="Goal" positionX="-57" positionY="-9" width="128" height="194"/>
     </elements>
 </model>

@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct StarboardView: View {
+    // Data
     var goal: Goal
+    @Environment(\.colorScheme) var colorScheme
+    
+    // Formatting
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
         df.dateStyle = .medium
@@ -21,6 +25,7 @@ struct StarboardView: View {
                 ForEach(goal.days!.sortedArray(using: [NSSortDescriptor(keyPath: \Day.number, ascending: true)]) as! [Day], id: \Day.number) { day in
                     DayView(day: day)
                         .id(day.date)
+                        .listRowBackground(Calendar.current.startOfDay(for: Date()).compare(day.date!) == ComparisonResult.orderedSame ? (colorScheme == .dark ? Color(goal.color!).darken() : Color(goal.color!).lighten()) : Color(UIColor.secondarySystemGroupedBackground))
                 }
                 .frame(height: 75)
             }

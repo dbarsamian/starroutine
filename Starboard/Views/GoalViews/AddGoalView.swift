@@ -35,6 +35,7 @@ struct AddGoalView: View {
         "gift.circle.fill",
         "airplane.circle.fill"
     ]
+    static let hardModeDescription: String = "Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. Beware, as this cannot be changed after you make your goal!"
     
     var body: some View {
         NavigationView {
@@ -42,6 +43,7 @@ struct AddGoalView: View {
                 Section(header: Text("Info")) {
                     TextField("Name", text: $viewModel.name)
                         .keyboardType(.default)
+                        .autocapitalization(.words)
                     TextField("Description", text: $viewModel.desc)
                         .keyboardType(.default)
                     ColorPicker("Color", selection: $viewModel.color)
@@ -60,6 +62,7 @@ struct AddGoalView: View {
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {
+                        self.hideKeyboard()
                         withAnimation(.easeInOut(duration: 4)) {
                             showingStartDate.toggle()
                             showingEndDate = false
@@ -79,6 +82,7 @@ struct AddGoalView: View {
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {
+                        self.hideKeyboard()
                         withAnimation(.easeInOut(duration: 4)) {
                             showingStartDate = false
                             showingEndDate.toggle()
@@ -90,6 +94,11 @@ struct AddGoalView: View {
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .padding(.top)
                     }
+                }
+                Section(header: Text("Other"), footer: Text("\(AddGoalView.hardModeDescription)")) {
+                    Toggle(isOn: $viewModel.hardMode, label: {
+                        Text("Hard Mode")
+                    })
                 }
             }
             .navigationBarTitle("New Goal", displayMode: .inline)

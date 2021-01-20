@@ -36,14 +36,26 @@ struct GoalsView: View {
                         deleteGoal(indexSet: indexSet, selectedGoal: $selectedGoal, goals: goals, showingAlert: $showingAlert)
                     })
                 }
+                .toolbar {
+                    ToolbarItem(placement: ToolbarItemPlacement.navigation) {
+                        EditButton()
+                    }
+                    ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {
+                        Button(action: {
+                            self.showingAddGoals.toggle()
+                        }, label: {
+                            Image(systemName: "plus.circle").imageScale(.large)
+                        })
+                    }
+                }
                 .listStyle(InsetGroupedListStyle())
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.showingAddGoals.toggle()
-                    }, label: {
-                        Image(systemName: "plus.circle").imageScale(.large)
-                    })
-                )
+//                .navigationBarItems(leading: EditButton(),
+//                                    trailing:
+//                                    Button(action: {
+//                                        self.showingAddGoals.toggle()
+//                                    }, label: {
+//                                        Image(systemName: "plus.circle").imageScale(.large)
+//                                    }))
                 .sheet(isPresented: $showingAddGoals, content: {
                     AddGoalView()
                 })

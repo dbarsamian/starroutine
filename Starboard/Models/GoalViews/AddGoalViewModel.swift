@@ -21,4 +21,5 @@ class AddGoalViewModel: ObservableObject {
     @Published var endDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
     @Published var color = Color.blue
     @Published var icon: String = "star.fill"
+    @Published var hardMode: Bool = false
 }

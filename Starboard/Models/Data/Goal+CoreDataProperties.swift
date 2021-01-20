@@ -26,6 +26,7 @@ extension Goal {
     @NSManaged public var startDate: Date?
     @NSManaged public var daysCompleted: Int16
     @NSManaged public var days: NSSet?
+    @NSManaged public var hardMode: Bool
 
 }
 
