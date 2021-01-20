@@ -37,26 +37,33 @@ struct DayView: View {
                         .font(.title)
                         .foregroundColor(.gray)
                 }
-                Text("\(DayView.dateFormatter.string(from: day.date!))")
-                    .font(.caption)
+                if Calendar.current.startOfDay(for: Date()).compare(day.date!) == ComparisonResult.orderedSame {
+                    Text("\(DayView.dateFormatter.string(from: day.date!)) - Today")
+                        .font(.caption)
+                        .italic()
+                } else {
+                    Text("\(DayView.dateFormatter.string(from: day.date!))")
+                        .font(.caption)
+                        .italic()
+                }
             }
             Spacer()
-            Image(systemName: day.goal!.icon ?? "star")
-                .font(.largeTitle)
-                .scaleEffect(day.date!.timeIntervalSince(Calendar.current.startOfDay(for: Date())) <= 0 ? (day.completed ? 1.5 : 1.0) : 0.75)
-                .foregroundColor(day.completed ? Color(day.goal!.color!) : Color.gray)
-                .onTapGesture {
-                    // If this date is in the future OR
-                    // if hard mode is on and the date is in the past OR
-                    // if the goal has completed, don't allow marking
-                    if day.date!.compare(Calendar.current.startOfDay(for: Date())) == ComparisonResult.orderedDescending
-                        || (day.goal!.hardMode && day.date!.compare(Calendar.current.startOfDay(for: Date())) == ComparisonResult.orderedAscending)
-                        || day.goal!.completed
-                    {
-                        return
-                    }
-                    // else, mark/unmark the day
-                    withAnimation(.interpolatingSpring(stiffness: 50, damping: 5)) {
+            withAnimation(.interpolatingSpring(stiffness: 50, damping: 5)) {
+                Image(systemName: day.goal!.icon ?? "star")
+                    .font(.largeTitle)
+                    .scaleEffect(day.date!.timeIntervalSince(Calendar.current.startOfDay(for: Date())) <= 0 ? (day.completed ? 1.5 : 1.0) : 0.75)
+                    .foregroundColor(day.completed ? Color(day.goal!.color!) : Color.gray)
+                    .onTapGesture {
+                        // If this date is in the future OR
+                        // if hard mode is on and the date is in the past OR
+                        // if the goal has completed, don't allow marking
+                        if day.date!.compare(Calendar.current.startOfDay(for: Date())) == ComparisonResult.orderedDescending
+                            || (day.goal!.hardMode && day.date!.compare(Calendar.current.startOfDay(for: Date())) == ComparisonResult.orderedAscending)
+                            || day.goal!.completed
+                        {
+                            return
+                        }
+                        // else, mark/unmark the day
                         self.day.completed.toggle()
                         dayComplete = self.day.completed
                         if dayComplete {
@@ -67,8 +74,8 @@ struct DayView: View {
                             print("Day uncomplete, total is now \(self.day.goal!.daysCompleted)")
                         }
                     }
-                }
-                .animation(.spring())
+            }
+            .animation(.spring())
         })
             .onReceive(self.day.objectWillChange) {
                 try? self.viewContext.save()

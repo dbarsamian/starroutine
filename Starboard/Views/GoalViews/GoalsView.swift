@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct GoalsView: View {
+    // Environment
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) private var presentation
+    @Environment(\.editMode) private var editMode
 
+    // Core Data
     @FetchRequest(entity: Goal.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Goal.startDate, ascending: true), NSSortDescriptor(keyPath: \Goal.name, ascending: true)]) var goals: FetchedResults<Goal>
 
+    // Properties
     @State var showingAddGoals = false
     @State var showingAlert = false
-
     @State private var selectedGoal: UUID?
 
     var body: some View {
@@ -49,13 +52,6 @@ struct GoalsView: View {
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
-//                .navigationBarItems(leading: EditButton(),
-//                                    trailing:
-//                                    Button(action: {
-//                                        self.showingAddGoals.toggle()
-//                                    }, label: {
-//                                        Image(systemName: "plus.circle").imageScale(.large)
-//                                    }))
                 .sheet(isPresented: $showingAddGoals, content: {
                     AddGoalView()
                 })

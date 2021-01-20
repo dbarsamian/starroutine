@@ -37,8 +37,7 @@ struct StarboardView: View {
                         return
                     }
                     if Calendar.current.startOfDay(for: Date()).compare(date.date!) == ComparisonResult.orderedSame {
-                        print("Date matches! \(date.number) \(date.date!)")
-                        withAnimation(.easeIn) {
+                        withAnimation(.default) {
                             proxy.scrollTo(Calendar.current.startOfDay(for: date.date!))
                         }
                     }

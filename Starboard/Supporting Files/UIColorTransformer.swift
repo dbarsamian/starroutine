@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc(UIColorValueTransformer)
+@objc(UIColorTransformer)
 final class UIColorTransformer: NSSecureUnarchiveFromDataTransformer {
     
     // The name of the transformer. This is the name used to register the transformer using `ValueTransformer.setValueTransformer(_"forName:)`
