@@ -68,10 +68,8 @@ struct DayView: View {
                         dayComplete = self.day.completed
                         if dayComplete {
                             self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted + 1).clamped(to: 0...Int16(self.day.goal!.days!.count))
-                            print("Day complete, total is now \(self.day.goal!.daysCompleted)")
                         } else {
                             self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted - 1).clamped(to: 0...Int16(self.day.goal!.days!.count))
-                            print("Day uncomplete, total is now \(self.day.goal!.daysCompleted)")
                         }
                     }
             }
