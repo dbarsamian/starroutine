@@ -68,8 +68,12 @@ struct DayView: View {
                         dayComplete = self.day.completed
                         if dayComplete {
                             self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted + 1).clamped(to: 0...Int16(self.day.goal!.days!.count))
+                            let impact = UIImpactFeedbackGenerator(style: .medium)
+                            impact.impactOccurred()
                         } else {
                             self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted - 1).clamped(to: 0...Int16(self.day.goal!.days!.count))
+                            let impact = UIImpactFeedbackGenerator(style: .soft)
+                            impact.impactOccurred()
                         }
                     }
             }

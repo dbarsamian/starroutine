@@ -47,6 +47,4 @@ extension Goal {
 
 }
 
-extension Goal : Identifiable {
-
-}
+extension Goal : Identifiable {}

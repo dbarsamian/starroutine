@@ -8,24 +8,20 @@
 import SwiftUI
 
 struct AddGoalView: View {
-    @Environment(\.managedObjectContext) private var viewContext // For Core Data
-    @Environment(\.presentationMode) var presentationMode // For modal view control
+    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentationMode
     
-    // New goal data
     @ObservedObject var viewModel = AddGoalViewModel()
     
-    // State variables
     @State private var showingStartDate = false
     @State private var showingEndDate = false
     
-    // Formatting
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter
     }()
     
-    // Constant
     static let icons: [String] = [
         "star.fill",
         "moon.stars.fill",

@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68B0B5DA26104C5900F2A039 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */; };
+		68B0B5DB26104C5900F2A039 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */; };
+		68B0B5DC26104C5900F2A039 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */; };
+		68B0B5DD26104C5900F2A039 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */; };
+		68B0B5DE26104C5900F2A039 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */; };
+		68B0B5DF26104C5900F2A039 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */; };
+		68B0B5E026104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */; };
+		68B0B5E126104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */; };
+		68B0B5E226104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */; };
+		68B0B5E326104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */; };
+		68B0B5E426104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */; };
+		68B0B5E526104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */; };
+		68B0B5E626104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */; };
+		68B0B5E726104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */; };
+		68B0B5E826104C5900F2A039 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */; };
+		68B0B5E926104C5900F2A039 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
@@ -17,6 +33,11 @@
 		68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */; };
 		68E37E9325B24E4F001D7AD9 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E9225B24E4F001D7AD9 /* Goal+CoreDataProperties.swift */; };
 		68E37E9725B2542C001D7AD9 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E9625B2542C001D7AD9 /* ComparableExtension.swift */; };
+		68E876A725D24FE5008C341A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF216C25B8A83D00374FCB /* WidgetKit.framework */; };
+		68E876A825D24FE5008C341A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF216E25B8A83D00374FCB /* SwiftUI.framework */; };
+		68E876AB25D24FE5008C341A /* StarboardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E876AA25D24FE5008C341A /* StarboardWidget.swift */; };
+		68E876AD25D24FE6008C341A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E876AC25D24FE6008C341A /* Assets.xcassets */; };
+		68E876B125D24FE6008C341A /* StarboardWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D50973C4255F3517008F944C /* StarboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarboardApp.swift */; };
 		D50973C6255F3517008F944C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C5255F3517008F944C /* ContentView.swift */; };
 		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
@@ -34,17 +55,56 @@
 		D5EB4156256B30FC0089250B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4155256B30FC0089250B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		68E876AF25D24FE6008C341A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D50973B8255F3516008F944C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68E876A525D24FE5008C341A;
+			remoteInfo = StarboardWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		68DF217C25B8A84100374FCB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				68E876B125D24FE6008C341A /* StarboardWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		680545B425D2593900AB173A /* Starboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Starboard.entitlements; sourceTree = "<group>"; };
+		68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.ttf"; sourceTree = "<group>"; };
+		68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.ttf"; sourceTree = "<group>"; };
+		68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
+		68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
+		68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
+		68DF216C25B8A83D00374FCB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		68DF216E25B8A83D00374FCB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		68E37E7F25B23AE8001D7AD9 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68E37E8025B23AE8001D7AD9 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68E37E8125B23AE8001D7AD9 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
 		68E37E9225B24E4F001D7AD9 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68E37E9625B2542C001D7AD9 /* ComparableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtension.swift; sourceTree = "<group>"; };
+		68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StarboardWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		68E876AA25D24FE5008C341A /* StarboardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardWidget.swift; sourceTree = "<group>"; };
+		68E876AC25D24FE6008C341A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68E876AE25D24FE6008C341A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50973C0255F3517008F944C /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50973C3255F3517008F944C /* StarboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardApp.swift; sourceTree = "<group>"; };
 		D50973C5255F3517008F944C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +125,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		68E876A325D24FE5008C341A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E876A825D24FE5008C341A /* SwiftUI.framework in Frameworks */,
+				68E876A725D24FE5008C341A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D50973BD255F3517008F944C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,12 +144,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68B0B5D126104C4C00F2A039 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */,
+				68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */,
+				68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */,
+				68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */,
+				68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */,
+				68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */,
+				68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */,
+				68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		68CBEA1925B11C5B001E0FFF /* GoalViews */ = {
 			isa = PBXGroup;
 			children = (
 				68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */,
 			);
 			path = GoalViews;
+			sourceTree = "<group>";
+		};
+		68DF216B25B8A83D00374FCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68DF216C25B8A83D00374FCB /* WidgetKit.framework */,
+				68DF216E25B8A83D00374FCB /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		68E37E8925B23B30001D7AD9 /* Data */ = {
@@ -94,10 +187,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		68E876A925D24FE5008C341A /* StarboardWidget */ = {
+			isa = PBXGroup;
+			children = (
+				68E876AA25D24FE5008C341A /* StarboardWidget.swift */,
+				68E876AC25D24FE6008C341A /* Assets.xcassets */,
+				68E876AE25D24FE6008C341A /* Info.plist */,
+			);
+			path = StarboardWidget;
+			sourceTree = "<group>";
+		};
 		D50973B7255F3516008F944C = {
 			isa = PBXGroup;
 			children = (
 				D50973C2255F3517008F944C /* Starboard */,
+				68E876A925D24FE5008C341A /* StarboardWidget */,
+				68DF216B25B8A83D00374FCB /* Frameworks */,
 				D50973C1255F3517008F944C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D50973C0255F3517008F944C /* Starboard.app */,
+				68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +219,7 @@
 		D50973C2255F3517008F944C /* Starboard */ = {
 			isa = PBXGroup;
 			children = (
+				680545B425D2593900AB173A /* Starboard.entitlements */,
 				D50973D1255F3519008F944C /* Info.plist */,
 				D53957972565E1E7001D7497 /* Models */,
 				D53957932565E1D6001D7497 /* Views */,
@@ -165,6 +272,7 @@
 		D53957982565E1F8001D7497 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68B0B5D126104C4C00F2A039 /* Fonts */,
 				D50973C7255F3519008F944C /* Assets.xcassets */,
 				D50973C9255F3519008F944C /* Preview Content */,
 				68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */,
@@ -223,6 +331,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		68E876A525D24FE5008C341A /* StarboardWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68E876B425D24FE6008C341A /* Build configuration list for PBXNativeTarget "StarboardWidgetExtension" */;
+			buildPhases = (
+				68E876A225D24FE5008C341A /* Sources */,
+				68E876A325D24FE5008C341A /* Frameworks */,
+				68E876A425D24FE5008C341A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarboardWidgetExtension;
+			productName = StarboardWidgetExtension;
+			productReference = 68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D50973BF255F3517008F944C /* Starboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D50973D4255F3519008F944C /* Build configuration list for PBXNativeTarget "Starboard" */;
@@ -230,10 +355,12 @@
 				D50973BC255F3517008F944C /* Sources */,
 				D50973BD255F3517008F944C /* Frameworks */,
 				D50973BE255F3517008F944C /* Resources */,
+				68DF217C25B8A84100374FCB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				68E876B025D24FE6008C341A /* PBXTargetDependency */,
 			);
 			name = Starboard;
 			productName = Starboard;
@@ -246,9 +373,12 @@
 		D50973B8255F3516008F944C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					68E876A525D24FE5008C341A = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					D50973BF255F3517008F944C = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -268,23 +398,56 @@
 			projectRoot = "";
 			targets = (
 				D50973BF255F3517008F944C /* Starboard */,
+				68E876A525D24FE5008C341A /* StarboardWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		68E876A425D24FE5008C341A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B0B5DD26104C5900F2A039 /* Cabin-Medium.ttf in Resources */,
+				68B0B5E926104C5900F2A039 /* Cabin-Italic.ttf in Resources */,
+				68B0B5E326104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */,
+				68B0B5DF26104C5900F2A039 /* Cabin-Bold.ttf in Resources */,
+				68B0B5E726104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */,
+				68B0B5E526104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */,
+				68E876AD25D24FE6008C341A /* Assets.xcassets in Resources */,
+				68B0B5DB26104C5900F2A039 /* Cabin-Regular.ttf in Resources */,
+				68B0B5E126104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D50973BE255F3517008F944C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */,
+				68B0B5E626104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */,
+				68B0B5E426104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */,
+				68B0B5E026104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */,
+				68B0B5E826104C5900F2A039 /* Cabin-Italic.ttf in Resources */,
 				D50973C8255F3519008F944C /* Assets.xcassets in Resources */,
+				68B0B5DA26104C5900F2A039 /* Cabin-Regular.ttf in Resources */,
+				68B0B5DC26104C5900F2A039 /* Cabin-Medium.ttf in Resources */,
+				68B0B5E226104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */,
+				68B0B5DE26104C5900F2A039 /* Cabin-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		68E876A225D24FE5008C341A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E876AB25D24FE5008C341A /* StarboardWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D50973BC255F3517008F944C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,7 +480,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		68E876B025D24FE6008C341A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68E876A525D24FE5008C341A /* StarboardWidgetExtension */;
+			targetProxy = 68E876AF25D24FE6008C341A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		68E876B225D24FE6008C341A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J97PER9B8T;
+				INFOPLIST_FILE = StarboardWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.StarboardWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68E876B325D24FE6008C341A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J97PER9B8T;
+				INFOPLIST_FILE = StarboardWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.StarboardWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D50973D2255F3519008F944C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -437,8 +652,10 @@
 		D50973D5255F3519008F944C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Starboard/Starboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Starboard/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = J97PER9B8T;
@@ -459,8 +676,10 @@
 		D50973D6255F3519008F944C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Starboard/Starboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Starboard/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = J97PER9B8T;
@@ -481,6 +700,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		68E876B425D24FE6008C341A /* Build configuration list for PBXNativeTarget "StarboardWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68E876B225D24FE6008C341A /* Debug */,
+				68E876B325D24FE6008C341A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D50973BB255F3516008F944C /* Build configuration list for PBXProject "Starboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

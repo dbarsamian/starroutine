@@ -12,9 +12,11 @@ struct EmptyListView: View {
     
     var body: some View {
         VStack {
-            Text("\"You are never too old to set another goal or to dream a new dream.\" - C.S. Lewis")
-                .padding(.all)
-                .font(.subheadline)
+            Spacer()
+            Text("\"You are never too old to set a new goal\nor to dream a new dream.\" - C.S. Lewis")
+                .padding(.horizontal, 25)
+                .font(Font.subheadline.italic())
+                .foregroundColor(Color(UIColor.secondaryLabel))
                 .navigationBarItems(trailing:
                     Button(action: {
                         self.showingAddGoals.toggle()

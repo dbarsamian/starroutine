@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct StarboardView: View {
-    // Data
-    var goal: Goal
     @Environment(\.colorScheme) var colorScheme
-    
-    // Formatting
+
+    var goal: Goal
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
         df.dateStyle = .medium
         return df
     }
-    
+
     var body: some View {
         ScrollViewReader { proxy in
-            List() {
+            List {
                 ForEach(goal.days!.sortedArray(using: [NSSortDescriptor(keyPath: \Day.number, ascending: true)]) as! [Day], id: \Day.number) { day in
                     DayView(day: day)
                         .id(day.date)
@@ -31,7 +29,7 @@ struct StarboardView: View {
             }
             .navigationBarTitle("Starboard")
             .listStyle(InsetGroupedListStyle())
-            .onAppear() { // Scroll to today
+            .onAppear { // Scroll to today
                 for rawDate in goal.days! {
                     guard let date = rawDate as? Day else {
                         return
