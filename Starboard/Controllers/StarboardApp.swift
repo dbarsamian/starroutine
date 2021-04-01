@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
+import FirstOpenViews
 import CoreData
-import os
 
 @main
 struct StarboardApp: App {
@@ -20,6 +20,11 @@ struct StarboardApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .welcomeView(mainColor: .accentColor, informationDetailViews: [
+                    InformationDetailView(title: "Make Goals", subTitle: "Create customized goals to focus on what's important.", image: Image(systemName: "list.star"), mainColor: .orange),
+                    InformationDetailView(title: "Build Habits", subTitle: "Track your goals every day with a single tap.", image: Image(systemName: "star.circle.fill"), mainColor: Color("StarColor")),
+                    InformationDetailView(title: "History", subTitle: "Keep track of your progress over time.", image: Image(systemName: "calendar"), mainColor: .red)
+                ])
         }
         .onChange(of: scenePhase) { (phase) in
             switch phase {

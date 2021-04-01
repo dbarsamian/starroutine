@@ -23,6 +23,7 @@
 		68B0B5E726104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */; };
 		68B0B5E826104C5900F2A039 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */; };
 		68B0B5E926104C5900F2A039 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */; };
+		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
@@ -138,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +365,9 @@
 				68E876B025D24FE6008C341A /* PBXTargetDependency */,
 			);
 			name = Starboard;
+			packageProductDependencies = (
+				68B5031526158CA900A324B3 /* FirstOpenViews */,
+			);
 			productName = Starboard;
 			productReference = D50973C0255F3517008F944C /* Starboard.app */;
 			productType = "com.apple.product-type.application";
@@ -393,6 +398,9 @@
 				Base,
 			);
 			mainGroup = D50973B7255F3516008F944C;
+			packageReferences = (
+				68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */,
+			);
 			productRefGroup = D50973C1255F3517008F944C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -728,6 +736,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LucasMucGH/FirstOpenViews";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68B5031526158CA900A324B3 /* FirstOpenViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */;
+			productName = FirstOpenViews;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D50973CE255F3519008F944C /* Starboard.xcdatamodeld */ = {

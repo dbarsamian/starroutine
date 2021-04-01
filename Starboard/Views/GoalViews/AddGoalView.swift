@@ -31,7 +31,7 @@ struct AddGoalView: View {
         "gift.circle.fill",
         "airplane.circle.fill"
     ]
-    static let hardModeDescription: String = "Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. Beware, as this cannot be changed after you make your goal!"
+    static let hardModeDescription: String = "Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. Be careful, this cannot be changed after you make your goal!"
     
     var body: some View {
         NavigationView {

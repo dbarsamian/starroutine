@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FirstOpenViews",
+        "repositoryURL": "https://github.com/LucasMucGH/FirstOpenViews",
+        "state": {
+          "branch": "main",
+          "revision": "0bd03948ce7296f1dcdbcb3dd06025c3918e592c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
