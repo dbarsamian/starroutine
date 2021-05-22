@@ -6,45 +6,41 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 import UIKit
 
-extension Goal {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Goal> {
+public extension Goal {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Goal> {
         return NSFetchRequest<Goal>(entityName: "Goal")
     }
 
-    @NSManaged public var color: UIColor?
-    @NSManaged public var completed: Bool
-    @NSManaged public var desc: String?
-    @NSManaged public var endDate: Date?
-    @NSManaged public var icon: String?
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
-    @NSManaged public var startDate: Date?
-    @NSManaged public var daysCompleted: Int16
-    @NSManaged public var days: NSSet?
-    @NSManaged public var hardMode: Bool
-
+    @NSManaged var color: UIColor?
+    @NSManaged var completed: Bool
+    @NSManaged var desc: String?
+    @NSManaged var endDate: Date?
+    @NSManaged var icon: String?
+    @NSManaged var name: String?
+    @NSManaged var startDate: Date?
+    @NSManaged var daysCompleted: Int16
+    @NSManaged var days: NSSet?
+    @NSManaged var hardMode: Bool
 }
 
 // MARK: Generated accessors for days
-extension Goal {
 
+public extension Goal {
     @objc(addDaysObject:)
-    @NSManaged public func addToDays(_ value: Day)
+    @NSManaged func addToDays(_ value: Day)
 
     @objc(removeDaysObject:)
-    @NSManaged public func removeFromDays(_ value: Day)
+    @NSManaged func removeFromDays(_ value: Day)
 
     @objc(addDays:)
-    @NSManaged public func addToDays(_ values: NSSet)
+    @NSManaged func addToDays(_ values: NSSet)
 
     @objc(removeDays:)
-    @NSManaged public func removeFromDays(_ values: NSSet)
-
+    @NSManaged func removeFromDays(_ values: NSSet)
 }
 
-extension Goal : Identifiable {}
+extension Goal: Identifiable {}

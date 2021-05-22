@@ -7,27 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68B0B5DA26104C5900F2A039 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */; };
-		68B0B5DB26104C5900F2A039 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */; };
-		68B0B5DC26104C5900F2A039 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */; };
-		68B0B5DD26104C5900F2A039 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */; };
-		68B0B5DE26104C5900F2A039 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */; };
-		68B0B5DF26104C5900F2A039 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */; };
-		68B0B5E026104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */; };
-		68B0B5E126104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */; };
-		68B0B5E226104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */; };
-		68B0B5E326104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */; };
-		68B0B5E426104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */; };
-		68B0B5E526104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */; };
-		68B0B5E626104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */; };
-		68B0B5E726104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */; };
-		68B0B5E826104C5900F2A039 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */; };
-		68B0B5E926104C5900F2A039 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */; };
 		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
 		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
+		68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D81C8726465EFF0072E86C /* EmptyDetailView.swift */; };
 		68E37E8325B23AE8001D7AD9 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E7F25B23AE8001D7AD9 /* Day+CoreDataClass.swift */; };
 		68E37E8425B23AE8001D7AD9 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8025B23AE8001D7AD9 /* Day+CoreDataProperties.swift */; };
 		68E37E8525B23AE8001D7AD9 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8125B23AE8001D7AD9 /* Goal+CoreDataClass.swift */; };
@@ -82,18 +67,11 @@
 
 /* Begin PBXFileReference section */
 		680545B425D2593900AB173A /* Starboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Starboard.entitlements; sourceTree = "<group>"; };
-		68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.ttf"; sourceTree = "<group>"; };
-		68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.ttf"; sourceTree = "<group>"; };
-		68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.ttf"; sourceTree = "<group>"; };
-		68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
-		68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
-		68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
-		68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
+		68D81C8726465EFF0072E86C /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
 		68DF216C25B8A83D00374FCB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		68DF216E25B8A83D00374FCB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		68E37E7F25B23AE8001D7AD9 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -146,21 +124,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		68B0B5D126104C4C00F2A039 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				68B0B5D426104C5800F2A039 /* Cabin-Bold.ttf */,
-				68B0B5D726104C5800F2A039 /* Cabin-BoldItalic.ttf */,
-				68B0B5D926104C5900F2A039 /* Cabin-Italic.ttf */,
-				68B0B5D326104C5800F2A039 /* Cabin-Medium.ttf */,
-				68B0B5D826104C5900F2A039 /* Cabin-MediumItalic.ttf */,
-				68B0B5D226104C5800F2A039 /* Cabin-Regular.ttf */,
-				68B0B5D626104C5800F2A039 /* Cabin-SemiBold.ttf */,
-				68B0B5D526104C5800F2A039 /* Cabin-SemiBoldItalic.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		68CBEA1925B11C5B001E0FFF /* GoalViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +237,6 @@
 		D53957982565E1F8001D7497 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				68B0B5D126104C4C00F2A039 /* Fonts */,
 				D50973C7255F3519008F944C /* Assets.xcassets */,
 				D50973C9255F3519008F944C /* Preview Content */,
 				68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */,
@@ -301,6 +263,7 @@
 				D5EB4143256B2CB20089250B /* GoalLinkView.swift */,
 				D5EB4146256B2FC30089250B /* GoalsView.swift */,
 				D5EB4149256B30380089250B /* AddGoalView.swift */,
+				68D81C8726465EFF0072E86C /* EmptyDetailView.swift */,
 			);
 			path = GoalViews;
 			sourceTree = "<group>";
@@ -358,6 +321,7 @@
 				D50973BD255F3517008F944C /* Frameworks */,
 				D50973BE255F3517008F944C /* Resources */,
 				68DF217C25B8A84100374FCB /* Embed App Extensions */,
+				68D81C86264632460072E86C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -416,15 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B0B5DD26104C5900F2A039 /* Cabin-Medium.ttf in Resources */,
-				68B0B5E926104C5900F2A039 /* Cabin-Italic.ttf in Resources */,
-				68B0B5E326104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */,
-				68B0B5DF26104C5900F2A039 /* Cabin-Bold.ttf in Resources */,
-				68B0B5E726104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */,
-				68B0B5E526104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */,
 				68E876AD25D24FE6008C341A /* Assets.xcassets in Resources */,
-				68B0B5DB26104C5900F2A039 /* Cabin-Regular.ttf in Resources */,
-				68B0B5E126104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,19 +389,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */,
-				68B0B5E626104C5900F2A039 /* Cabin-MediumItalic.ttf in Resources */,
-				68B0B5E426104C5900F2A039 /* Cabin-BoldItalic.ttf in Resources */,
-				68B0B5E026104C5900F2A039 /* Cabin-SemiBoldItalic.ttf in Resources */,
-				68B0B5E826104C5900F2A039 /* Cabin-Italic.ttf in Resources */,
 				D50973C8255F3519008F944C /* Assets.xcassets in Resources */,
-				68B0B5DA26104C5900F2A039 /* Cabin-Regular.ttf in Resources */,
-				68B0B5DC26104C5900F2A039 /* Cabin-Medium.ttf in Resources */,
-				68B0B5E226104C5900F2A039 /* Cabin-SemiBold.ttf in Resources */,
-				68B0B5DE26104C5900F2A039 /* Cabin-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68D81C86264632460072E86C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68E876A225D24FE5008C341A /* Sources */ = {
@@ -481,6 +449,7 @@
 				D50973CD255F3519008F944C /* Persistence.swift in Sources */,
 				D50973C6255F3517008F944C /* ContentView.swift in Sources */,
 				68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */,
+				68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */,
 				D50973C4255F3517008F944C /* StarboardApp.swift in Sources */,
 				68E37E9725B2542C001D7AD9 /* ComparableExtension.swift in Sources */,
 			);
@@ -511,6 +480,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.StarboardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -533,6 +503,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.StarboardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -574,6 +545,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -635,6 +607,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -674,6 +647,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -698,6 +672,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

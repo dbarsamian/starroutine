@@ -7,25 +7,27 @@
 
 import SwiftUI
 
+// swiftlint:disable opening_brace
 struct DayView: View {
     @Environment(\.managedObjectContext) var viewContext
-    
+    @Environment(\.presentationMode) var presentationMode
+
     @ObservedObject var day: Day
-    
     @State private var dayComplete = false
-    
+
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter
     }()
-    
+
     init(day: Day) {
         self.day = day
-        dayComplete = self.day.completed
+        self.dayComplete = self.day.completed
     }
-    
+
     var body: some View {
+        if day.date != nil {
         HStack(alignment: .center, spacing: nil, content: {
             Spacer()
             VStack {
@@ -49,39 +51,55 @@ struct DayView: View {
             }
             Spacer()
             withAnimation(.interpolatingSpring(stiffness: 50, damping: 5)) {
-                Image(systemName: day.goal!.icon ?? "star")
+                Image(systemName: day.goal?.icon ?? "star")
                     .font(.largeTitle)
-                    .scaleEffect(day.date!.timeIntervalSince(Calendar.current.startOfDay(for: Date())) <= 0 ? (day.completed ? 1.5 : 1.0) : 0.75)
+                    .scaleEffect(day.date!.timeIntervalSince(
+                        Calendar.current.startOfDay(for: Date())) <= 0 ? (
+                        day.completed ? 1.5 : 1.0) :
+                        0.75
+                    )
                     .foregroundColor(day.completed ? Color(day.goal!.color!) : Color.gray)
-                    .onTapGesture {
-                        // If this date is in the future OR
-                        // if hard mode is on and the date is in the past OR
-                        // if the goal has completed, don't allow marking
-                        if day.date!.compare(Calendar.current.startOfDay(for: Date())) == ComparisonResult.orderedDescending
-                            || (day.goal!.hardMode && day.date!.compare(Calendar.current.startOfDay(for: Date())) == ComparisonResult.orderedAscending)
-                            || day.goal!.completed
-                        {
-                            return
-                        }
-                        // else, mark/unmark the day
-                        self.day.completed.toggle()
-                        dayComplete = self.day.completed
-                        if dayComplete {
-                            self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted + 1).clamped(to: 0...Int16(self.day.goal!.days!.count))
-                            let impact = UIImpactFeedbackGenerator(style: .medium)
-                            impact.impactOccurred()
-                        } else {
-                            self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted - 1).clamped(to: 0...Int16(self.day.goal!.days!.count))
-                            let impact = UIImpactFeedbackGenerator(style: .soft)
-                            impact.impactOccurred()
-                        }
-                    }
+                    .onTapGesture(perform: toggleStar)
             }
             .animation(.spring())
         })
             .onReceive(self.day.objectWillChange) {
                 try? self.viewContext.save()
             }
-            .onAppear {}
+        } else {
+            EmptyView().onAppear {
+                presentationMode.wrappedValue.dismiss()
+            }
+        }
+    }
+
+    func toggleStar() {
+        // If this date is in the future OR
+        // if hard mode is on and the date is in the past OR
+        // if the goal has completed, don't allow marking
+        let today = Calendar.current.startOfDay(for: Date())
+        if self.day.date!.compare(today) == ComparisonResult.orderedDescending ||
+            (self.day.goal!.hardMode &&
+                self.day.date!.compare(today) == ComparisonResult.orderedAscending) ||
+            self.day.goal!.completed
+        {
+            return
+        }
+        // else, mark/unmark the day
+        self.day.completed.toggle()
+        self.dayComplete = self.day.completed
+        if self.dayComplete {
+            self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted + 1).clamped(
+                to: 0...Int16(self.day.goal!.days!.count)
+            )
+            let impact = UIImpactFeedbackGenerator(style: .medium)
+            impact.impactOccurred()
+        } else {
+            self.day.goal!.daysCompleted = (self.day.goal!.daysCompleted - 1).clamped(
+                to: 0...Int16(self.day.goal!.days!.count)
+            )
+            let impact = UIImpactFeedbackGenerator(style: .soft)
+            impact.impactOccurred()
+        }
     }
 }

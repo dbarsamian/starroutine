@@ -6,23 +6,18 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension Day {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Day> {
+public extension Day {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Day> {
         return NSFetchRequest<Day>(entityName: "Day")
     }
 
-    @NSManaged public var completed: Bool
-    @NSManaged public var date: Date?
-    @NSManaged public var number: Int16
-    @NSManaged public var goal: Goal?
-
+    @NSManaged var completed: Bool
+    @NSManaged var date: Date?
+    @NSManaged var number: Int16
+    @NSManaged var goal: Goal?
 }
 
-extension Day : Identifiable {
-
-}
+extension Day: Identifiable {}

@@ -6,61 +6,79 @@
 //
 
 import CoreData
+import UIKit
 
-struct PersistenceController {
+class PersistenceController {
+    // A singleton for our entire app to use
     static let shared = PersistenceController()
 
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-//        for n in 0..<10 {
-//            let newItem = Goal(context: viewContext)
-//            newItem.name = "\(n)"
-//            newItem.desc = "Goal \(n)"
-//            newItem.id = UUID()
-//            newItem.startDate = Date()
-//            newItem.endDate = Calendar.current.date(byAdding: .day, value: 7, to: newItem.startDate ?? Date())
-//            var days: [Day] = []
-//            for n in 1 ... Calendar.current.dateComponents([.day], from: Calendar.current.startOfDay(for: Date()), to: Calendar.current.startOfDay(for: newItem.endDate!)).day! {
-//                let newDay = Day(context: viewContext)
-//                newDay.number = Int16(n)
-//                days.append(newDay)
-//            }
-//            newItem.daysCompleted = NSSet(array: days)
-//        }
-//        do {
-//            try viewContext.save()
-//        } catch {
-//            // Replace this implementation with code to handle the error appropriately.
-//            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//            let nsError = error as NSError
-//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//        }
-        return result
-    }()
-
+    // Storage for Core Data
     let container: NSPersistentContainer
+
+    // A test configuration for SwiftUI previews
+    static var preview: PersistenceController = {
+        let controller = PersistenceController(inMemory: true)
+
+        // Create 10 example goals
+        for goalNum in 0 ..< 10 {
+            let goal = Goal(context: controller.container.viewContext)
+            goal.name = "Test Goal \(goalNum)"
+            goal.desc = "Lorem Ipsum"
+            goal.startDate = Calendar.current.startOfDay(for: Date())
+            goal.endDate = Calendar.current.date(byAdding: .day, value: 7, to: goal.startDate!)
+            goal.color = UIColor.systemRed
+            goal.icon = "cube"
+            goal.hardMode = false
+
+            var days: [Day] = []
+            for dayNum in 1 ... goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!) {
+                let newDay = Day(context: controller.container.viewContext)
+                newDay.number = Int16(dayNum)
+                newDay.date = Calendar.current.startOfDay(
+                    for: Calendar.current.date(
+                        byAdding: .day,
+                        value: dayNum - 1,
+                        to: goal.startDate!
+                    )!
+                )
+                days.append(newDay)
+            }
+            goal.days = NSSet(array: days)
+        }
+
+        return controller
+    }()
 
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "Starboard")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-
-                /*
-                Typical reasons for an error here include:
-                * The parent directory does not exist, cannot be created, or disallows writing.
-                * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                * The device is out of space.
-                * The store could not be migrated to the current model version.
-                Check the error message to determine what the actual problem was.
-                */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+
+        let center = NotificationCenter.default
+        let notification = UIApplication.willResignActiveNotification
+        center.addObserver(forName: notification, object: nil, queue: nil) { [weak self] _ in
+            guard let self = self else { return }
+
+            if self.container.viewContext.hasChanges {
+                try? self.container.viewContext.save()
+            }
+        }
+    }
+
+    func save() {
+        let context = container.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }

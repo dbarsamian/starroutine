@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GoalLinkView: View {
-    var goal: Goal
+    @ObservedObject var goal: Goal
 
     @State var progress: Float = 0
     @State var daysLeftDescription: String = ""
@@ -24,28 +24,42 @@ struct GoalLinkView: View {
             VStack(alignment: .leading) {
                 Text("\(goal.name ?? "")")
                     .font(.headline)
-                Text("\(goal.desc!)")
+                Text("\(goal.desc ?? "")")
                     .font(.subheadline)
-                ProgressView(value: $progress.wrappedValue) {
-                    Text("\($daysLeftDescription.wrappedValue)")
+                ProgressView(value: progress) {
+                    Text("\(daysLeftDescription)")
                         .font(.caption)
                 }
                 .progressViewStyle(LinearProgressViewStyle(tint: Color(goal.color ?? .systemBlue)))
             }
-            .onAppear(perform: {
-                // Calculate progress
-                withAnimation(.easeOut) {
-                    $progress.wrappedValue = Float(goal.daysCompleted) / Float(goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!))
-                }
+            .onAppear(perform: populateView)
+        }
+    }
 
-                // Calculate days left description
-                daysLeftDescription = "(\(goal.completed ? "Goal completed!)" : (goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!) > 1 ? "\(goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!)) days left." : "1 day left!")))"
+    func populateView() {
+        // Calculate progress
+        withAnimation(.easeOut) {
+            progress = Float(goal.daysCompleted) / Float(goal.endDate!.interval(
+                ofComponent: .day,
+                fromDate: goal.startDate!
+            ))
+        }
 
-                // Lock goal if end date is today
-                if Calendar.current.dateComponents([.day], from: Calendar.current.startOfDay(for: Date()), to: Calendar.current.startOfDay(for: goal.endDate!)).day! == 0 {
-                    goal.completed = true
-                }
-            })
+        // Calculate days left description
+        if goal.completed {
+            daysLeftDescription = "(Goal completed!)"
+        } else if goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!) > 1 {
+            let daysLeft = goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!)
+            daysLeftDescription = "\(daysLeft) days left."
+        } else {
+            daysLeftDescription = "1 day left!"
+        }
+
+        // Lock goal if end date is today
+        let today = Calendar.current.startOfDay(for: Date())
+        let end = Calendar.current.startOfDay(for: goal.endDate!)
+        if Calendar.current.dateComponents([.day], from: today, to: end).day! == 0 {
+            goal.completed = true
         }
     }
 }

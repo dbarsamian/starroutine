@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UnfinishedView: View {
     @State var title: String = ""
-    
+
     var body: some View {
         VStack {
             Image(systemName: "exclamationmark.triangle.fill")

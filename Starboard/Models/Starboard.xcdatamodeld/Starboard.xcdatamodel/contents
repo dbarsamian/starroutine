@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Day" representedClassName="Day" syncable="YES">
         <attribute name="completed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="days" inverseEntity="Goal"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Goal" inverseName="days" inverseEntity="Goal"/>
     </entity>
     <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName="UIColorTransformer" customClassName="UIColor"/>
@@ -14,13 +14,12 @@
         <attribute name="endDate" attributeType="Date" defaultDateTimeInterval="627528060" usesScalarValueType="NO"/>
         <attribute name="hardMode" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="icon" optional="YES" attributeType="String"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="startDate" attributeType="Date" defaultDateTimeInterval="627528060" usesScalarValueType="NO"/>
-        <relationship name="days" toMany="YES" deletionRule="Nullify" destinationEntity="Day" inverseName="goal" inverseEntity="Day"/>
+        <relationship name="days" toMany="YES" deletionRule="Cascade" destinationEntity="Day" inverseName="goal" inverseEntity="Day"/>
     </entity>
     <elements>
         <element name="Day" positionX="246" positionY="19" width="128" height="89"/>
-        <element name="Goal" positionX="-57" positionY="-9" width="128" height="194"/>
+        <element name="Goal" positionX="-57" positionY="-9" width="128" height="179"/>
     </elements>
 </model>

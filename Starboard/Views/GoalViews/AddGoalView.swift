@@ -10,18 +10,18 @@ import SwiftUI
 struct AddGoalView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
-    
+
     @ObservedObject var viewModel = AddGoalViewModel()
-    
+
     @State private var showingStartDate = false
     @State private var showingEndDate = false
-    
+
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter
     }()
-    
+
     static let icons: [String] = [
         "star.fill",
         "moon.stars.fill",
@@ -31,8 +31,11 @@ struct AddGoalView: View {
         "gift.circle.fill",
         "airplane.circle.fill"
     ]
-    static let hardModeDescription: String = "Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. Be careful, this cannot be changed after you make your goal!"
-    
+    static let hardModeDescription: String = """
+    Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. \
+    Be careful, this cannot be changed after you make your goal!
+    """
+
     var body: some View {
         NavigationView {
             Form {
@@ -85,7 +88,19 @@ struct AddGoalView: View {
                         }
                     }
                     if showingEndDate {
-                        DatePicker(selection: $viewModel.endDate, in: Calendar.current.date(byAdding: .day, value: 1, to: $viewModel.startDate.wrappedValue)! ... Calendar.current.date(byAdding: .year, value: 1, to: $viewModel.startDate.wrappedValue)!, displayedComponents: .date) {}
+                        DatePicker(
+                            selection: $viewModel.endDate,
+                            in: Calendar.current.date(
+                                byAdding: .day,
+                                value: 1,
+                                to: $viewModel.startDate.wrappedValue
+                            )! ... Calendar.current.date(
+                                byAdding: .year,
+                                value: 1,
+                                to: $viewModel.startDate.wrappedValue
+                            )!,
+                            displayedComponents: .date
+                        ) {}
                             .labelsHidden()
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .padding(.top)
@@ -113,17 +128,21 @@ struct AddGoalView: View {
                     newGoal.endDate = $viewModel.endDate.wrappedValue
                     newGoal.color = UIColor($viewModel.color.wrappedValue)
                     newGoal.icon = $viewModel.icon.wrappedValue
-                    newGoal.id = UUID()
                     // Populate new goal's daysCompleted with however many Days
                     var days: [Day] = []
-                    for n in 1 ... newGoal.endDate!.interval(ofComponent: .day, fromDate: newGoal.startDate!) {
+                    for dayNum in 1 ... newGoal.endDate!.interval(ofComponent: .day, fromDate: newGoal.startDate!) {
                         let newDay = Day(context: viewContext)
-                        newDay.number = Int16(n)
-                        newDay.date = Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .day, value: n - 1, to: Date())!)
+                        newDay.number = Int16(dayNum)
+                        newDay.date = Calendar.current.startOfDay(
+                            for: Calendar.current.date(
+                                byAdding: .day,
+                                value: dayNum - 1,
+                                to: newGoal.startDate!
+                            )!
+                        )
                         days.append(newDay)
                     }
                     newGoal.days = NSSet(array: days)
-                    
                     // Save new goal
                     try? viewContext.save()
                     presentationMode.wrappedValue.dismiss()
