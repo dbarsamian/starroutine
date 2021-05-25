@@ -26,20 +26,15 @@ struct GoalsView: View {
     @State var showingAddGoals = false
 
     var body: some View {
-        if goals.isEmpty {
-            EmptyListView()
-            EmptyDetailView()
-        } else {
+        NavigationView {
             List {
                 ForEach(goals) { goal in
-                    if !goal.isFault {
-                        NavigationLink(
-                            destination: StarboardView(goal: goal),
-                            tag: goal.id,
-                            selection: $selectedGoal
-                        ) {
-                            GoalLinkView(goal: goal)
-                        }
+                    NavigationLink(
+                        destination: StarboardView(goal: goal),
+                        tag: goal.id,
+                        selection: $selectedGoal
+                    ) {
+                        GoalLinkView(goal: goal)
                     }
                 }
                 .onDelete(perform: removeGoal)
@@ -61,6 +56,11 @@ struct GoalsView: View {
             .listStyle(InsetGroupedListStyle())
             .sheet(isPresented: $showingAddGoals, content: {
                 AddGoalView()
+            })
+            .onChange(of: goals.count, perform: { _ in
+                if let first = goals.first {
+                    selectedGoal = first.id
+                }
             })
             .navigationBarTitle(Text("Goals"))
 

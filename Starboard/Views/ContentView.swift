@@ -15,28 +15,22 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            NavigationView {
-                GoalsView()
-            }
-            .tabItem {
-                Image(systemName: "star.fill")
-                Text("Starboard")
-            }
-            NavigationView {
-                HistoryView()
-            }
-            .tabItem {
-                Image(systemName: "calendar")
-                Text("History")
-            }
-            NavigationView {
-                SettingsView()
-            }
-            .tabItem {
-                Image(systemName: "gear")
-                Text("Settings")
-            }
-        }.navigationViewStyle(DefaultNavigationViewStyle())
+            GoalsView()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Starboard")
+                }
+            HistoryView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("History")
+                }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
+        }
     }
 }
 

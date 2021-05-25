@@ -13,9 +13,6 @@ struct AddGoalView: View {
 
     @ObservedObject var viewModel = AddGoalViewModel()
 
-    @State private var showingStartDate = false
-    @State private var showingEndDate = false
-
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -40,76 +37,53 @@ struct AddGoalView: View {
         NavigationView {
             Form {
                 Section(header: Text("Info")) {
-                    TextField("Name", text: $viewModel.name)
+                    TextField("Name",
+                              text: $viewModel.name)
                         .keyboardType(.default)
                         .autocapitalization(.words)
-                    TextField("Description", text: $viewModel.desc)
+                    TextField("Description",
+                              text: $viewModel.desc)
                         .keyboardType(.default)
-                    ColorPicker("Color", selection: $viewModel.color)
-                    Picker(selection: $viewModel.icon, label: Text("Icon"), content: {
-                        ForEach(AddGoalView.icons, id: \.self) { icon in
-                            Image(systemName: icon)
-                        }
-                    })
+                    ColorPicker("Color",
+                                selection: $viewModel.color)
+                    HStack {
+                        Text("Icon")
+                        Spacer()
+                        Picker(selection: $viewModel.icon,
+                               label: Image(systemName: $viewModel.icon.wrappedValue)
+                                   .foregroundColor($viewModel.color.wrappedValue),
+                               content: {
+                                   ForEach(AddGoalView.icons,
+                                           id: \.self) { icon in
+                                       Image(systemName: icon)
+                                   }
+                               })
+                            .pickerStyle(MenuPickerStyle())
+                    }
                 }
                 Section(header: Text("Dates")) {
-                    // Start Date
-                    HStack {
+                    DatePicker(selection: $viewModel.startDate,
+                               in: Date()...,
+                               displayedComponents: .date) {
                         Label("Start Date", systemImage: "calendar")
-                        Spacer()
-                        Text("\($viewModel.startDate.wrappedValue, formatter: AddGoalView.dateFormatter)")
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        self.hideKeyboard()
-                        withAnimation(.easeInOut(duration: 4)) {
-                            showingStartDate.toggle()
-                            showingEndDate = false
-                        }
-                    }
-                    if showingStartDate {
-                        DatePicker(selection: $viewModel.startDate, in: Date()..., displayedComponents: .date) {}
-                            .labelsHidden()
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                            .padding(.top)
-                    }
-                    // End Date
-                    HStack {
+                    DatePicker(selection: $viewModel.endDate,
+                               in: Calendar.current.date(byAdding: .day,
+                                                         value: 1,
+                                                         to: $viewModel.startDate.wrappedValue)!
+                                   ... Calendar.current.date(byAdding: .year,
+                                                             value: 1,
+                                                             to: $viewModel.startDate.wrappedValue)!,
+                               displayedComponents: .date) {
                         Label("End Date", systemImage: "calendar")
-                        Spacer()
-                        Text("\($viewModel.endDate.wrappedValue, formatter: AddGoalView.dateFormatter)")
-                    }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        self.hideKeyboard()
-                        withAnimation(.easeInOut(duration: 4)) {
-                            showingStartDate = false
-                            showingEndDate.toggle()
-                        }
-                    }
-                    if showingEndDate {
-                        DatePicker(
-                            selection: $viewModel.endDate,
-                            in: Calendar.current.date(
-                                byAdding: .day,
-                                value: 1,
-                                to: $viewModel.startDate.wrappedValue
-                            )! ... Calendar.current.date(
-                                byAdding: .year,
-                                value: 1,
-                                to: $viewModel.startDate.wrappedValue
-                            )!,
-                            displayedComponents: .date
-                        ) {}
-                            .labelsHidden()
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                            .padding(.top)
                     }
                 }
-                Section(header: Text("Other"), footer: Text("\(AddGoalView.hardModeDescription)")) {
-                    Toggle(isOn: $viewModel.hardMode, label: {
-                        Text("Hard Mode")
-                    })
+                Section(header: Text("Other"),
+                        footer: Text("\(AddGoalView.hardModeDescription)")) {
+                    Toggle(isOn: $viewModel.hardMode,
+                           label: {
+                               Text("Hard Mode")
+                           })
                 }
             }
             .navigationBarTitle("New Goal", displayMode: .inline)
