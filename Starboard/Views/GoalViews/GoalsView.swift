@@ -57,11 +57,6 @@ struct GoalsView: View {
             .sheet(isPresented: $showingAddGoals, content: {
                 AddGoalView()
             })
-            .onChange(of: goals.count, perform: { _ in
-                if let first = goals.first {
-                    selectedGoal = first.id
-                }
-            })
             .navigationBarTitle(Text("Goals"))
 
             EmptyDetailView()
@@ -69,9 +64,12 @@ struct GoalsView: View {
     }
 
     private func removeGoal(at offsets: IndexSet) {
-        for index in offsets {
-            let goal = goals[index]
-            viewContext.delete(goal)
+        viewContext.perform {
+            offsets.forEach { index in
+                viewContext.delete(goals[index])
+            }
         }
+        try? viewContext.save()
+        viewContext.refreshAllObjects()
     }
 }
