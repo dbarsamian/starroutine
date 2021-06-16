@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
+		68B64EB5267AB1EA0001B2D6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 68B64EB4267AB1EA0001B2D6 /* Introspect */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
@@ -118,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */,
+				68B64EB5267AB1EA0001B2D6 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +333,7 @@
 			name = Starboard;
 			packageProductDependencies = (
 				68B5031526158CA900A324B3 /* FirstOpenViews */,
+				68B64EB4267AB1EA0001B2D6 /* Introspect */,
 			);
 			productName = Starboard;
 			productReference = D50973C0255F3517008F944C /* Starboard.app */;
@@ -364,6 +367,7 @@
 			mainGroup = D50973B7255F3516008F944C;
 			packageReferences = (
 				68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */,
+				68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = D50973C1255F3517008F944C /* Products */;
 			projectDirPath = "";
@@ -721,6 +725,14 @@
 				kind = branch;
 			};
 		};
+		68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -728,6 +740,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */;
 			productName = FirstOpenViews;
+		};
+		68B64EB4267AB1EA0001B2D6 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 
