@@ -158,9 +158,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAL-Yn-Jgy">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAL-Yn-Jgy" userLabel="ColorWell">
                                                     <rect key="frame" x="310" y="0.0" width="44" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="45j-bL-SYP"/>
                                                         <constraint firstAttribute="width" secondItem="eAL-Yn-Jgy" secondAttribute="height" multiplier="1:1" id="DN9-qN-d4N"/>
@@ -389,7 +388,7 @@
                     </tableViewCellContentView>
                 </tableViewCell>
             </objects>
-            <point key="canvasLocation" x="2221.739130434783" y="-861.83035714285711"/>
+            <point key="canvasLocation" x="3346" y="-500"/>
         </scene>
         <!--Goals-->
         <scene sceneID="9BF-9h-kMK">
@@ -522,7 +521,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBH-dw-qQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311.5942028985507" y="-862.5"/>
+            <point key="canvasLocation" x="2228" y="-499"/>
         </scene>
         <!--Starboard Navigation-->
         <scene sceneID="g6S-Jh-PUK">
@@ -551,9 +550,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
