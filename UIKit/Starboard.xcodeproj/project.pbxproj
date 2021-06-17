@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		68B7AA97267AC42F007D94C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7AA96267AC42F007D94C6 /* AppDelegate.swift */; };
 		68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */; };
-		68B7AA9B267AC42F007D94C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7AA9A267AC42F007D94C6 /* ViewController.swift */; };
 		68B7AA9E267AC42F007D94C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7AA9C267AC42F007D94C6 /* Main.storyboard */; };
 		68B7AAA1267AC42F007D94C6 /* Starboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68B7AA9F267AC42F007D94C6 /* Starboard.xcdatamodeld */; };
 		68B7AAA3267AC430007D94C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B7AAA2267AC430007D94C6 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		68B7AA93267AC42F007D94C6 /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B7AA96267AC42F007D94C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68B7AA9A267AC42F007D94C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		68B7AA9D267AC42F007D94C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68B7AAA0267AC42F007D94C6 /* Starboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Starboard.xcdatamodel; sourceTree = "<group>"; };
 		68B7AAA2267AC430007D94C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				68B7AA96267AC42F007D94C6 /* AppDelegate.swift */,
 				68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */,
-				68B7AA9A267AC42F007D94C6 /* ViewController.swift */,
 				68B7AA9C267AC42F007D94C6 /* Main.storyboard */,
 				68B7AAA2267AC430007D94C6 /* Assets.xcassets */,
 				68B7AAA4267AC430007D94C6 /* LaunchScreen.storyboard */,
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B7AAA1267AC42F007D94C6 /* Starboard.xcdatamodeld in Sources */,
-				68B7AA9B267AC42F007D94C6 /* ViewController.swift in Sources */,
 				68B7AA97267AC42F007D94C6 /* AppDelegate.swift in Sources */,
 				68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */,
 			);
