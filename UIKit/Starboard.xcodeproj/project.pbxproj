@@ -20,6 +20,15 @@
 		680390C3267C4A9C00867F94 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390BB267C4A9C00867F94 /* Footer.swift */; };
 		680390C8267C4F4000867F94 /* STextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390C7267C4F4000867F94 /* STextField.swift */; };
 		680390CA267C4F5000867F94 /* STextFieldContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390C9267C4F5000867F94 /* STextFieldContent.xib */; };
+		680390D0267D041900867F94 /* SIconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390CF267D041900867F94 /* SIconPicker.swift */; };
+		680390D2267D042300867F94 /* SIconPickerContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390D1267D042300867F94 /* SIconPickerContent.xib */; };
+		680390D4267D073200867F94 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390D3267D073200867F94 /* Icon.swift */; };
+		680390D6267D094B00867F94 /* SLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390D5267D094B00867F94 /* SLabel.swift */; };
+		680390D8267D0A1B00867F94 /* SLabelContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390D7267D0A1B00867F94 /* SLabelContent.xib */; };
+		680390DA267D0C3C00867F94 /* SIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390D9267D0C3C00867F94 /* SIconLabel.swift */; };
+		680390DC267D0C8800867F94 /* SIconLabelContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390DB267D0C8800867F94 /* SIconLabelContent.xib */; };
+		680390DE267D288600867F94 /* SColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390DD267D288600867F94 /* SColorPicker.swift */; };
+		680390E0267D365B00867F94 /* SColorPickerContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390DF267D365B00867F94 /* SColorPickerContent.xib */; };
 		6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */; };
 		6878FFC7267BF3BB00950033 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */; };
 		6878FFC8267BF3BB00950033 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */; };
@@ -45,6 +54,15 @@
 		680390BB267C4A9C00867F94 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		680390C7267C4F4000867F94 /* STextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STextField.swift; sourceTree = "<group>"; };
 		680390C9267C4F5000867F94 /* STextFieldContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STextFieldContent.xib; sourceTree = "<group>"; };
+		680390CF267D041900867F94 /* SIconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIconPicker.swift; sourceTree = "<group>"; };
+		680390D1267D042300867F94 /* SIconPickerContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SIconPickerContent.xib; sourceTree = "<group>"; };
+		680390D3267D073200867F94 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		680390D5267D094B00867F94 /* SLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLabel.swift; sourceTree = "<group>"; };
+		680390D7267D0A1B00867F94 /* SLabelContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLabelContent.xib; sourceTree = "<group>"; };
+		680390D9267D0C3C00867F94 /* SIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIconLabel.swift; sourceTree = "<group>"; };
+		680390DB267D0C8800867F94 /* SIconLabelContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SIconLabelContent.xib; sourceTree = "<group>"; };
+		680390DD267D288600867F94 /* SColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SColorPicker.swift; sourceTree = "<group>"; };
+		680390DF267D365B00867F94 /* SColorPickerContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SColorPickerContent.xib; sourceTree = "<group>"; };
 		6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -110,6 +128,14 @@
 			children = (
 				680390C7267C4F4000867F94 /* STextField.swift */,
 				680390C9267C4F5000867F94 /* STextFieldContent.xib */,
+				680390CF267D041900867F94 /* SIconPicker.swift */,
+				680390D1267D042300867F94 /* SIconPickerContent.xib */,
+				680390D5267D094B00867F94 /* SLabel.swift */,
+				680390DB267D0C8800867F94 /* SIconLabelContent.xib */,
+				680390D9267D0C3C00867F94 /* SIconLabel.swift */,
+				680390D7267D0A1B00867F94 /* SLabelContent.xib */,
+				680390DD267D288600867F94 /* SColorPicker.swift */,
+				680390DF267D365B00867F94 /* SColorPickerContent.xib */,
 			);
 			path = AddGoal;
 			sourceTree = "<group>";
@@ -119,6 +145,7 @@
 			children = (
 				6878FFCB267BF3E100950033 /* Core Data */,
 				680390A9267C104C00867F94 /* AddGoalViewModel.swift */,
+				680390D3267D073200867F94 /* Icon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,12 +259,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680390D8267D0A1B00867F94 /* SLabelContent.xib in Resources */,
+				680390DC267D0C8800867F94 /* SIconLabelContent.xib in Resources */,
 				68B7AAA6267AC430007D94C6 /* LaunchScreen.storyboard in Resources */,
 				680390CA267C4F5000867F94 /* STextFieldContent.xib in Resources */,
 				68B7AAA3267AC430007D94C6 /* Assets.xcassets in Resources */,
+				680390D2267D042300867F94 /* SIconPickerContent.xib in Resources */,
 				680390BC267C4A9C00867F94 /* HeaderContent.xib in Resources */,
 				680390BE267C4A9C00867F94 /* FooterContent.xib in Resources */,
 				68B7AA9E267AC42F007D94C6 /* Main.storyboard in Resources */,
+				680390E0267D365B00867F94 /* SColorPickerContent.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +291,13 @@
 				680390AA267C104C00867F94 /* AddGoalViewModel.swift in Sources */,
 				680390C3267C4A9C00867F94 /* Footer.swift in Sources */,
 				6878FFC9267BF3BB00950033 /* Goal+CoreDataProperties.swift in Sources */,
+				680390D4267D073200867F94 /* Icon.swift in Sources */,
+				680390DE267D288600867F94 /* SColorPicker.swift in Sources */,
 				680390C0267C4A9C00867F94 /* NibLoadable.swift in Sources */,
+				680390D6267D094B00867F94 /* SLabel.swift in Sources */,
+				680390DA267D0C3C00867F94 /* SIconLabel.swift in Sources */,
 				680390BF267C4A9C00867F94 /* Extensions.swift in Sources */,
+				680390D0267D041900867F94 /* SIconPicker.swift in Sources */,
 				680390C1267C4A9C00867F94 /* Spacing.swift in Sources */,
 				68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */,
 			);

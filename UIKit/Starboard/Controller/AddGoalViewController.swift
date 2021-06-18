@@ -29,28 +29,6 @@ class AddGoalViewController: UITableViewController {
         case hardModeToggle
     }
     
-    enum Icon: String, CaseIterable {
-        case star = "star.fill"
-        case moonAndStars = "moon.stars.fill"
-        case moon = "moon.fill"
-        case sun = "sun.max.fill"
-        case tornado
-        case drawing = "pencil.and.outline"
-        case book = "book.fill"
-        case bookmark = "bookmark.fill"
-        case gradCap = "graduationcap.fill"
-        case flag = "flag.fill"
-        case camera = "camera.fill"
-        case piano = "pianokeys.inverse"
-        case paint = "paintbrush.fill"
-        case puzzle = "puzzlepiece.fill"
-        case map = "map.fill"
-        case alarm = "alarm.fill"
-        case walk = "figure.walk"
-        case leaf = "leaf.fill"
-        case creditCard = "creditcard.fill"
-    }
-    
     struct State {
         var name: String?
         var desc: String?
@@ -59,6 +37,7 @@ class AddGoalViewController: UITableViewController {
         var startDate: Date?
         var endDate: Date?
         var hardMode: Bool? = false
+        var isOpenIconPicker = false
     }
     
     var state = State() {
@@ -90,20 +69,45 @@ class AddGoalViewController: UITableViewController {
                     STextField(title: "Name", text: state.name, placeholder: "Get Sleep") { [weak self] text in
                         self?.state.name = text
                     }
+                    .identified(by: ID.name)
                 
                     STextField(title: "Description", text: state.desc, placeholder: "Get eight hours of sleep every night.") { [weak self] text in
                         self?.state.desc = text
                     }
+                    .identified(by: ID.description)
                 
-                    // Color Picker
+                    SColorPicker(title: "Color", color: state.color) { [weak self] color in
+                        self?.state.color = color
+                    }
+                    .identified(by: ID.colorPicker)
                 
-                    // Icon Picker
+                    SIconLabel(title: "Icon", image: UIImage(systemName: state.iconName!.rawValue), color: state.color) { [weak self] in
+                        self?.state.isOpenIconPicker.toggle()
+                    }
+                    
+                    if state.isOpenIconPicker {
+                        SIconPicker(icons: Icon.allCases, color: state.color) { [weak self] iconName in
+                            self?.state.iconName = Icon(rawValue: iconName)
+                        }
+                        .identified(by: ID.iconPicker)
+                    }
                 }
-                // Dates
-                    // Start Date Picker
-                    // End Date Picker
+                Section(id: 2) {
+                    Header("Dates")
+                        .identified(by: \.title)
+                    
+                    SLabel(title: "Start Date", text: "Jan 01, 1969") {}
+                    
+                    SLabel(title: "End Date", text: "Jan 02, 1969") {}
+                }
                 // Advanced
-                    // Hard Mode Toggle
+                // Hard Mode Toggle
+                Section(id: 3) {
+                    Header("Advanced")
+                        .identified(by: \.title)
+                    
+                    SLabel(title: "Hard Mode", text: "REPLACE ME") {}
+                }
             }
         }
     }
