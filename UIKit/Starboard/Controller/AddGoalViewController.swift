@@ -38,6 +38,8 @@ class AddGoalViewController: UITableViewController {
         var endDate: Date?
         var hardMode: Bool? = false
         var isOpenIconPicker = false
+        var isOpenStartDatePicker = false
+        var isOpenEndDatePicker = false
     }
     
     var state = State() {
@@ -53,8 +55,8 @@ class AddGoalViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         renderer.target = tableView
-        renderer.updater.deleteRowsAnimation = .middle
-        renderer.updater.insertRowsAnimation = .middle
+        renderer.updater.deleteRowsAnimation = .fade
+        renderer.updater.insertRowsAnimation = .fade
         
         render()
     }
@@ -96,9 +98,27 @@ class AddGoalViewController: UITableViewController {
                     Header("Dates")
                         .identified(by: \.title)
                     
-                    SLabel(title: "Start Date", text: "Jan 01, 1969") {}
+                    SLabel(title: "Start Date", text: "Jan 01, 1969") { [weak self] in
+                        self?.state.isOpenStartDatePicker.toggle()
+                    }
                     
-                    SLabel(title: "End Date", text: "Jan 02, 1969") {}
+                    if state.isOpenStartDatePicker {
+                        SDatePicker(date: state.startDate) { [weak self] date in
+                            self?.state.startDate = date
+                        }
+                        .identified(by: ID.startDatePicker)
+                    }
+                    
+                    SLabel(title: "End Date", text: "Jan 02, 1969") { [weak self] in
+                        self?.state.isOpenEndDatePicker.toggle()
+                    }
+                    
+                    if state.isOpenEndDatePicker {
+                        SDatePicker(date: state.endDate) { [weak self] date in
+                            self?.state.endDate = date
+                        }
+                        .identified(by: ID.endDatePicker)
+                    }
                 }
                 // Advanced
                 // Hard Mode Toggle
