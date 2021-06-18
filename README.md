@@ -19,7 +19,6 @@ I will be porting over what I have in SwiftUI to an entirely new UIKit project. 
 - Create goals tailored for what you want to accomplish.
 - Customize your goals with colors and icons to make your goals stand out.
 - See your progress with a timeline view of the progress you make.
-- Challenge yourself with *hard mode*: you can only check-off your goal once a day!
 
 ## 💫 Upcoming Features
 - Unlimited goals (via in-app purchase, read more [here]() (this post isn't live yet.))
