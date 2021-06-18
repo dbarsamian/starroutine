@@ -9,7 +9,17 @@
 /* Begin PBXBuildFile section */
 		680390A7267BFDC500867F94 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 680390A6267BFDC500867F94 /* SnapKit */; };
 		680390AA267C104C00867F94 /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390A9267C104C00867F94 /* AddGoalViewModel.swift */; };
-		680390AC267C2FA600867F94 /* AddGoalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390AB267C2FA600867F94 /* AddGoalDataSource.swift */; };
+		680390AF267C441700867F94 /* Carbon in Frameworks */ = {isa = PBXBuildFile; productRef = 680390AE267C441700867F94 /* Carbon */; };
+		680390BC267C4A9C00867F94 /* HeaderContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390B4267C4A9C00867F94 /* HeaderContent.xib */; };
+		680390BD267C4A9C00867F94 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B5267C4A9C00867F94 /* Header.swift */; };
+		680390BE267C4A9C00867F94 /* FooterContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390B6267C4A9C00867F94 /* FooterContent.xib */; };
+		680390BF267C4A9C00867F94 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B7267C4A9C00867F94 /* Extensions.swift */; };
+		680390C0267C4A9C00867F94 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B8267C4A9C00867F94 /* NibLoadable.swift */; };
+		680390C1267C4A9C00867F94 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B9267C4A9C00867F94 /* Spacing.swift */; };
+		680390C2267C4A9C00867F94 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390BA267C4A9C00867F94 /* HostingController.swift */; };
+		680390C3267C4A9C00867F94 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390BB267C4A9C00867F94 /* Footer.swift */; };
+		680390C8267C4F4000867F94 /* STextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390C7267C4F4000867F94 /* STextField.swift */; };
+		680390CA267C4F5000867F94 /* STextFieldContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390C9267C4F5000867F94 /* STextFieldContent.xib */; };
 		6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */; };
 		6878FFC7267BF3BB00950033 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */; };
 		6878FFC8267BF3BB00950033 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */; };
@@ -25,7 +35,16 @@
 
 /* Begin PBXFileReference section */
 		680390A9267C104C00867F94 /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
-		680390AB267C2FA600867F94 /* AddGoalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalDataSource.swift; sourceTree = "<group>"; };
+		680390B4267C4A9C00867F94 /* HeaderContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderContent.xib; sourceTree = "<group>"; };
+		680390B5267C4A9C00867F94 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		680390B6267C4A9C00867F94 /* FooterContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterContent.xib; sourceTree = "<group>"; };
+		680390B7267C4A9C00867F94 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		680390B8267C4A9C00867F94 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		680390B9267C4A9C00867F94 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		680390BA267C4A9C00867F94 /* HostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		680390BB267C4A9C00867F94 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		680390C7267C4F4000867F94 /* STextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STextField.swift; sourceTree = "<group>"; };
+		680390C9267C4F5000867F94 /* STextFieldContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STextFieldContent.xib; sourceTree = "<group>"; };
 		6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -47,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				680390A7267BFDC500867F94 /* SnapKit in Frameworks */,
+				680390AF267C441700867F94 /* Carbon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +77,41 @@
 			isa = PBXGroup;
 			children = (
 				6878FFCC267BF4DC00950033 /* AddGoalViewController.swift */,
-				680390AB267C2FA600867F94 /* AddGoalDataSource.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		680390B0267C45B100867F94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				680390C6267C4E6E00867F94 /* AddGoal */,
+				680390B1267C49B400867F94 /* Common */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		680390B1267C49B400867F94 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				680390B7267C4A9C00867F94 /* Extensions.swift */,
+				680390BB267C4A9C00867F94 /* Footer.swift */,
+				680390B6267C4A9C00867F94 /* FooterContent.xib */,
+				680390B5267C4A9C00867F94 /* Header.swift */,
+				680390B4267C4A9C00867F94 /* HeaderContent.xib */,
+				680390BA267C4A9C00867F94 /* HostingController.swift */,
+				680390B8267C4A9C00867F94 /* NibLoadable.swift */,
+				680390B9267C4A9C00867F94 /* Spacing.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		680390C6267C4E6E00867F94 /* AddGoal */ = {
+			isa = PBXGroup;
+			children = (
+				680390C7267C4F4000867F94 /* STextField.swift */,
+				680390C9267C4F5000867F94 /* STextFieldContent.xib */,
+			);
+			path = AddGoal;
 			sourceTree = "<group>";
 		};
 		6878FFCA267BF3D800950033 /* Model */ = {
@@ -104,6 +156,7 @@
 			children = (
 				6878FFCA267BF3D800950033 /* Model */,
 				680390A8267C0FA700867F94 /* Controller */,
+				680390B0267C45B100867F94 /* View */,
 				68B7AA96267AC42F007D94C6 /* AppDelegate.swift */,
 				68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */,
 				68B7AA9C267AC42F007D94C6 /* Main.storyboard */,
@@ -132,6 +185,7 @@
 			name = Starboard;
 			packageProductDependencies = (
 				680390A6267BFDC500867F94 /* SnapKit */,
+				680390AE267C441700867F94 /* Carbon */,
 			);
 			productName = Starboard;
 			productReference = 68B7AA93267AC42F007D94C6 /* Starboard.app */;
@@ -162,6 +216,7 @@
 			mainGroup = 68B7AA8A267AC42F007D94C6;
 			packageReferences = (
 				680390A5267BFDC500867F94 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				680390AD267C441700867F94 /* XCRemoteSwiftPackageReference "Carbon" */,
 			);
 			productRefGroup = 68B7AA94267AC42F007D94C6 /* Products */;
 			projectDirPath = "";
@@ -178,7 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B7AAA6267AC430007D94C6 /* LaunchScreen.storyboard in Resources */,
+				680390CA267C4F5000867F94 /* STextFieldContent.xib in Resources */,
 				68B7AAA3267AC430007D94C6 /* Assets.xcassets in Resources */,
+				680390BC267C4A9C00867F94 /* HeaderContent.xib in Resources */,
+				680390BE267C4A9C00867F94 /* FooterContent.xib in Resources */,
 				68B7AA9E267AC42F007D94C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,15 +248,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680390BD267C4A9C00867F94 /* Header.swift in Sources */,
 				6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */,
 				6878FFCD267BF4DC00950033 /* AddGoalViewController.swift in Sources */,
 				68B7AAA1267AC42F007D94C6 /* Starboard.xcdatamodeld in Sources */,
+				680390C2267C4A9C00867F94 /* HostingController.swift in Sources */,
 				6878FFC8267BF3BB00950033 /* Goal+CoreDataClass.swift in Sources */,
 				68B7AA97267AC42F007D94C6 /* AppDelegate.swift in Sources */,
-				680390AC267C2FA600867F94 /* AddGoalDataSource.swift in Sources */,
+				680390C8267C4F4000867F94 /* STextField.swift in Sources */,
 				6878FFC7267BF3BB00950033 /* Day+CoreDataProperties.swift in Sources */,
 				680390AA267C104C00867F94 /* AddGoalViewModel.swift in Sources */,
+				680390C3267C4A9C00867F94 /* Footer.swift in Sources */,
 				6878FFC9267BF3BB00950033 /* Goal+CoreDataProperties.swift in Sources */,
+				680390C0267C4A9C00867F94 /* NibLoadable.swift in Sources */,
+				680390BF267C4A9C00867F94 /* Extensions.swift in Sources */,
+				680390C1267C4A9C00867F94 /* Spacing.swift in Sources */,
 				68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +475,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		680390AD267C441700867F94 /* XCRemoteSwiftPackageReference "Carbon" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ra1028/Carbon.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -418,6 +490,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 680390A5267BFDC500867F94 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		680390AE267C441700867F94 /* Carbon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680390AD267C441700867F94 /* XCRemoteSwiftPackageReference "Carbon" */;
+			productName = Carbon;
 		};
 /* End XCSwiftPackageProductDependency section */
 

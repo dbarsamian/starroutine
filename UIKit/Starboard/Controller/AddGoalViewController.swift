@@ -5,67 +5,112 @@
 //  Created by David Barsamian on 6/17/21.
 //
 
-import SnapKit
+import Carbon
 import UIKit
 
 class AddGoalViewController: UITableViewController {
-    // MARK: - Outlets
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var descTextField: UITextField!
-    @IBOutlet var colorWellParentView: UIView!
-    @IBOutlet var iconImageView: UIImageView!
-    @IBOutlet var startDateLabel: UILabel!
-    @IBOutlet var endDateLabel: UILabel!
-    @IBOutlet var hardModeSwitch: UISwitch!
-    @IBOutlet var iconPickerCell: UITableViewCell!
-    @IBOutlet var iconPickerView: UIPickerView!
-    @IBOutlet var datePickerCell: UITableViewCell!
-    @IBOutlet var datePickerView: UIDatePicker!
-    @IBOutlet var iconLabelCell: UITableViewCell!
-    @IBOutlet var startDateLabelCell: UITableViewCell!
-    @IBOutlet var endDateLabelCell: UITableViewCell!
+    /*
+     What the form needs:
+     - Name text field
+     - Description text field
+     - Color picker
+     - Icon picker
+     - Start date picker
+     - End date picker
+     - Hard mode toggle
+     */
+    enum ID {
+        case name
+        case description
+        case colorPicker
+        case iconPicker
+        case startDatePicker
+        case endDatePicker
+        case hardModeToggle
+    }
     
-    // MARK: - Variables
-    private let dataSource = AddGoalDataSource()
-    private var viewModel = AddGoalViewModel()
-    private var colorWell: UIColorWell!
-    private var iconLabelCellIndexPath: IndexPath?
-    private var startDateLabelCellIndexPath: IndexPath?
-    private var endDateLabelCellIndexPath: IndexPath?
+    enum Icon: String, CaseIterable {
+        case star = "star.fill"
+        case moonAndStars = "moon.stars.fill"
+        case moon = "moon.fill"
+        case sun = "sun.max.fill"
+        case tornado
+        case drawing = "pencil.and.outline"
+        case book = "book.fill"
+        case bookmark = "bookmark.fill"
+        case gradCap = "graduationcap.fill"
+        case flag = "flag.fill"
+        case camera = "camera.fill"
+        case piano = "pianokeys.inverse"
+        case paint = "paintbrush.fill"
+        case puzzle = "puzzlepiece.fill"
+        case map = "map.fill"
+        case alarm = "alarm.fill"
+        case walk = "figure.walk"
+        case leaf = "leaf.fill"
+        case creditCard = "creditcard.fill"
+    }
     
-    static let iconPickerCellIdentifier = "IconPickerCell"
-    static let datePickerCellIdentifier = "DatePickerCell"
+    struct State {
+        var name: String?
+        var desc: String?
+        var color: UIColor? = .blue
+        var iconName: Icon? = .star
+        var startDate: Date?
+        var endDate: Date?
+        var hardMode: Bool? = false
+    }
     
-    // MARK: - Functions
+    var state = State() {
+        didSet { render() }
+    }
+    
+    private let renderer = Renderer(adapter: UITableViewAdapter(), updater: UITableViewUpdater())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up table view
-        tableView.delegate = self
+        title = "Add Goal"
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
-        // Get index paths for cells that act as buttons
-        iconLabelCellIndexPath = tableView.indexPath(for: iconLabelCell)
-        startDateLabelCellIndexPath = tableView.indexPath(for: startDateLabelCell)
-        endDateLabelCellIndexPath = tableView.indexPath(for: endDateLabelCell)
+        renderer.target = tableView
+        renderer.updater.deleteRowsAnimation = .middle
+        renderer.updater.insertRowsAnimation = .middle
         
-        
-        
-        // Register icon and date picker cells
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Self.iconPickerCellIdentifier)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Self.datePickerCellIdentifier)
-        
-        // Set up color well
-        colorWell = UIColorWell(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        colorWell.addTarget(self, action: #selector(colorChanged), for: .valueChanged)
-        colorWell.selectedColor = .systemBlue
-        colorWellParentView.addSubview(colorWell)
-        colorWell.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        render()
+    }
+    
+    func render() {
+        renderer.render {
+            Group {
+                Section(id: 1) {
+                    Header("Info")
+                        .identified(by: \.title)
+                
+                    STextField(title: "Name", text: state.name, placeholder: "Get Sleep") { [weak self] text in
+                        self?.state.name = text
+                    }
+                
+                    STextField(title: "Description", text: state.desc, placeholder: "Get eight hours of sleep every night.") { [weak self] text in
+                        self?.state.desc = text
+                    }
+                
+                    // Color Picker
+                
+                    // Icon Picker
+                }
+                // Dates
+                    // Start Date Picker
+                    // End Date Picker
+                // Advanced
+                    // Hard Mode Toggle
+            }
         }
     }
     
-    @objc private func colorChanged() {
-        
+    @objc func keyboardWillChangeFrame(notification: Notification) {
+        let keyboardFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+        tableView.contentInset.bottom = view.bounds.height - keyboardFrame.minY
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
@@ -73,20 +118,4 @@ class AddGoalViewController: UITableViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {}
-}
-
-// MARK: - TableView
-extension AddGoalViewController {
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let iconLabelCellIndexPath = iconLabelCellIndexPath, indexPath == iconLabelCellIndexPath {
-            showingIconPicker.toggle()
-        }
-        if let startDateLabelCellIndexPath = startDateLabelCellIndexPath, indexPath == startDateLabelCellIndexPath {
-            showingStartDatePicker.toggle()
-        }
-        if let endDateLabelCellIndexPath = endDateLabelCellIndexPath, indexPath == endDateLabelCellIndexPath {
-            showingEndDatePicker.toggle()
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 }
