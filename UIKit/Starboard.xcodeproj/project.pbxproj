@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680390A7267BFDC500867F94 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 680390A6267BFDC500867F94 /* SnapKit */; };
+		680390AA267C104C00867F94 /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390A9267C104C00867F94 /* AddGoalViewModel.swift */; };
+		680390AC267C2FA600867F94 /* AddGoalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390AB267C2FA600867F94 /* AddGoalDataSource.swift */; };
+		6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */; };
+		6878FFC7267BF3BB00950033 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */; };
+		6878FFC8267BF3BB00950033 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */; };
+		6878FFC9267BF3BB00950033 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC5267BF3BB00950033 /* Goal+CoreDataProperties.swift */; };
+		6878FFCD267BF4DC00950033 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFCC267BF4DC00950033 /* AddGoalViewController.swift */; };
 		68B7AA97267AC42F007D94C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7AA96267AC42F007D94C6 /* AppDelegate.swift */; };
 		68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */; };
 		68B7AA9E267AC42F007D94C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7AA9C267AC42F007D94C6 /* Main.storyboard */; };
@@ -16,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		680390A9267C104C00867F94 /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
+		680390AB267C2FA600867F94 /* AddGoalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalDataSource.swift; sourceTree = "<group>"; };
+		6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6878FFC5267BF3BB00950033 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6878FFCC267BF4DC00950033 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		68B7AA93267AC42F007D94C6 /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B7AA96267AC42F007D94C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +46,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680390A7267BFDC500867F94 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680390A8267C0FA700867F94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6878FFCC267BF4DC00950033 /* AddGoalViewController.swift */,
+				680390AB267C2FA600867F94 /* AddGoalDataSource.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6878FFCA267BF3D800950033 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6878FFCB267BF3E100950033 /* Core Data */,
+				680390A9267C104C00867F94 /* AddGoalViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6878FFCB267BF3E100950033 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				68B7AA9F267AC42F007D94C6 /* Starboard.xcdatamodeld */,
+				6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */,
+				6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */,
+				6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */,
+				6878FFC5267BF3BB00950033 /* Goal+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		68B7AA8A267AC42F007D94C6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +102,14 @@
 		68B7AA95267AC42F007D94C6 /* Starboard */ = {
 			isa = PBXGroup;
 			children = (
+				6878FFCA267BF3D800950033 /* Model */,
+				680390A8267C0FA700867F94 /* Controller */,
 				68B7AA96267AC42F007D94C6 /* AppDelegate.swift */,
 				68B7AA98267AC42F007D94C6 /* SceneDelegate.swift */,
 				68B7AA9C267AC42F007D94C6 /* Main.storyboard */,
 				68B7AAA2267AC430007D94C6 /* Assets.xcassets */,
 				68B7AAA4267AC430007D94C6 /* LaunchScreen.storyboard */,
 				68B7AAA7267AC430007D94C6 /* Info.plist */,
-				68B7AA9F267AC42F007D94C6 /* Starboard.xcdatamodeld */,
 			);
 			path = Starboard;
 			sourceTree = "<group>";
@@ -83,6 +130,9 @@
 			dependencies = (
 			);
 			name = Starboard;
+			packageProductDependencies = (
+				680390A6267BFDC500867F94 /* SnapKit */,
+			);
 			productName = Starboard;
 			productReference = 68B7AA93267AC42F007D94C6 /* Starboard.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 68B7AA8A267AC42F007D94C6;
+			packageReferences = (
+				680390A5267BFDC500867F94 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 68B7AA94267AC42F007D94C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */,
+				6878FFCD267BF4DC00950033 /* AddGoalViewController.swift in Sources */,
 				68B7AAA1267AC42F007D94C6 /* Starboard.xcdatamodeld in Sources */,
+				6878FFC8267BF3BB00950033 /* Goal+CoreDataClass.swift in Sources */,
 				68B7AA97267AC42F007D94C6 /* AppDelegate.swift in Sources */,
+				680390AC267C2FA600867F94 /* AddGoalDataSource.swift in Sources */,
+				6878FFC7267BF3BB00950033 /* Day+CoreDataProperties.swift in Sources */,
+				680390AA267C104C00867F94 /* AddGoalViewModel.swift in Sources */,
+				6878FFC9267BF3BB00950033 /* Goal+CoreDataProperties.swift in Sources */,
 				68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		680390A5267BFDC500867F94 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		680390A6267BFDC500867F94 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680390A5267BFDC500867F94 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		68B7AA9F267AC42F007D94C6 /* Starboard.xcdatamodeld */ = {
