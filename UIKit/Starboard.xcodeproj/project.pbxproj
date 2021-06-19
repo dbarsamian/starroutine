@@ -13,7 +13,7 @@
 		680390BC267C4A9C00867F94 /* HeaderContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390B4267C4A9C00867F94 /* HeaderContent.xib */; };
 		680390BD267C4A9C00867F94 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B5267C4A9C00867F94 /* Header.swift */; };
 		680390BE267C4A9C00867F94 /* FooterContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390B6267C4A9C00867F94 /* FooterContent.xib */; };
-		680390BF267C4A9C00867F94 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B7267C4A9C00867F94 /* Extensions.swift */; };
+		680390BF267C4A9C00867F94 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B7267C4A9C00867F94 /* UIKitExtensions.swift */; };
 		680390C0267C4A9C00867F94 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B8267C4A9C00867F94 /* NibLoadable.swift */; };
 		680390C1267C4A9C00867F94 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390B9267C4A9C00867F94 /* Spacing.swift */; };
 		680390C2267C4A9C00867F94 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390BA267C4A9C00867F94 /* HostingController.swift */; };
@@ -31,6 +31,9 @@
 		680390E0267D365B00867F94 /* SColorPickerContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390DF267D365B00867F94 /* SColorPickerContent.xib */; };
 		680390E2267D3E7500867F94 /* SDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390E1267D3E7500867F94 /* SDatePicker.swift */; };
 		680390E4267D3F0A00867F94 /* SDatePickerContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390E3267D3F0A00867F94 /* SDatePickerContent.xib */; };
+		680390E6267D493D00867F94 /* SSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390E5267D493D00867F94 /* SSwitch.swift */; };
+		680390E8267D49C400867F94 /* SSwitchContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680390E7267D49C400867F94 /* SSwitchContent.xib */; };
+		680390EC267D5DC900867F94 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680390EB267D5DC900867F94 /* DateExtension.swift */; };
 		6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */; };
 		6878FFC7267BF3BB00950033 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */; };
 		6878FFC8267BF3BB00950033 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */; };
@@ -49,7 +52,7 @@
 		680390B4267C4A9C00867F94 /* HeaderContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderContent.xib; sourceTree = "<group>"; };
 		680390B5267C4A9C00867F94 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		680390B6267C4A9C00867F94 /* FooterContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterContent.xib; sourceTree = "<group>"; };
-		680390B7267C4A9C00867F94 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		680390B7267C4A9C00867F94 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		680390B8267C4A9C00867F94 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		680390B9267C4A9C00867F94 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		680390BA267C4A9C00867F94 /* HostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,9 @@
 		680390DF267D365B00867F94 /* SColorPickerContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SColorPickerContent.xib; sourceTree = "<group>"; };
 		680390E1267D3E7500867F94 /* SDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDatePicker.swift; sourceTree = "<group>"; };
 		680390E3267D3F0A00867F94 /* SDatePickerContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDatePickerContent.xib; sourceTree = "<group>"; };
+		680390E5267D493D00867F94 /* SSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSwitch.swift; sourceTree = "<group>"; };
+		680390E7267D49C400867F94 /* SSwitchContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSwitchContent.xib; sourceTree = "<group>"; };
+		680390EB267D5DC900867F94 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ../../SwiftUI/Starboard/Extensions/DateExtension.swift; sourceTree = "<group>"; };
 		6878FFC2267BF3BB00950033 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6878FFC3267BF3BB00950033 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6878FFC4267BF3BB00950033 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -115,7 +121,7 @@
 		680390B1267C49B400867F94 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				680390B7267C4A9C00867F94 /* Extensions.swift */,
+				680390B7267C4A9C00867F94 /* UIKitExtensions.swift */,
 				680390BB267C4A9C00867F94 /* Footer.swift */,
 				680390B6267C4A9C00867F94 /* FooterContent.xib */,
 				680390B5267C4A9C00867F94 /* Header.swift */,
@@ -142,6 +148,8 @@
 				680390DF267D365B00867F94 /* SColorPickerContent.xib */,
 				680390E1267D3E7500867F94 /* SDatePicker.swift */,
 				680390E3267D3F0A00867F94 /* SDatePickerContent.xib */,
+				680390E5267D493D00867F94 /* SSwitch.swift */,
+				680390E7267D49C400867F94 /* SSwitchContent.xib */,
 			);
 			path = AddGoal;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 				68B7AAA2267AC430007D94C6 /* Assets.xcassets */,
 				68B7AAA4267AC430007D94C6 /* LaunchScreen.storyboard */,
 				68B7AAA7267AC430007D94C6 /* Info.plist */,
+				680390EB267D5DC900867F94 /* DateExtension.swift */,
 			);
 			path = Starboard;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 				68B7AAA3267AC430007D94C6 /* Assets.xcassets in Resources */,
 				680390D2267D042300867F94 /* SIconPickerContent.xib in Resources */,
 				680390BC267C4A9C00867F94 /* HeaderContent.xib in Resources */,
+				680390E8267D49C400867F94 /* SSwitchContent.xib in Resources */,
 				680390BE267C4A9C00867F94 /* FooterContent.xib in Resources */,
 				68B7AA9E267AC42F007D94C6 /* Main.storyboard in Resources */,
 				680390E4267D3F0A00867F94 /* SDatePickerContent.xib in Resources */,
@@ -287,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				680390BD267C4A9C00867F94 /* Header.swift in Sources */,
+				680390EC267D5DC900867F94 /* DateExtension.swift in Sources */,
 				680390E2267D3E7500867F94 /* SDatePicker.swift in Sources */,
 				6878FFC6267BF3BB00950033 /* Day+CoreDataClass.swift in Sources */,
 				6878FFCD267BF4DC00950033 /* AddGoalViewController.swift in Sources */,
@@ -303,8 +314,9 @@
 				680390DE267D288600867F94 /* SColorPicker.swift in Sources */,
 				680390C0267C4A9C00867F94 /* NibLoadable.swift in Sources */,
 				680390D6267D094B00867F94 /* SLabel.swift in Sources */,
+				680390E6267D493D00867F94 /* SSwitch.swift in Sources */,
 				680390DA267D0C3C00867F94 /* SIconLabel.swift in Sources */,
-				680390BF267C4A9C00867F94 /* Extensions.swift in Sources */,
+				680390BF267C4A9C00867F94 /* UIKitExtensions.swift in Sources */,
 				680390D0267D041900867F94 /* SIconPicker.swift in Sources */,
 				680390C1267C4A9C00867F94 /* Spacing.swift in Sources */,
 				68B7AA99267AC42F007D94C6 /* SceneDelegate.swift in Sources */,

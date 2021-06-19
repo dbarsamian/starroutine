@@ -8,9 +8,18 @@
 import Carbon
 import UIKit
 
-struct SDatePicker: Component {
+struct SDatePicker: IdentifiableComponent {
+    var title: String
     var date: Date?
     var onUpdate: (Date) -> Void
+    
+    var id: String {
+        title
+    }
+    
+    var reuseIdentifier: String {
+        title
+    }
     
     func renderContent() -> SDatePickerContent {
         .loadFromNib()
@@ -36,7 +45,7 @@ final class SDatePickerContent: UIView, NibLoadable {
         datePicker.datePickerMode = .date
         datePicker.minimumDate = Locale.current.calendar.startOfDay(for: Date())
         datePicker.maximumDate = Locale.current.calendar.date(byAdding: .year, value: 1, to: datePicker.minimumDate ?? Date())
-        datePicker.setValue(UIColor.label, forKey: "textColor")
+        datePicker.setValue(UIColor.link, forKey: "textColor")
         datePicker.addTarget(self, action: #selector(update), for: .valueChanged)
     }
     

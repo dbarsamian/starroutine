@@ -53,7 +53,10 @@ final class SIconPickerContent: UIView, NibLoadable, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        return UIImageView(image: UIImage(systemName: icons[row].rawValue))
+        var image = UIImage(systemName: icons[row].rawValue)
+        image = image?.applyingSymbolConfiguration(.init(scale: .large))
+        let view = UIImageView(image: image)
+        return view
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -9,16 +9,7 @@ import Carbon
 import UIKit
 
 class AddGoalViewController: UITableViewController {
-    /*
-     What the form needs:
-     - Name text field
-     - Description text field
-     - Color picker
-     - Icon picker
-     - Start date picker
-     - End date picker
-     - Hard mode toggle
-     */
+    // Carbon
     enum ID {
         case name
         case description
@@ -26,27 +17,47 @@ class AddGoalViewController: UITableViewController {
         case iconPicker
         case startDatePicker
         case endDatePicker
-        case hardModeToggle
     }
-    
+
     struct State {
         var name: String?
         var desc: String?
         var color: UIColor? = .blue
         var iconName: Icon? = .star
-        var startDate: Date?
-        var endDate: Date?
-        var hardMode: Bool? = false
+        var startDate: Date? {
+            didSet {
+                if let date = startDate {
+                    startDate = Locale.current.calendar.startOfDay(for: date)
+                }
+            }
+        }
+
+        var endDate: Date? {
+            didSet {
+                if let date = endDate {
+                    endDate = Locale.current.calendar.startOfDay(for: date)
+                }
+            }
+        }
+
         var isOpenIconPicker = false
         var isOpenStartDatePicker = false
         var isOpenEndDatePicker = false
     }
-    
+
     var state = State() {
         didSet { render() }
     }
-    
+
     private let renderer = Renderer(adapter: UITableViewAdapter(), updater: UITableViewUpdater())
+    private var dateFormatter: DateFormatter {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        return df
+    }
+    
+    // Local
+    @IBOutlet var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,35 +109,30 @@ class AddGoalViewController: UITableViewController {
                     Header("Dates")
                         .identified(by: \.title)
                     
-                    SLabel(title: "Start Date", text: "Jan 01, 1969") { [weak self] in
+                    SLabel(title: "Start Date", text: dateFormatter.string(from: state.startDate ?? Date())) { [weak self] in
                         self?.state.isOpenStartDatePicker.toggle()
                     }
                     
                     if state.isOpenStartDatePicker {
-                        SDatePicker(date: state.startDate) { [weak self] date in
-                            self?.state.startDate = date
+                        SDatePicker(title: "Start Date", date: state.startDate) { [self] startDate in
+                            self.state.startDate = startDate
+                            if let endDate = self.state.endDate, endDate < startDate {
+                                self.state.endDate = startDate
+                            }
+                            self.state.isOpenStartDatePicker.toggle()
                         }
-                        .identified(by: ID.startDatePicker)
                     }
                     
-                    SLabel(title: "End Date", text: "Jan 02, 1969") { [weak self] in
+                    SLabel(title: "End Date", text: dateFormatter.string(from: state.endDate ?? Date())) { [weak self] in
                         self?.state.isOpenEndDatePicker.toggle()
                     }
                     
                     if state.isOpenEndDatePicker {
-                        SDatePicker(date: state.endDate) { [weak self] date in
-                            self?.state.endDate = date
+                        SDatePicker(title: "End Date", date: state.endDate) { [self] endDate in
+                            self.state.endDate = endDate
+                            self.state.isOpenEndDatePicker.toggle()
                         }
-                        .identified(by: ID.endDatePicker)
                     }
-                }
-                // Advanced
-                // Hard Mode Toggle
-                Section(id: 3) {
-                    Header("Advanced")
-                        .identified(by: \.title)
-                    
-                    SLabel(title: "Hard Mode", text: "REPLACE ME") {}
                 }
             }
         }
@@ -141,5 +147,40 @@ class AddGoalViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {}
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        print("Current State: \(state)")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let viewContext = appDelegate.persistentContainer.viewContext
+        viewContext.perform {
+            let goal = Goal(context: viewContext)
+            goal.identifier = UUID()
+            goal.name = self.state.name
+            goal.desc = self.state.desc
+            goal.iconName = self.state.iconName?.rawValue
+            var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0
+            self.state.color?.getRed(&red, green: &green, blue: &blue, alpha: nil)
+            goal.colorRed = Float(red)
+            goal.colorGreen = Float(green)
+            goal.colorBlue = Float(blue)
+            goal.startDate = self.state.startDate
+            goal.endDate = self.state.endDate
+            
+            let localCalendar = Locale.current.calendar
+            var days = [Day]()
+            for dayNum in 1 ... goal.endDate!.interval(ofComponent: .day, fromDate: goal.startDate!) {
+                let day = Day(context: viewContext)
+                day.identifier = UUID()
+                day.number = Int16(dayNum)
+                let thisDate = localCalendar.date(byAdding: .day, value: dayNum - 1, to: goal.startDate!)
+                day.date = localCalendar.startOfDay(for: thisDate!)
+                days.append(day)
+            }
+            goal.days = NSSet(array: days)
+            
+            appDelegate.saveContext()
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
