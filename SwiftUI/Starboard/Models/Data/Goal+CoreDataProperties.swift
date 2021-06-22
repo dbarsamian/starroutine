@@ -2,7 +2,7 @@
 //  Goal+CoreDataProperties.swift
 //  Starboard
 //
-//  Created by David Barsamian on 1/15/21.
+//  Created by David Barsamian on 6/21/21.
 //
 //
 
@@ -17,14 +17,14 @@ public extension Goal {
 
     @NSManaged var color: UIColor?
     @NSManaged var completed: Bool
+    @NSManaged var daysCompleted: Int16
     @NSManaged var desc: String?
     @NSManaged var endDate: Date?
+    @NSManaged var hardMode: Bool
     @NSManaged var icon: String?
     @NSManaged var name: String?
     @NSManaged var startDate: Date?
-    @NSManaged var daysCompleted: Int16
     @NSManaged var days: NSSet?
-    @NSManaged var hardMode: Bool
 }
 
 // MARK: Generated accessors for days

@@ -2,7 +2,7 @@
 //  Goal+CoreDataClass.swift
 //  Starboard
 //
-//  Created by David Barsamian on 1/15/21.
+//  Created by David Barsamian on 6/21/21.
 //
 //
 

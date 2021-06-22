@@ -37,6 +37,8 @@ struct GoalLinkView: View {
     }
 
     func populateView() {
+        guard goal.days != nil else { return }
+
         // Calculate progress
         withAnimation(.easeOut) {
             progress = Float(goal.daysCompleted) / Float(goal.endDate!.interval(

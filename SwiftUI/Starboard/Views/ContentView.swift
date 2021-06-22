@@ -11,8 +11,6 @@ import SwiftUI
 // MARK: - ContentView
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
     var body: some View {
         TabView {
             GoalsView()
@@ -30,18 +28,6 @@ struct ContentView: View {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
-        }
-    }
-}
-
-// MARK: - Previews
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView()
-                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-                .previewDisplayName("Main")
         }
     }
 }
