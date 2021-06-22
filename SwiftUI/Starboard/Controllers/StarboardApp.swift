@@ -15,7 +15,7 @@ struct StarboardApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GoalsView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                 .welcomeView(mainColor: .accentColor, informationDetailViews: [
                     InformationDetailView(

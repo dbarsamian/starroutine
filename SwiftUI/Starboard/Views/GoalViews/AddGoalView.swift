@@ -127,3 +127,10 @@ struct AddGoalView: View {
         }
     }
 }
+
+struct AddGoalView_Preview: PreviewProvider {
+    static var previews: some View {
+        AddGoalView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}

@@ -65,7 +65,7 @@ struct GoalsView: View {
     }
 }
 
-struct GoalsView_Previews: PreviewProvider {
+struct GoalsView_Preview: PreviewProvider {
     static var previews: some View {
         GoalsView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

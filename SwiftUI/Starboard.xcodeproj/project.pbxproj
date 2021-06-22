@@ -12,10 +12,11 @@
 		68461DF6268154BE009F9A07 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */; };
 		68461DF7268154BE009F9A07 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */; };
 		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
-		68B64EB5267AB1EA0001B2D6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 68B64EB4267AB1EA0001B2D6 /* Introspect */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
+		68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 68C6E18926829DEE00AA5B91 /* .swiftlint.yml */; };
+		68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */; };
 		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
 		68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D81C8726465EFF0072E86C /* EmptyDetailView.swift */; };
 		68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */; };
@@ -26,7 +27,6 @@
 		68E876AD25D24FE6008C341A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E876AC25D24FE6008C341A /* Assets.xcassets */; };
 		68E876B125D24FE6008C341A /* StarboardWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D50973C4255F3517008F944C /* StarboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarboardApp.swift */; };
-		D50973C6255F3517008F944C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C5255F3517008F944C /* ContentView.swift */; };
 		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
 		D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973CA255F3519008F944C /* Preview Assets.xcassets */; };
 		D50973CD255F3519008F944C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973CC255F3519008F944C /* PersistenceController.swift */; };
@@ -75,6 +75,8 @@
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		68C6E18926829DEE00AA5B91 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardBackground.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
 		68D81C8726465EFF0072E86C /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
 		68DF216C25B8A83D00374FCB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -87,7 +89,6 @@
 		68E876AE25D24FE6008C341A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50973C0255F3517008F944C /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50973C3255F3517008F944C /* StarboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardApp.swift; sourceTree = "<group>"; };
-		D50973C5255F3517008F944C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D50973C7255F3519008F944C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D50973CA255F3519008F944C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D50973CC255F3519008F944C /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */,
-				68B64EB5267AB1EA0001B2D6 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +171,7 @@
 				68E876A925D24FE5008C341A /* StarboardWidget */,
 				68DF216B25B8A83D00374FCB /* Frameworks */,
 				D50973C1255F3517008F944C /* Products */,
+				68C6E18926829DEE00AA5B91 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,7 +209,6 @@
 		D53957932565E1D6001D7497 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D50973C5255F3517008F944C /* ContentView.swift */,
 				D5EB4158256B31380089250B /* GoalViews */,
 				D5EB415A256B31660089250B /* StarboardViews */,
 				D5EB415C256B31700089250B /* HistoryViews */,
@@ -275,6 +275,7 @@
 			children = (
 				D5EB414C256B30A60089250B /* StarboardView.swift */,
 				D5EB414F256B30C50089250B /* DayView.swift */,
+				68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */,
 			);
 			path = StarboardViews;
 			sourceTree = "<group>";
@@ -333,7 +334,6 @@
 			name = Starboard;
 			packageProductDependencies = (
 				68B5031526158CA900A324B3 /* FirstOpenViews */,
-				68B64EB4267AB1EA0001B2D6 /* Introspect */,
 			);
 			productName = Starboard;
 			productReference = D50973C0255F3517008F944C /* Starboard.app */;
@@ -367,7 +367,6 @@
 			mainGroup = D50973B7255F3516008F944C;
 			packageReferences = (
 				68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */,
-				68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = D50973C1255F3517008F944C /* Products */;
 			projectDirPath = "";
@@ -392,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */,
 				D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */,
 				D50973C8255F3519008F944C /* Assets.xcassets in Resources */,
 			);
@@ -438,6 +438,7 @@
 				D5EB414D256B30A60089250B /* StarboardView.swift in Sources */,
 				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
 				68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */,
+				68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */,
 				68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */,
 				68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */,
 				68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */,
@@ -451,7 +452,6 @@
 				68461DF6268154BE009F9A07 /* Goal+CoreDataClass.swift in Sources */,
 				D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */,
 				D50973CD255F3519008F944C /* PersistenceController.swift in Sources */,
-				D50973C6255F3517008F944C /* ContentView.swift in Sources */,
 				68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */,
 				68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */,
 				D50973C4255F3517008F944C /* StarboardApp.swift in Sources */,
@@ -484,7 +484,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -507,7 +507,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -651,7 +651,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -676,7 +676,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -725,14 +725,6 @@
 				kind = branch;
 			};
 		};
-		68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -740,11 +732,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */;
 			productName = FirstOpenViews;
-		};
-		68B64EB4267AB1EA0001B2D6 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 
