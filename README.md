@@ -3,7 +3,7 @@
 
 *Starboard* is a daily goal tracking app designed to make it rewarding and easy to create new habits and achieve your goals.
 
-
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/dbarsamian/starboard?include_prereleases)](https://github.com/dbarsamian/starboard/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/dbarsamian/starboard)](https://github.com/dbarsamian/starboard/commits/master)
 [![GitHub license](https://img.shields.io/github/license/dbarsamian/starboard)](https://github.com/dbarsamian/starboard/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/dbarsamian/starboard)](https://github.com/dbarsamian/starboard/issues)
