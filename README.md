@@ -10,23 +10,17 @@
 [![GitHub followers](https://img.shields.io/github/followers/dbarsamian?style=social)](https://github.com/dbarsamian)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dbarsamian/starboard?style=social)](https://github.com/dbarsamian/starboard/subscription)
 
-## ℹ️ Update: SwiftUI & UIKit
-I will be porting over what I have in SwiftUI to an entirely new UIKit project. The SwiftUI project will remain alongside the new UIKit project. Read about this change [here](). (this post is *not* live yet.) 
-
-**TL;DR: There are (what I presume to be) bugs in SwiftUI that are causing UI/UX issues I consider to be unacceptable, and are not allowing me to finish the app. Rather than attempt to craft hacky workarounds for the shortcomings I've come across, I've decided to port the project to UIKit.**
-
 ## 🌟 Features
 - Create goals tailored for what you want to accomplish.
 - Customize your goals with colors and icons to make your goals stand out.
 - See your progress with a timeline view of the progress you make.
-- Challenge yourself with *hard mode*: you can only check-off your goal once a day!
 
 ## 💫 Upcoming Features
 - Unlimited goals (via in-app purchase, read more [here]() (this post isn't live yet.))
 - Edit goals
 - More icons
-- Customization with pictures
-- Cross-platform support with an iPad, Mac app
+- Customization with themes
+- Cross-platform support with iPhone, iPad, Mac, and Apple Watch apps
 - Sync across platforms with iCloud
 - Widget
 - Apple Watch app
