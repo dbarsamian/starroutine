@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StarboardBackground: View {
     var body: some View {
-        
+        Text("Background")
     }
 }
 
