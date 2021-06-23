@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68461DF4268154BE009F9A07 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF0268154BE009F9A07 /* Day+CoreDataClass.swift */; };
+		68461DF5268154BE009F9A07 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */; };
+		68461DF6268154BE009F9A07 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */; };
+		68461DF7268154BE009F9A07 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */; };
 		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
-		68B64EB5267AB1EA0001B2D6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 68B64EB4267AB1EA0001B2D6 /* Introspect */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
+		68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 68C6E18926829DEE00AA5B91 /* .swiftlint.yml */; };
+		68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */; };
 		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
 		68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D81C8726465EFF0072E86C /* EmptyDetailView.swift */; };
-		68E37E8325B23AE8001D7AD9 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E7F25B23AE8001D7AD9 /* Day+CoreDataClass.swift */; };
-		68E37E8425B23AE8001D7AD9 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8025B23AE8001D7AD9 /* Day+CoreDataProperties.swift */; };
-		68E37E8525B23AE8001D7AD9 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8125B23AE8001D7AD9 /* Goal+CoreDataClass.swift */; };
 		68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */; };
-		68E37E9325B24E4F001D7AD9 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E9225B24E4F001D7AD9 /* Goal+CoreDataProperties.swift */; };
 		68E37E9725B2542C001D7AD9 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E9625B2542C001D7AD9 /* ComparableExtension.swift */; };
 		68E876A725D24FE5008C341A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF216C25B8A83D00374FCB /* WidgetKit.framework */; };
 		68E876A825D24FE5008C341A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF216E25B8A83D00374FCB /* SwiftUI.framework */; };
@@ -26,10 +27,9 @@
 		68E876AD25D24FE6008C341A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E876AC25D24FE6008C341A /* Assets.xcassets */; };
 		68E876B125D24FE6008C341A /* StarboardWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D50973C4255F3517008F944C /* StarboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarboardApp.swift */; };
-		D50973C6255F3517008F944C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C5255F3517008F944C /* ContentView.swift */; };
 		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
 		D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973CA255F3519008F944C /* Preview Assets.xcassets */; };
-		D50973CD255F3519008F944C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973CC255F3519008F944C /* Persistence.swift */; };
+		D50973CD255F3519008F944C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973CC255F3519008F944C /* PersistenceController.swift */; };
 		D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D50973CE255F3519008F944C /* Starboard.xcdatamodeld */; };
 		D55F2A7C25675E1900DB9C52 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F2A7B25675E1900DB9C52 /* DateExtension.swift */; };
 		D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB4140256B2C190089250B /* EmptyListView.swift */; };
@@ -68,18 +68,20 @@
 
 /* Begin PBXFileReference section */
 		680545B425D2593900AB173A /* Starboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Starboard.entitlements; sourceTree = "<group>"; };
+		68461DF0268154BE009F9A07 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		68C6E18926829DEE00AA5B91 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardBackground.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
 		68D81C8726465EFF0072E86C /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
 		68DF216C25B8A83D00374FCB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		68DF216E25B8A83D00374FCB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		68E37E7F25B23AE8001D7AD9 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
-		68E37E8025B23AE8001D7AD9 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		68E37E8125B23AE8001D7AD9 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
-		68E37E9225B24E4F001D7AD9 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68E37E9625B2542C001D7AD9 /* ComparableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtension.swift; sourceTree = "<group>"; };
 		68E876A625D24FE5008C341A /* StarboardWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StarboardWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E876AA25D24FE5008C341A /* StarboardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardWidget.swift; sourceTree = "<group>"; };
@@ -87,10 +89,9 @@
 		68E876AE25D24FE6008C341A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50973C0255F3517008F944C /* Starboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50973C3255F3517008F944C /* StarboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardApp.swift; sourceTree = "<group>"; };
-		D50973C5255F3517008F944C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D50973C7255F3519008F944C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D50973CA255F3519008F944C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D50973CC255F3519008F944C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D50973CC255F3519008F944C /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D50973CF255F3519008F944C /* Starboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Starboard.xcdatamodel; sourceTree = "<group>"; };
 		D50973D1255F3519008F944C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55F2A7B25675E1900DB9C52 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */,
-				68B64EB5267AB1EA0001B2D6 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,10 +146,10 @@
 		68E37E8925B23B30001D7AD9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				68E37E7F25B23AE8001D7AD9 /* Day+CoreDataClass.swift */,
-				68E37E8025B23AE8001D7AD9 /* Day+CoreDataProperties.swift */,
-				68E37E8125B23AE8001D7AD9 /* Goal+CoreDataClass.swift */,
-				68E37E9225B24E4F001D7AD9 /* Goal+CoreDataProperties.swift */,
+				68461DF0268154BE009F9A07 /* Day+CoreDataClass.swift */,
+				68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */,
+				68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */,
+				68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -171,6 +171,7 @@
 				68E876A925D24FE5008C341A /* StarboardWidget */,
 				68DF216B25B8A83D00374FCB /* Frameworks */,
 				D50973C1255F3517008F944C /* Products */,
+				68C6E18926829DEE00AA5B91 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,7 +209,6 @@
 		D53957932565E1D6001D7497 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D50973C5255F3517008F944C /* ContentView.swift */,
 				D5EB4158256B31380089250B /* GoalViews */,
 				D5EB415A256B31660089250B /* StarboardViews */,
 				D5EB415C256B31700089250B /* HistoryViews */,
@@ -221,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				D50973C3255F3517008F944C /* StarboardApp.swift */,
-				D50973CC255F3519008F944C /* Persistence.swift */,
+				D50973CC255F3519008F944C /* PersistenceController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +275,7 @@
 			children = (
 				D5EB414C256B30A60089250B /* StarboardView.swift */,
 				D5EB414F256B30C50089250B /* DayView.swift */,
+				68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */,
 			);
 			path = StarboardViews;
 			sourceTree = "<group>";
@@ -333,7 +334,6 @@
 			name = Starboard;
 			packageProductDependencies = (
 				68B5031526158CA900A324B3 /* FirstOpenViews */,
-				68B64EB4267AB1EA0001B2D6 /* Introspect */,
 			);
 			productName = Starboard;
 			productReference = D50973C0255F3517008F944C /* Starboard.app */;
@@ -367,7 +367,6 @@
 			mainGroup = D50973B7255F3516008F944C;
 			packageReferences = (
 				68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */,
-				68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = D50973C1255F3517008F944C /* Products */;
 			projectDirPath = "";
@@ -392,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */,
 				D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */,
 				D50973C8255F3519008F944C /* Assets.xcassets in Resources */,
 			);
@@ -434,24 +434,24 @@
 			files = (
 				D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */,
 				D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */,
-				68E37E8425B23AE8001D7AD9 /* Day+CoreDataProperties.swift in Sources */,
 				D55F2A7C25675E1900DB9C52 /* DateExtension.swift in Sources */,
 				D5EB414D256B30A60089250B /* StarboardView.swift in Sources */,
-				68E37E9325B24E4F001D7AD9 /* Goal+CoreDataProperties.swift in Sources */,
 				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
 				68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */,
+				68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */,
 				68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */,
-				68E37E8325B23AE8001D7AD9 /* Day+CoreDataClass.swift in Sources */,
 				68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */,
 				68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */,
-				68E37E8525B23AE8001D7AD9 /* Goal+CoreDataClass.swift in Sources */,
 				D5EB414A256B30380089250B /* AddGoalView.swift in Sources */,
 				D5EB4150256B30C50089250B /* DayView.swift in Sources */,
 				D5EB4156256B30FC0089250B /* SettingsView.swift in Sources */,
+				68461DF4268154BE009F9A07 /* Day+CoreDataClass.swift in Sources */,
 				D5EB4147256B2FC30089250B /* GoalsView.swift in Sources */,
+				68461DF7268154BE009F9A07 /* Goal+CoreDataProperties.swift in Sources */,
+				68461DF5268154BE009F9A07 /* Day+CoreDataProperties.swift in Sources */,
+				68461DF6268154BE009F9A07 /* Goal+CoreDataClass.swift in Sources */,
 				D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */,
-				D50973CD255F3519008F944C /* Persistence.swift in Sources */,
-				D50973C6255F3517008F944C /* ContentView.swift in Sources */,
+				D50973CD255F3519008F944C /* PersistenceController.swift in Sources */,
 				68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */,
 				68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */,
 				D50973C4255F3517008F944C /* StarboardApp.swift in Sources */,
@@ -484,8 +484,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.StarboardWidget;
+				MARKETING_VERSION = 0.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -507,8 +507,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.StarboardWidget;
+				MARKETING_VERSION = 0.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -651,8 +651,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard;
+				MARKETING_VERSION = 0.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -676,8 +676,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard;
+				MARKETING_VERSION = 0.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -725,14 +725,6 @@
 				kind = branch;
 			};
 		};
-		68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -740,11 +732,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68B5031426158CA900A324B3 /* XCRemoteSwiftPackageReference "FirstOpenViews" */;
 			productName = FirstOpenViews;
-		};
-		68B64EB4267AB1EA0001B2D6 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 68B64EB3267AB1EA0001B2D6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 

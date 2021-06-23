@@ -13,12 +13,10 @@ import SwiftUI
 struct StarboardApp: App {
     @Environment(\.scenePhase) private var scenePhase
 
-    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            GoalsView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                 .welcomeView(mainColor: .accentColor, informationDetailViews: [
                     InformationDetailView(
                         title: "Make Goals",
@@ -41,18 +39,12 @@ struct StarboardApp: App {
                 ])
         }
         .onChange(of: scenePhase) { _ in
-            persistenceController.save()
-        }
-    }
-
-    func saveContext() {
-        let context = persistenceController.container.viewContext
-        if context.hasChanges {
+            let viewContext = PersistenceController.shared.container.viewContext
             do {
-                try context.save()
+                try viewContext.save()
             } catch {
-                let error = error as NSError
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                let nsError = error as NSError
+                fatalError("Unresolved error: \(nsError.localizedDescription), \(nsError.userInfo)")
             }
         }
     }

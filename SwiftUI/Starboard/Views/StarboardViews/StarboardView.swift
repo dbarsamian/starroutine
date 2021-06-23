@@ -12,7 +12,7 @@ struct StarboardView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var dayArray = [Day]()
 
-    @ObservedObject var goal: Goal
+    @StateObject var goal: Goal
     var dateFormatter: DateFormatter {
         let dformat = DateFormatter()
         dformat.dateStyle = .medium
@@ -23,34 +23,33 @@ struct StarboardView: View {
         ScrollViewReader { proxy in
             List {
                 ForEach(dayArray, id: \Day.number) { day in
-                    DayView(day: day)
-                        .listRowBackground(
-                            Calendar.current.startOfDay(
-                                for: Date()).compare(day.date!) == ComparisonResult.orderedSame ? (
-                                colorScheme == .dark ? Color(goal.color!).darken() :
-                                    Color(goal.color!).lighten()
-                            ) : Color(UIColor.secondarySystemGroupedBackground)
-                        )
+                    if day.date != nil {
+                        DayView(day: day)
+                            .listRowBackground(
+                                Calendar.current.startOfDay(
+                                    for: Date()).compare(day.date!) == ComparisonResult.orderedSame ? (
+                                    colorScheme == .dark ? Color(goal.color!).darken() :
+                                        Color(goal.color!).lighten()
+                                ) : Color(UIColor.secondarySystemGroupedBackground)
+                            )
+                    }
                 }
                 .frame(height: 75)
             }
             .navigationBarTitle(Text(goal.name ?? ""))
             .listStyle(InsetGroupedListStyle())
             .onAppear {
-                // Populate day array
+                // Populate day array and scroll to today
+                let descriptor = NSSortDescriptor(keyPath: \Day.number, ascending: true)
                 if let days = goal.days,
-                   let array = days.sortedArray(using: [NSSortDescriptor(keyPath: \Day.number,
-                                                                         ascending: true)]) as? [Day] {
+                   let array = days.sortedArray(using: [descriptor]) as? [Day] {
                     dayArray = array
-                }
-                // Scroll to today
-                for rawDate in goal.days! {
-                    guard let date = rawDate as? Day else {
-                        return
-                    }
-                    if Calendar.current.startOfDay(for: Date()).compare(date.date!) == ComparisonResult.orderedSame {
-                        withAnimation(.default) {
-                            proxy.scrollTo(Calendar.current.startOfDay(for: date.date!))
+                    let cal = Locale.current.calendar
+                    for day in dayArray {
+                        if let date = day.date, cal.startOfDay(for: Date()).compare(date) == .orderedSame {
+                            withAnimation(.default) {
+                                proxy.scrollTo(cal.startOfDay(for: date))
+                            }
                         }
                     }
                 }
