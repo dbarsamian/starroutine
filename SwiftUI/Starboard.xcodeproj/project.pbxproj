@@ -17,6 +17,7 @@
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
 		68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 68C6E18926829DEE00AA5B91 /* .swiftlint.yml */; };
 		68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */; };
+		68C71EE2268BE6D300356201 /* ParticlesEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */; };
 		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
 		68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D81C8726465EFF0072E86C /* EmptyDetailView.swift */; };
 		68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */; };
@@ -77,6 +78,7 @@
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		68C6E18926829DEE00AA5B91 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardBackground.swift; sourceTree = "<group>"; };
+		68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesEmitter.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
 		68D81C8726465EFF0072E86C /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
 		68DF216C25B8A83D00374FCB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -243,6 +245,7 @@
 				D50973C9255F3519008F944C /* Preview Content */,
 				68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */,
 				68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */,
+				68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			files = (
 				D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */,
 				D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */,
+				68C71EE2268BE6D300356201 /* ParticlesEmitter.swift in Sources */,
 				D55F2A7C25675E1900DB9C52 /* DateExtension.swift in Sources */,
 				D5EB414D256B30A60089250B /* StarboardView.swift in Sources */,
 				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
