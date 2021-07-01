@@ -12,17 +12,25 @@ struct StarboardBackground: View {
 
     private var backgroundGradient: LinearGradient {
         if colorScheme == .light {
-            return LinearGradient(gradient: Gradient(colors: [Color("BackgroundColor").lighten(), Color("BackgroundColor")]), startPoint: .bottom, endPoint: .top)
+            return LinearGradient(
+                gradient: Gradient(colors: [Color("BackgroundColor").lighten(), Color("BackgroundColor")]),
+                startPoint: .bottom,
+                endPoint: .top
+            )
         } else {
-            return LinearGradient(gradient: Gradient(colors: [Color("BackgroundColor"), Color("BackgroundColor").darken(by: 75)]), startPoint: .bottom, endPoint: .top)
+            return LinearGradient(
+                gradient: Gradient(colors: [Color("BackgroundColor"), Color("BackgroundColor").darken(by: 50)]),
+                startPoint: .bottom,
+                endPoint: .top
+            )
         }
     }
 
     var body: some View {
         ParticlesEmitter {
             EmitterCell()
-                .content(.circle(16.0))
-                .color(.white.withAlphaComponent(0.0))
+                .content(.circle(16))
+                .color(.white)
                 .lifetime(20)
                 .birthRate(80)
                 .scale(0.01)
@@ -42,15 +50,11 @@ struct StarboardBackground: View {
 
 struct StarboardBackground_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
+        HStack(spacing: 0) {
             StarboardBackground()
-                .previewLayout(.fixed(width: 500, height: 500))
-                .previewDisplayName("Light")
-                .preferredColorScheme(.light)
+                .environment(\.colorScheme, .light)
             StarboardBackground()
-                .previewLayout(.fixed(width: 500, height: 500))
-                .previewDisplayName("Dark")
-                .preferredColorScheme(.dark)
+                .environment(\.colorScheme, .dark)
         }
     }
 }
