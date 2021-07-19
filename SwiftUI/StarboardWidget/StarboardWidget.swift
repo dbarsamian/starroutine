@@ -42,7 +42,17 @@ struct StarboardWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack {
+            Text("Goal")
+                .font(.headline)
+            Text("Date")
+                .font(.subheadline)
+                .italic()
+            Image(systemName: "star.fill")
+                .font(.largeTitle)
+                .foregroundColor(.yellow)
+                .padding()
+        }
     }
 }
 
@@ -54,8 +64,8 @@ struct StarboardWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             StarboardWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Goals")
-        .description("Get a glance at your ongoing goals.")
+        .configurationDisplayName("Starboard")
+        .description("Keep track of a goal and easily mark today off.")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }

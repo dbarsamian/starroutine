@@ -69,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		680545B425D2593900AB173A /* Starboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Starboard.entitlements; sourceTree = "<group>"; };
+		682B6DA326919A7C00788EBC /* StarboardWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarboardWidgetExtension.entitlements; sourceTree = "<group>"; };
 		68461DF0268154BE009F9A07 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		68E876A925D24FE5008C341A /* StarboardWidget */ = {
 			isa = PBXGroup;
 			children = (
+				682B6DA326919A7C00788EBC /* StarboardWidgetExtension.entitlements */,
 				68E876AA25D24FE5008C341A /* StarboardWidget.swift */,
 				68E876AC25D24FE6008C341A /* Assets.xcassets */,
 				68E876AE25D24FE6008C341A /* Info.plist */,
@@ -479,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StarboardWidget/StarboardWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J97PER9B8T;
 				INFOPLIST_FILE = StarboardWidget/Info.plist;
@@ -489,9 +492,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StarboardWidget/StarboardWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J97PER9B8T;
 				INFOPLIST_FILE = StarboardWidget/Info.plist;
@@ -512,9 +517,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -656,8 +662,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -681,8 +688,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
