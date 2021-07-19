@@ -40,7 +40,7 @@ struct GoalLinkView: View {
         guard goal.days != nil else { return }
 
         // Calculate progress
-        withAnimation(.easeOut) {
+        withAnimation(.default) {
             progress = Float(goal.daysCompleted) / Float(goal.endDate!.interval(
                 ofComponent: .day,
                 fromDate: goal.startDate!
