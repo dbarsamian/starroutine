@@ -61,6 +61,8 @@ struct GoalsView: View {
                 AddGoalView()
             })
             .navigationBarTitle(Text("Goals"))
+            
+            StarboardBackground()
         }
     }
 }

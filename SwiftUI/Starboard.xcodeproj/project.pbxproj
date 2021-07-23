@@ -17,6 +17,7 @@
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
 		68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 68C6E18926829DEE00AA5B91 /* .swiftlint.yml */; };
 		68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */; };
+		68C71EE2268BE6D300356201 /* ParticlesEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */; };
 		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
 		68D81C8826465EFF0072E86C /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D81C8726465EFF0072E86C /* EmptyDetailView.swift */; };
 		68E37E8C25B23BCD001D7AD9 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		680545B425D2593900AB173A /* Starboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Starboard.entitlements; sourceTree = "<group>"; };
+		682B6DA326919A7C00788EBC /* StarboardWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarboardWidgetExtension.entitlements; sourceTree = "<group>"; };
 		68461DF0268154BE009F9A07 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		68C6E18926829DEE00AA5B91 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardBackground.swift; sourceTree = "<group>"; };
+		68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesEmitter.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
 		68D81C8726465EFF0072E86C /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
 		68DF216C25B8A83D00374FCB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -157,6 +160,7 @@
 		68E876A925D24FE5008C341A /* StarboardWidget */ = {
 			isa = PBXGroup;
 			children = (
+				682B6DA326919A7C00788EBC /* StarboardWidgetExtension.entitlements */,
 				68E876AA25D24FE5008C341A /* StarboardWidget.swift */,
 				68E876AC25D24FE6008C341A /* Assets.xcassets */,
 				68E876AE25D24FE6008C341A /* Info.plist */,
@@ -243,6 +247,7 @@
 				D50973C9255F3519008F944C /* Preview Content */,
 				68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */,
 				68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */,
+				68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 			files = (
 				D50973D0255F3519008F944C /* Starboard.xcdatamodeld in Sources */,
 				D5EB4144256B2CB20089250B /* GoalLinkView.swift in Sources */,
+				68C71EE2268BE6D300356201 /* ParticlesEmitter.swift in Sources */,
 				D55F2A7C25675E1900DB9C52 /* DateExtension.swift in Sources */,
 				D5EB414D256B30A60089250B /* StarboardView.swift in Sources */,
 				D5EB4153256B30E90089250B /* HistoryView.swift in Sources */,
@@ -475,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StarboardWidget/StarboardWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J97PER9B8T;
 				INFOPLIST_FILE = StarboardWidget/Info.plist;
@@ -485,9 +492,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StarboardWidget/StarboardWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J97PER9B8T;
 				INFOPLIST_FILE = StarboardWidget/Info.plist;
@@ -508,9 +517,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI.StarboardWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -652,8 +662,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -677,8 +688,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.Starboard.SwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbarsam.starboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
