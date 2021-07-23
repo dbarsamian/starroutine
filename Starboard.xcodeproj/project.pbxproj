@@ -11,11 +11,11 @@
 		68461DF5268154BE009F9A07 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */; };
 		68461DF6268154BE009F9A07 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */; };
 		68461DF7268154BE009F9A07 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */; };
+		687B69AC26AB38FF000F4C17 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 687B69AB26AB38FF000F4C17 /* .swiftlint.yml */; };
 		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
 		68C5EFD02599DD8B0094BE12 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */; };
-		68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 68C6E18926829DEE00AA5B91 /* .swiftlint.yml */; };
 		68C6E18C2682A13300AA5B91 /* StarboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */; };
 		68C71EE2268BE6D300356201 /* ParticlesEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */; };
 		68CBEA1B25B11C75001E0FFF /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */; };
@@ -74,10 +74,10 @@
 		68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		687B69AB26AB38FF000F4C17 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		68C6E18926829DEE00AA5B91 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		68C6E18B2682A13300AA5B91 /* StarboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardBackground.swift; sourceTree = "<group>"; };
 		68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesEmitter.swift; sourceTree = "<group>"; };
 		68CBEA1A25B11C75001E0FFF /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
@@ -171,11 +171,11 @@
 		D50973B7255F3516008F944C = {
 			isa = PBXGroup;
 			children = (
+				687B69AB26AB38FF000F4C17 /* .swiftlint.yml */,
 				D50973C2255F3517008F944C /* Starboard */,
 				68E876A925D24FE5008C341A /* StarboardWidget */,
 				68DF216B25B8A83D00374FCB /* Frameworks */,
 				D50973C1255F3517008F944C /* Products */,
-				68C6E18926829DEE00AA5B91 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -396,7 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68C6E18A26829DEE00AA5B91 /* .swiftlint.yml in Resources */,
+				687B69AC26AB38FF000F4C17 /* .swiftlint.yml in Resources */,
 				D50973CB255F3519008F944C /* Preview Assets.xcassets in Resources */,
 				D50973C8255F3519008F944C /* Assets.xcassets in Resources */,
 			);
