@@ -56,7 +56,7 @@ struct GoalsView: View {
                     })
                 }
             }
-            .listStyle(.insetGrouped)
+            .listStyle(InsetGroupedListStyle())
             .sheet(isPresented: $showingAddGoals, content: {
                 AddGoalView()
             })

@@ -12,39 +12,33 @@ struct StarboardView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode
     @State var dayArray = [Day]()
-
+    
     @StateObject var goal: Goal
-
+    
     private var dateFormatter: DateFormatter {
         let dformat = DateFormatter()
         dformat.dateStyle = .medium
         return dformat
     }
-
+    
     var body: some View {
         ScrollViewReader { proxy in
             List {
                 ForEach(dayArray, id: \Day.number) { day in
                     if day.date != nil {
-                        if #available(iOS 15.0, *) {
-                            DayView(day: day)
-                                .listRowSeparator(.hidden)
-                                .listRowBackground(rowColor(for: day.date!).opacity(0.2).background(.ultraThinMaterial))
-                        } else {
-                            DayView(day: day)
-                                .listRowBackground(rowColor(for: day.date!).opacity(0.2))
-                        }
+                        DayView(day: day)
+                            .listRowBackground(rowColor(for: day.date!).opacity(0.2))
                     }
                 }
                 .frame(height: 75)
             }
             .background(StarboardBackground())
             .navigationBarTitle(Text(goal.name ?? ""))
-            .listStyle(.insetGrouped)
+            .listStyle(InsetGroupedListStyle())
             .onAppear { setup(with: proxy) }
         }
     }
-
+    
     private func rowColor(for date: Date) -> Color {
         let today = Locale.current.calendar.startOfDay(for: Date())
         if today.compare(date) == .orderedSame {
@@ -57,10 +51,10 @@ struct StarboardView: View {
             return Color(UIColor.secondarySystemGroupedBackground)
         }
     }
-
+    
     private func setup(with proxy: ScrollViewProxy) {
         UITableView.appearance().backgroundColor = .clear
-
+        
         // Populate day array and scroll to today
         let descriptor = NSSortDescriptor(keyPath: \Day.number, ascending: true)
         if let days = goal.days,

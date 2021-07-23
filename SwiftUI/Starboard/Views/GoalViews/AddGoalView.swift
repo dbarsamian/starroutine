@@ -82,7 +82,7 @@ struct AddGoalView: View {
                         DatePicker(selection: $viewModel.startDate, in: Date()..., displayedComponents: .date) {
                             Label("Start", systemImage: "hourglass.bottomhalf.fill")
                         }
-                        .datePickerStyle(.graphical)
+                        .datePickerStyle(GraphicalDatePickerStyle())
                     }
                     HStack {
                         Label("End", systemImage: "hourglass.tophalf.fill")
@@ -106,7 +106,7 @@ struct AddGoalView: View {
                         )!, displayedComponents: .date) {
                             Label("Start", systemImage: "hourglass.bottomhalf.fill")
                         }
-                        .datePickerStyle(.graphical)
+                        .datePickerStyle(GraphicalDatePickerStyle())
                     }
                 }
                 Section(header: Text("Other"),
