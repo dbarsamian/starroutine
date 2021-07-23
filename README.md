@@ -29,9 +29,8 @@
 
 ### For Developers
 This project is built on:
-- macOS Big Sur 11.0.1+
-- Xcode 12.3
-- SwiftUI 2
-- UIKit
+- macOS Big Sur
+- Xcode 12.5.1
+- SwiftUI
 
 `// TODO: Complete the rest of this README.md`
