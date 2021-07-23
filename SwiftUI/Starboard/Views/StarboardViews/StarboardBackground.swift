@@ -27,24 +27,26 @@ struct StarboardBackground: View {
     }
 
     var body: some View {
-        ParticlesEmitter {
-            EmitterCell()
-                .content(.circle(16))
-                .color(.white)
-                .lifetime(20)
-                .birthRate(80)
-                .scale(0.01)
-                .scaleRange(0.004)
-                .scaleSpeed(0.005)
-                .alphaSpeed(0.3)
-                .velocity(120)
-                .emissionRange(-.pi)
+        GeometryReader { geo in
+            ParticlesEmitter {
+                EmitterCell()
+                    .content(.circle(16))
+                    .color(.white)
+                    .lifetime(20)
+                    .birthRate(80)
+                    .scale(0.01)
+                    .scaleRange(0.004)
+                    .scaleSpeed(0.005)
+                    .alphaSpeed(0.3)
+                    .velocity(120)
+                    .emissionRange(-.pi)
+            }
+            .emitterSize(CGSize(width: 1, height: 1))
+            .emitterShape(.rectangle)
+            .emitterPosition(CGPoint(x: geo.size.width / 2, y: geo.size.height / 2))
+            .background(backgroundGradient)
+            .edgesIgnoringSafeArea(.all)
         }
-        .emitterSize(CGSize(width: 1, height: 1))
-        .emitterShape(.rectangle)
-        .emitterPosition(CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
-        .background(backgroundGradient)
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

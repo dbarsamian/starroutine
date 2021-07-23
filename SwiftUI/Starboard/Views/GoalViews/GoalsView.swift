@@ -56,11 +56,13 @@ struct GoalsView: View {
                     })
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+            .listStyle(.insetGrouped)
             .sheet(isPresented: $showingAddGoals, content: {
                 AddGoalView()
             })
             .navigationBarTitle(Text("Goals"))
+            
+            StarboardBackground()
         }
     }
 }

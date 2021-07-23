@@ -12,7 +12,7 @@ struct AddGoalView: View {
     @Environment(\.presentationMode) var presentationMode
 
     @ObservedObject var viewModel = AddGoalViewModel()
-    
+
     @State private var showingStartDateCal = false
     @State private var showingEndDateCal = false
 
@@ -21,6 +21,7 @@ struct AddGoalView: View {
         formatter.dateStyle = .medium
         return formatter
     }()
+
     private static let calendar = Locale.current.calendar
     private static let icons: [String] = [
         "star.fill",
@@ -32,10 +33,10 @@ struct AddGoalView: View {
         "airplane.circle.fill"
     ]
     private static let hardModeDescription: String =
-    """
-    Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. \
-    Be careful, this cannot be changed after you make your goal!
-    """
+        """
+        Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. \
+        Be careful, this cannot be changed after you make your goal!
+        """
 
     var body: some View {
         NavigationView {
@@ -54,20 +55,21 @@ struct AddGoalView: View {
                         Text("Icon")
                         Spacer()
                         Picker(selection: $viewModel.icon,
-                               label: Image(systemName: $viewModel.icon.wrappedValue)
-                                   .foregroundColor($viewModel.color.wrappedValue),
+                               label: Image(systemName: viewModel.icon)
+                                   .foregroundColor(viewModel.color),
                                content: {
                                    ForEach(AddGoalView.icons,
                                            id: \.self) { icon in
                                        Image(systemName: icon)
                                    }
                                })
+                            .accentColor(viewModel.color)
                             .pickerStyle(MenuPickerStyle())
                     }
                 }
                 Section(header: Text("Dates")) {
                     HStack {
-                        Label("Start", systemImage: "hourglass.bottomhalf.filled")
+                        Label("Start", systemImage: "hourglass.bottomhalf.fill")
                         Spacer()
                         Button(Self.dateFormatter.string(from: viewModel.startDate)) {
                             withAnimation {
@@ -78,12 +80,12 @@ struct AddGoalView: View {
                     }
                     if showingStartDateCal {
                         DatePicker(selection: $viewModel.startDate, in: Date()..., displayedComponents: .date) {
-                            Label("Start", systemImage: "hourglass.bottomhalf.filled")
+                            Label("Start", systemImage: "hourglass.bottomhalf.fill")
                         }
                         .datePickerStyle(.graphical)
                     }
                     HStack {
-                        Label("End", systemImage: "hourglass.tophalf.filled")
+                        Label("End", systemImage: "hourglass.tophalf.fill")
                         Spacer()
                         Button(Self.dateFormatter.string(from: viewModel.endDate)) {
                             withAnimation {
@@ -96,11 +98,13 @@ struct AddGoalView: View {
                         DatePicker(selection: $viewModel.endDate, in: Self.calendar.date(
                             byAdding: .day,
                             value: 1,
-                            to: viewModel.startDate)!...Self.calendar.date(
-                                byAdding: .year,
-                                value: 1,
-                                to: viewModel.startDate)!, displayedComponents: .date) {
-                            Label("Start", systemImage: "hourglass.bottomhalf.filled")
+                            to: viewModel.startDate
+                        )! ... Self.calendar.date(
+                            byAdding: .year,
+                            value: 1,
+                            to: viewModel.startDate
+                        )!, displayedComponents: .date) {
+                            Label("Start", systemImage: "hourglass.bottomhalf.fill")
                         }
                         .datePickerStyle(.graphical)
                     }
@@ -127,7 +131,7 @@ struct AddGoalView: View {
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Text("Add")
-                }).disabled($viewModel.name.wrappedValue.isEmpty || $viewModel.desc.wrappedValue.isEmpty)
+                }).disabled(viewModel.name.isEmpty || viewModel.desc.isEmpty)
             )
         }
     }
@@ -135,12 +139,12 @@ struct AddGoalView: View {
     private func createGoal() {
         // Create new goal
         let newGoal = Goal(context: viewContext)
-        newGoal.name = $viewModel.name.wrappedValue
-        newGoal.desc = $viewModel.desc.wrappedValue
-        newGoal.startDate = $viewModel.startDate.wrappedValue
-        newGoal.endDate = $viewModel.endDate.wrappedValue
-        newGoal.color = UIColor($viewModel.color.wrappedValue)
-        newGoal.icon = $viewModel.icon.wrappedValue
+        newGoal.name = viewModel.name
+        newGoal.desc = viewModel.desc
+        newGoal.startDate = viewModel.startDate
+        newGoal.endDate = viewModel.endDate
+        newGoal.color = UIColor(viewModel.color)
+        newGoal.icon = viewModel.icon
         // Populate new goal's daysCompleted with however many Days
         var days: [Day] = []
         for dayNum in 1 ... newGoal.endDate!.interval(ofComponent: .day, fromDate: newGoal.startDate!) {
