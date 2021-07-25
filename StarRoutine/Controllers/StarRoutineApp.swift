@@ -10,7 +10,7 @@ import FirstOpenViews
 import SwiftUI
 
 @main
-struct StarboardApp: App {
+struct StarRoutineApp: App {
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {

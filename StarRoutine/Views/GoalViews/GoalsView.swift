@@ -60,7 +60,11 @@ struct GoalsView: View {
             .sheet(isPresented: $showingAddGoals, content: {
                 AddGoalView()
             })
+            .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarTitle(Text("Goals"))
+            .onAppear {
+                UITableViewCell.appearance().backgroundColor = .systemBackground
+            }
             
             StarboardBackground()
         }
