@@ -1,7 +1,7 @@
-# Starboard
+# StarRoutine
 ### A habit-creating, goal-tracking app for iOS inspired by the star sticker boards of our childhoods.
 
-*Starboard* is a daily goal tracking app designed to make it rewarding and easy to create new habits and achieve your goals.
+*StarRoutine* is a daily goal tracking app designed to make it rewarding and easy to create new habits and achieve your goals.
 
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/dbarsamian/starboard?include_prereleases)](https://github.com/dbarsamian/starboard/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/dbarsamian/starboard)](https://github.com/dbarsamian/starboard/commits/master)
