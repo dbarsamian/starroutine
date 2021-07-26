@@ -7,6 +7,7 @@
 
 import CoreData
 import SwiftUI
+import SwiftUIX
 
 struct GoalsView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -24,39 +25,14 @@ struct GoalsView: View {
     @State private var sortMode: SortMode = .none
     @State private var selectedGoal: ObjectIdentifier?
     @State private var showingAddGoals = false
+    @State private var searchText = ""
+
+    // MARK: - Body
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(sortMode == .none ? Array(goals) : goals.sorted {first, second in
-                    switch sortMode {
-                    case .name:
-                        return first.name ?? "" < second.name ?? ""
-                    case .daysLeft:
-                        return first.daysLeft < second.daysLeft
-                    case .none:
-                        return true
-                    }
-                }) { goal in
-                    NavigationLink(
-                        destination: StarboardView(goal: goal),
-                        tag: goal.id,
-                        selection: $selectedGoal
-                    ) {
-                        GoalLinkView(goal: goal)
-                    }
-                }
-                .onDelete(perform: { indexSet in
-                    for index in indexSet {
-                        viewContext.delete(goals[index])
-                    }
-                    do {
-                        try viewContext.save()
-                    } catch {
-                        let nsError = error as NSError
-                        fatalError("Unresolved error: \(nsError.localizedDescription), \(nsError.userInfo)")
-                    }
-                })
+                listView
             }
             .toolbar {
                 ToolbarItem(placement: .navigation) {
@@ -82,8 +58,8 @@ struct GoalsView: View {
                         }
                     } label: {
                         Image(systemName: sortMode == .none
-                              ? "line.3.horizontal.decrease.circle"
-                              : "line.3.horizontal.decrease.circle.fill")
+                            ? "line.3.horizontal.decrease.circle"
+                            : "line.3.horizontal.decrease.circle.fill")
                     }
                     Spacer()
                     Text(sortMode == .none ? "" : "Sort by: \(sortMode.rawValue)")
@@ -99,8 +75,56 @@ struct GoalsView: View {
             .onAppear {
                 UITableViewCell.appearance().backgroundColor = .systemBackground
             }
+            .navigationSearchBar {
+                SearchBar("Search for a goal", text: $searchText)
+            }
+            .navigationSearchBarHiddenWhenScrolling(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+
+    // MARK: - List View
+
+    private var listView: some View {
+        ForEach(sortMode == .none
+            ? Array(goals)
+            .filter { goal in
+                searchText.isEmpty == true ? true : goal.name!.contains(searchText)
+            }
+            : goals
+            .sorted { first, second in
+                switch sortMode {
+                case .name:
+                    return first.name ?? "" < second.name ?? ""
+                case .daysLeft:
+                    return first.daysLeft < second.daysLeft
+                case .none:
+                    return true
+                }
+            }
+            .filter { goal in
+                searchText.isEmpty == true ? true : goal.name!.contains(searchText)
+            }
+        ) { goal in
+            NavigationLink(
+                destination: StarboardView(goal: goal),
+                tag: goal.id,
+                selection: $selectedGoal
+            ) {
+                GoalLinkView(goal: goal)
+            }
+        }
+        .onDelete(perform: { indexSet in
+            for index in indexSet {
+                viewContext.delete(goals[index])
+            }
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error: \(nsError.localizedDescription), \(nsError.userInfo)")
+            }
+        })
     }
 }
 
