@@ -14,6 +14,7 @@
 		687B69AC26AB38FF000F4C17 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 687B69AB26AB38FF000F4C17 /* .swiftlint.yml */; };
 		6894D3DA26AB75EF00F19FB2 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 6894D3D926AB75EF00F19FB2 /* SwiftUIX */; };
 		6894D3DD26AB881000F19FB2 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 6894D3DC26AB881000F19FB2 /* Introspect */; };
+		689FD63D26AF0FAD007B4F9A /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD63C26AF0FAD007B4F9A /* IconNames.swift */; };
 		68B5031626158CA900A324B3 /* FirstOpenViews in Frameworks */ = {isa = PBXBuildFile; productRef = 68B5031526158CA900A324B3 /* FirstOpenViews */; };
 		68C5EFC52599B5230094BE12 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFC42599B5230094BE12 /* ColorExtension.swift */; };
 		68C5EFCD2599CCB10094BE12 /* UnfinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */; };
@@ -26,7 +27,7 @@
 		68E37E9725B2542C001D7AD9 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E37E9625B2542C001D7AD9 /* ComparableExtension.swift */; };
 		68E876A725D24FE5008C341A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF216C25B8A83D00374FCB /* WidgetKit.framework */; };
 		68E876A825D24FE5008C341A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF216E25B8A83D00374FCB /* SwiftUI.framework */; };
-		68E876AB25D24FE5008C341A /* StarboardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E876AA25D24FE5008C341A /* StarboardWidget.swift */; };
+		68E876AB25D24FE5008C341A /* StarRoutineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E876AA25D24FE5008C341A /* StarRoutineWidget.swift */; };
 		68E876AD25D24FE6008C341A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E876AC25D24FE6008C341A /* Assets.xcassets */; };
 		D50973C4255F3517008F944C /* StarRoutineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50973C3255F3517008F944C /* StarRoutineApp.swift */; };
 		D50973C8255F3519008F944C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50973C7255F3519008F944C /* Assets.xcassets */; };
@@ -46,12 +47,13 @@
 
 /* Begin PBXFileReference section */
 		680545B425D2593900AB173A /* StarRoutine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarRoutine.entitlements; sourceTree = "<group>"; };
-		682B6DA326919A7C00788EBC /* StarboardWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarboardWidgetExtension.entitlements; sourceTree = "<group>"; };
+		682B6DA326919A7C00788EBC /* StarRoutineWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarRoutineWidgetExtension.entitlements; sourceTree = "<group>"; };
 		68461DF0268154BE009F9A07 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68461DF1268154BE009F9A07 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68461DF2268154BE009F9A07 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68461DF3268154BE009F9A07 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		687B69AB26AB38FF000F4C17 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		689FD63C26AF0FAD007B4F9A /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
 		68C5EFC42599B5230094BE12 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedView.swift; sourceTree = "<group>"; };
 		68C5EFCF2599DD8B0094BE12 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 		68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
 		68E37E9625B2542C001D7AD9 /* ComparableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtension.swift; sourceTree = "<group>"; };
 		68E876A625D24FE5008C341A /* StarRoutineWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StarRoutineWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		68E876AA25D24FE5008C341A /* StarboardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarboardWidget.swift; sourceTree = "<group>"; };
+		68E876AA25D24FE5008C341A /* StarRoutineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRoutineWidget.swift; sourceTree = "<group>"; };
 		68E876AC25D24FE6008C341A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68E876AE25D24FE6008C341A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50973C0255F3517008F944C /* StarRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,8 +141,8 @@
 		68E876A925D24FE5008C341A /* StarRoutineWidget */ = {
 			isa = PBXGroup;
 			children = (
-				682B6DA326919A7C00788EBC /* StarboardWidgetExtension.entitlements */,
-				68E876AA25D24FE5008C341A /* StarboardWidget.swift */,
+				682B6DA326919A7C00788EBC /* StarRoutineWidgetExtension.entitlements */,
+				68E876AA25D24FE5008C341A /* StarRoutineWidget.swift */,
 				68E876AC25D24FE6008C341A /* Assets.xcassets */,
 				68E876AE25D24FE6008C341A /* Info.plist */,
 			);
@@ -175,8 +177,8 @@
 				D53957972565E1E7001D7497 /* Models */,
 				D53957932565E1D6001D7497 /* Views */,
 				D53957952565E1E0001D7497 /* Controllers */,
-				D53957982565E1F8001D7497 /* Supporting Files */,
 				D55F2A7A25675DEF00DB9C52 /* Extensions */,
+				D53957982565E1F8001D7497 /* Supporting Files */,
 			);
 			path = StarRoutine;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 				68C5EFCC2599CCB10094BE12 /* UnfinishedView.swift */,
 				68E37E8B25B23BCD001D7AD9 /* UIColorTransformer.swift */,
 				68C71EE1268BE6D300356201 /* ParticlesEmitter.swift */,
+				689FD63C26AF0FAD007B4F9A /* IconNames.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -410,7 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E876AB25D24FE5008C341A /* StarboardWidget.swift in Sources */,
+				68E876AB25D24FE5008C341A /* StarRoutineWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +438,7 @@
 				68461DF4268154BE009F9A07 /* Day+CoreDataClass.swift in Sources */,
 				D5EB4147256B2FC30089250B /* GoalsView.swift in Sources */,
 				68461DF7268154BE009F9A07 /* Goal+CoreDataProperties.swift in Sources */,
+				689FD63D26AF0FAD007B4F9A /* IconNames.swift in Sources */,
 				68461DF5268154BE009F9A07 /* Day+CoreDataProperties.swift in Sources */,
 				68461DF6268154BE009F9A07 /* Goal+CoreDataClass.swift in Sources */,
 				D5EB4141256B2C190089250B /* EmptyListView.swift in Sources */,
@@ -454,10 +458,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = StarboardWidget/StarboardWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = StarRoutineWidget/StarRoutineWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J97PER9B8T;
-				INFOPLIST_FILE = StarboardWidget/Info.plist;
+				INFOPLIST_FILE = StarRoutineWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,10 +483,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = StarboardWidget/StarboardWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = StarRoutineWidget/StarRoutineWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J97PER9B8T;
-				INFOPLIST_FILE = StarboardWidget/Info.plist;
+				INFOPLIST_FILE = StarRoutineWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,6 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = StarRoutine/StarRoutine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"StarRoutine/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = J97PER9B8T;
 				ENABLE_PREVIEWS = YES;
@@ -649,6 +654,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = StarRoutine/StarRoutine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"StarRoutine/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = J97PER9B8T;
 				ENABLE_PREVIEWS = YES;

@@ -4,8 +4,10 @@
 //
 //  Created by David Barsamian on 11/22/20.
 //
+// swiftlint:disable multiple_closures_with_trailing_closure
 
 import SwiftUI
+import SwiftUIX
 
 struct AddGoalView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -15,6 +17,7 @@ struct AddGoalView: View {
 
     @State private var showingStartDateCal = false
     @State private var showingEndDateCal = false
+    @State private var showingIconPicker = false
 
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -23,15 +26,6 @@ struct AddGoalView: View {
     }()
 
     private static let calendar = Locale.current.calendar
-    private static let icons: [String] = [
-        "star.fill",
-        "moon.stars.fill",
-        "sparkles",
-        "leaf.fill",
-        "bookmark.circle.fill",
-        "gift.circle.fill",
-        "airplane.circle.fill"
-    ]
     private static let hardModeDescription: String =
         """
         Hard Mode disables marking stars on past days, only letting you mark them on the day of the star. \
@@ -41,6 +35,8 @@ struct AddGoalView: View {
     var body: some View {
         NavigationView {
             Form {
+                // MARK: - Info
+
                 Section(header: Text("Info")) {
                     TextField("Name",
                               text: $viewModel.name)
@@ -51,22 +47,23 @@ struct AddGoalView: View {
                         .keyboardType(.default)
                     ColorPicker("Color",
                                 selection: $viewModel.color)
-                    HStack {
-                        Text("Icon")
-                        Spacer()
-                        Picker(selection: $viewModel.icon,
-                               label: Image(systemName: viewModel.icon)
-                                   .foregroundColor(viewModel.color),
-                               content: {
-                                   ForEach(AddGoalView.icons,
-                                           id: \.self) { icon in
-                                       Image(systemName: icon)
-                                   }
-                               })
-                            .accentColor(viewModel.color)
-                            .pickerStyle(MenuPickerStyle())
+                    Button(action: {
+                        showingIconPicker = true
+                    }) {
+                        HStack {
+                            Text("Icon")
+                            Spacer()
+                            Image(systemName: viewModel.icon)
+                                .foregroundColor(viewModel.color)
+                        }
+                    }
+                    .sheet(isPresented: $showingIconPicker, onDismiss: nil) {
+                        iconPickerView
                     }
                 }
+
+                // MARK: - Dates
+
                 Section(header: Text("Dates")) {
                     HStack {
                         Label("Start", systemImage: "hourglass.bottomhalf.fill")
@@ -109,6 +106,9 @@ struct AddGoalView: View {
                         .datePickerStyle(GraphicalDatePickerStyle())
                     }
                 }
+
+                // MARK: - Other
+
                 Section(header: Text("Other"),
                         footer: Text("\(AddGoalView.hardModeDescription)")) {
                     Toggle(isOn: $viewModel.hardMode,
@@ -133,6 +133,42 @@ struct AddGoalView: View {
                     Text("Add")
                 }).disabled(viewModel.name.isEmpty || viewModel.desc.isEmpty)
             )
+        }
+    }
+
+    // MARK: - Icon Picker Sheet
+
+    private static let iconPickerSpacing: CGFloat = 32
+
+    @ViewBuilder
+    private var iconPickerView: some View {
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 48, maximum: 48),
+                                             spacing: Self.iconPickerSpacing)],
+                alignment: .center,
+                spacing: 32) {
+                    ForEach(IconNames.allCases,
+                            id: \.self) { icon in
+                        Button(action: {
+                            viewModel.icon = icon.rawValue
+                            showingIconPicker = false
+                        }) {
+                            Image(systemName: icon.rawValue)
+                                .resizable()
+                                .aspectRatio(nil, contentMode: .fit)
+                                .accentColor(viewModel.color)
+                                .frame(width: 48, height: 48)
+                                .fixedSize()
+                        }
+                    }
+                }
+                .padding()
+            }
+            .navigationBarTitle("Pick an icon", displayMode: .inline)
+            .navigationBarItems(leading: Button("Cancel", action: {
+                showingIconPicker = false
+            }))
         }
     }
 

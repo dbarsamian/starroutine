@@ -1,6 +1,6 @@
 //
-//  StarboardWidget.swift
-//  StarboardWidget
+//  StarRoutineWidget.swift
+//  StarRoutineWidget
 //
 //  Created by David Barsamian on 2/8/21.
 //
@@ -38,7 +38,7 @@ struct SimpleEntry: TimelineEntry {
     let date: Date
 }
 
-struct StarboardWidgetEntryView: View {
+struct StarRoutineWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -57,27 +57,27 @@ struct StarboardWidgetEntryView: View {
 }
 
 @main
-struct StarboardWidget: Widget {
+struct StarRoutineWidget: Widget {
     let kind: String = "com.davidbarsam.starboard-goals"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            StarboardWidgetEntryView(entry: entry)
+            StarRoutineWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Starboard")
+        .configurationDisplayName("StarRoutine")
         .description("Keep track of a goal and easily mark today off.")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
-struct StarboardWidget_Previews: PreviewProvider {
+struct StarRoutineWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StarboardWidgetEntryView(entry: SimpleEntry(date: Date()))
+            StarRoutineWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            StarboardWidgetEntryView(entry: SimpleEntry(date: Date()))
+            StarRoutineWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
-            StarboardWidgetEntryView(entry: SimpleEntry(date: Date()))
+            StarRoutineWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemLarge))
         }
     }

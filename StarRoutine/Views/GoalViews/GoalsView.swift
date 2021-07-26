@@ -15,13 +15,29 @@ struct GoalsView: View {
 
     @FetchRequest(fetchRequest: PersistenceController.goalFetchRequest) var goals
 
-    @State var selectedGoal: ObjectIdentifier?
-    @State var showingAddGoals = false
+    private enum SortMode: String, CaseIterable {
+        case none = "None"
+        case name = "Name"
+        case daysLeft = "Days Left"
+    }
+
+    @State private var sortMode: SortMode = .none
+    @State private var selectedGoal: ObjectIdentifier?
+    @State private var showingAddGoals = false
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(goals) { goal in
+                ForEach(sortMode == .none ? Array(goals) : goals.sorted {first, second in
+                    switch sortMode {
+                    case .name:
+                        return first.name ?? "" < second.name ?? ""
+                    case .daysLeft:
+                        return first.daysLeft < second.daysLeft
+                    case .none:
+                        return true
+                    }
+                }) { goal in
                     NavigationLink(
                         destination: StarboardView(goal: goal),
                         tag: goal.id,
@@ -49,25 +65,42 @@ struct GoalsView: View {
                     }
                 }
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: {
+                    Button {
                         self.showingAddGoals.toggle()
-                    }, label: {
+                    } label: {
                         Image(systemName: "plus")
-                    })
+                    }
+                }
+                ToolbarItemGroup(placement: ToolbarItemPlacement.bottomBar) {
+                    Menu {
+                        ForEach(SortMode.allCases, id: \.self) { mode in
+                            Button {
+                                sortMode = mode
+                            } label: {
+                                Text("\(mode.rawValue)")
+                            }
+                        }
+                    } label: {
+                        Image(systemName: sortMode == .none
+                              ? "line.3.horizontal.decrease.circle"
+                              : "line.3.horizontal.decrease.circle.fill")
+                    }
+                    Spacer()
+                    Text(sortMode == .none ? "" : "Sort by: \(sortMode.rawValue)")
+                        .font(Font.caption)
+                    Spacer()
                 }
             }
             .listStyle(InsetGroupedListStyle())
             .sheet(isPresented: $showingAddGoals, content: {
                 AddGoalView()
             })
-            .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarTitle(Text("Goals"))
             .onAppear {
                 UITableViewCell.appearance().backgroundColor = .systemBackground
             }
-            
-            StarboardBackground()
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

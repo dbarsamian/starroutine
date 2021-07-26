@@ -46,6 +46,12 @@ struct StarboardBackground: View {
             .emitterPosition(CGPoint(x: geo.size.width / 2, y: geo.size.height / 2))
             .background(backgroundGradient)
             .edgesIgnoringSafeArea(.all)
+            .mask(
+                Rectangle()
+                    .frame(width: UIScreen.main.bounds.width,
+                           height: UIScreen.main.bounds.height)
+                    .edgesIgnoringSafeArea(.all)
+            )
         }
     }
 }

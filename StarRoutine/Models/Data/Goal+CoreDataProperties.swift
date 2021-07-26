@@ -25,6 +25,13 @@ public extension Goal {
     @NSManaged var name: String?
     @NSManaged var startDate: Date?
     @NSManaged var days: NSSet?
+    var daysLeft: Int {
+        let today = Locale.current.calendar.startOfDay(for: Date())
+        guard let endDate = endDate else {
+            return 0
+        }
+        return endDate.interval(ofComponent: .day, fromDate: today)
+    }
 }
 
 // MARK: Generated accessors for days
